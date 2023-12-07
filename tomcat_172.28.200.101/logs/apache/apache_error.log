@@ -1,0 +1,963 @@
+[Sun Dec 03 22:13:47.385957 2023] [suexec:notice] [pid 7311] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Sun Dec 03 22:13:47.460736 2023] [lbmethod_heartbeat:notice] [pid 7311] AH02282: No slotmem from mod_heartmonitor
+[Sun Dec 03 22:13:47.460800 2023] [http2:warn] [pid 7311] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Sun Dec 03 22:13:47.460802 2023] [http2:warn] [pid 7311] AH02951: mod_ssl does not seem to be enabled
+[Sun Dec 03 22:13:47.462084 2023] [mpm_prefork:notice] [pid 7311] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Sun Dec 03 22:13:47.462093 2023] [core:notice] [pid 7311] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sun Dec 03 22:49:14.641247 2023] [mpm_prefork:notice] [pid 7311] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 21:00:12.754120 2023] [suexec:notice] [pid 1700] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 21:00:12.835528 2023] [lbmethod_heartbeat:notice] [pid 1700] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 21:00:12.835645 2023] [http2:warn] [pid 1700] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 21:00:12.835655 2023] [http2:warn] [pid 1700] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 21:00:12.849241 2023] [mpm_prefork:notice] [pid 1700] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 21:00:12.849259 2023] [core:notice] [pid 1700] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 21:01:23.425168 2023] [autoindex:error] [pid 1735] [client 172.28.200.1:50042] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Dec 05 23:17:03.544064 2023] [mpm_prefork:notice] [pid 1700] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:17:04.659858 2023] [suexec:notice] [pid 4722] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:17:04.735534 2023] [lbmethod_heartbeat:notice] [pid 4722] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:17:04.735689 2023] [http2:warn] [pid 4722] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:17:04.735704 2023] [http2:warn] [pid 4722] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:17:04.737671 2023] [mpm_prefork:notice] [pid 4722] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:17:04.737687 2023] [core:notice] [pid 4722] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:22:29.648437 2023] [mpm_prefork:notice] [pid 4722] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:23:09.810921 2023] [suexec:notice] [pid 4941] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:23:09.810967 2023] [http2:debug] [pid 4941] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:23:09.891334 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:23:09.891347 2023] [lbmethod_heartbeat:notice] [pid 4941] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:23:09.891364 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:23:09.891366 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.891395 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:23:09.891407 2023] [proxy:debug] [pid 4941] proxy_util.c(1237): AH02337: copying shm[0] (0x7f300625b018) for balancer://cluster
+[Tue Dec 05 23:23:09.891436 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:23:09.891437 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.891458 2023] [slotmem_shm:debug] [pid 4941] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:23:09.891467 2023] [proxy:debug] [pid 4941] proxy_util.c(1916): AH02338: copying shm[0] (0x7f300625a018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:23:09.891471 2023] [proxy:debug] [pid 4941] proxy_util.c(1916): AH02338: copying shm[1] (0x7f300625a440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:23:09.891489 2023] [http2:info] [pid 4941] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:23:09.891514 2023] [http2:warn] [pid 4941] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:23:09.891521 2023] [http2:warn] [pid 4941] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:23:09.891543 2023] [proxy_http2:info] [pid 4941] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:23:09.891549 2023] [proxy_hcheck:debug] [pid 4941] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:23:09.891555 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:23:09.891558 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:23:09.891560 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:23:09.891561 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.891565 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.891567 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:23:09.891568 2023] [watchdog:debug] [pid 4941] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:23:09.893520 2023] [mpm_prefork:notice] [pid 4941] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:23:09.893536 2023] [mpm_prefork:info] [pid 4941] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:23:09.893543 2023] [core:notice] [pid 4941] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:23:09.893546 2023] [core:debug] [pid 4941] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:23:09.893548 2023] [mpm_prefork:debug] [pid 4941] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:23:09.894334 2023] [watchdog:debug] [pid 4943] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:23:09.894350 2023] [proxy_hcheck:debug] [pid 4943] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:23:09.894374 2023] [watchdog:debug] [pid 4944] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.894390 2023] [slotmem_shm:debug] [pid 4944] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:09.894401 2023] [slotmem_shm:debug] [pid 4944] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.894408 2023] [slotmem_shm:debug] [pid 4944] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:09.894413 2023] [slotmem_shm:debug] [pid 4944] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.894494 2023] [proxy:debug] [pid 4944] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:09.894499 2023] [proxy:debug] [pid 4944] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:09.894506 2023] [proxy:debug] [pid 4944] proxy_util.c(2034): AH00930: initialized pool in child 4944 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:09.894978 2023] [watchdog:debug] [pid 4943] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.895006 2023] [slotmem_shm:debug] [pid 4943] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:09.895049 2023] [slotmem_shm:debug] [pid 4943] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.895064 2023] [slotmem_shm:debug] [pid 4943] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:09.895085 2023] [slotmem_shm:debug] [pid 4943] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.895113 2023] [proxy:debug] [pid 4943] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:09.895152 2023] [proxy:debug] [pid 4943] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:09.895198 2023] [proxy:debug] [pid 4943] proxy_util.c(2034): AH00930: initialized pool in child 4943 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:09.895243 2023] [watchdog:debug] [pid 4946] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.895263 2023] [slotmem_shm:debug] [pid 4946] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:09.895273 2023] [slotmem_shm:debug] [pid 4946] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.895280 2023] [slotmem_shm:debug] [pid 4946] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:09.895284 2023] [slotmem_shm:debug] [pid 4946] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.895304 2023] [proxy:debug] [pid 4946] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:09.895314 2023] [proxy_hcheck:debug] [pid 4943] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:23:09.895321 2023] [proxy:debug] [pid 4946] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:09.895332 2023] [proxy:debug] [pid 4946] proxy_util.c(2034): AH00930: initialized pool in child 4946 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:09.895603 2023] [watchdog:debug] [pid 4942] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.895621 2023] [slotmem_shm:debug] [pid 4942] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:09.895632 2023] [slotmem_shm:debug] [pid 4942] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.895639 2023] [slotmem_shm:debug] [pid 4942] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:09.895643 2023] [slotmem_shm:debug] [pid 4942] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.895661 2023] [proxy:debug] [pid 4942] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:09.895672 2023] [proxy:debug] [pid 4942] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:09.895683 2023] [proxy:debug] [pid 4942] proxy_util.c(2034): AH00930: initialized pool in child 4942 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:09.896216 2023] [watchdog:debug] [pid 4945] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:09.896249 2023] [slotmem_shm:debug] [pid 4945] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:09.896261 2023] [slotmem_shm:debug] [pid 4945] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:09.896268 2023] [slotmem_shm:debug] [pid 4945] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:09.896272 2023] [slotmem_shm:debug] [pid 4945] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:09.896289 2023] [proxy:debug] [pid 4945] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:09.896300 2023] [proxy:debug] [pid 4945] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:09.896311 2023] [proxy:debug] [pid 4945] proxy_util.c(2034): AH00930: initialized pool in child 4945 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:18.910805 2023] [watchdog:debug] [pid 4991] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:18.910849 2023] [slotmem_shm:debug] [pid 4991] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:18.910857 2023] [slotmem_shm:debug] [pid 4991] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:18.910865 2023] [slotmem_shm:debug] [pid 4991] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:18.910869 2023] [slotmem_shm:debug] [pid 4991] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:18.910893 2023] [proxy:debug] [pid 4991] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:18.910907 2023] [proxy:debug] [pid 4991] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:18.910919 2023] [proxy:debug] [pid 4991] proxy_util.c(2034): AH00930: initialized pool in child 4991 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:42.606966 2023] [core:info] [pid 4941] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=4941)
+[Tue Dec 05 23:23:42.607060 2023] [mpm_prefork:notice] [pid 4941] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:23:43.716037 2023] [suexec:notice] [pid 5009] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:23:43.716092 2023] [http2:debug] [pid 5009] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:23:43.798409 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:23:43.798421 2023] [lbmethod_heartbeat:notice] [pid 5009] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:23:43.798434 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:23:43.798436 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.798465 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:23:43.798476 2023] [proxy:debug] [pid 5009] proxy_util.c(1237): AH02337: copying shm[0] (0x7f374b11e018) for balancer://cluster
+[Tue Dec 05 23:23:43.798514 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:23:43.798515 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.798536 2023] [slotmem_shm:debug] [pid 5009] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:23:43.798546 2023] [proxy:debug] [pid 5009] proxy_util.c(1916): AH02338: copying shm[0] (0x7f374b11d018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:23:43.798550 2023] [proxy:debug] [pid 5009] proxy_util.c(1916): AH02338: copying shm[1] (0x7f374b11d440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:23:43.798557 2023] [http2:info] [pid 5009] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:23:43.798578 2023] [http2:warn] [pid 5009] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:23:43.798580 2023] [http2:trace1] [pid 5009] h2_h2.c(447): h2_h2, child_init
+[Tue Dec 05 23:23:43.798582 2023] [http2:warn] [pid 5009] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:23:43.798602 2023] [http2:trace1] [pid 5009] h2_switch.c(44): h2_switch init
+[Tue Dec 05 23:23:43.798607 2023] [proxy_http2:info] [pid 5009] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:23:43.798611 2023] [proxy_hcheck:debug] [pid 5009] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:23:43.798616 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:23:43.798619 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:23:43.798621 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:23:43.798623 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:23:43.798629 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:23:43.798630 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.798634 2023] [watchdog:debug] [pid 5009] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.800587 2023] [mpm_prefork:notice] [pid 5009] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:23:43.800615 2023] [mpm_prefork:info] [pid 5009] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:23:43.800623 2023] [core:notice] [pid 5009] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:23:43.800626 2023] [core:debug] [pid 5009] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:23:43.800628 2023] [mpm_prefork:debug] [pid 5009] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:23:43.801598 2023] [watchdog:debug] [pid 5012] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:23:43.801614 2023] [proxy_hcheck:debug] [pid 5012] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:23:43.801700 2023] [watchdog:debug] [pid 5012] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.801758 2023] [slotmem_shm:debug] [pid 5012] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:43.801766 2023] [slotmem_shm:debug] [pid 5012] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.801774 2023] [slotmem_shm:debug] [pid 5012] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:43.801778 2023] [slotmem_shm:debug] [pid 5012] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.801909 2023] [proxy:debug] [pid 5012] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:43.801914 2023] [proxy:debug] [pid 5012] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:43.802048 2023] [proxy:debug] [pid 5012] proxy_util.c(2034): AH00930: initialized pool in child 5012 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:43.802207 2023] [watchdog:debug] [pid 5013] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.802224 2023] [slotmem_shm:debug] [pid 5013] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:43.802231 2023] [slotmem_shm:debug] [pid 5013] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.802238 2023] [slotmem_shm:debug] [pid 5013] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:43.802242 2023] [slotmem_shm:debug] [pid 5013] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.802258 2023] [proxy:debug] [pid 5013] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:43.802271 2023] [proxy:debug] [pid 5013] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:43.802282 2023] [proxy:debug] [pid 5013] proxy_util.c(2034): AH00930: initialized pool in child 5013 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:43.802323 2023] [watchdog:debug] [pid 5011] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.802331 2023] [watchdog:debug] [pid 5014] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.802343 2023] [slotmem_shm:debug] [pid 5011] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:43.802348 2023] [slotmem_shm:debug] [pid 5014] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:43.802356 2023] [slotmem_shm:debug] [pid 5011] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.802357 2023] [slotmem_shm:debug] [pid 5014] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.802364 2023] [slotmem_shm:debug] [pid 5011] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:43.802365 2023] [slotmem_shm:debug] [pid 5014] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:43.802369 2023] [slotmem_shm:debug] [pid 5011] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.802370 2023] [slotmem_shm:debug] [pid 5014] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.802389 2023] [proxy:debug] [pid 5014] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:43.802391 2023] [proxy:debug] [pid 5011] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:43.802400 2023] [proxy:debug] [pid 5014] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:43.802412 2023] [proxy:debug] [pid 5014] proxy_util.c(2034): AH00930: initialized pool in child 5014 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:43.802437 2023] [proxy:debug] [pid 5011] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:43.802451 2023] [proxy:debug] [pid 5011] proxy_util.c(2034): AH00930: initialized pool in child 5011 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:43.802459 2023] [proxy_hcheck:debug] [pid 5012] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:23:43.803042 2023] [watchdog:debug] [pid 5015] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:43.803081 2023] [slotmem_shm:debug] [pid 5015] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:43.803088 2023] [slotmem_shm:debug] [pid 5015] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:43.803095 2023] [slotmem_shm:debug] [pid 5015] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:43.803099 2023] [slotmem_shm:debug] [pid 5015] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:43.803122 2023] [proxy:debug] [pid 5015] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:43.803136 2023] [proxy:debug] [pid 5015] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:43.803148 2023] [proxy:debug] [pid 5015] proxy_util.c(2034): AH00930: initialized pool in child 5015 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:23:48.260216 2023] [http2:trace1] [pid 5012] h2_h2.c(588): [client 172.28.200.1:50754] h2_h2, process_conn
+[Tue Dec 05 23:23:48.260260 2023] [http2:trace1] [pid 5012] h2_h2.c(602): [client 172.28.200.1:50754] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:23:48.260263 2023] [http2:trace1] [pid 5012] h2_h2.c(661): [client 172.28.200.1:50754] h2_h2, declined
+[Tue Dec 05 23:23:48.809479 2023] [watchdog:debug] [pid 5058] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:23:48.809525 2023] [slotmem_shm:debug] [pid 5058] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:23:48.809540 2023] [slotmem_shm:debug] [pid 5058] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:23:48.809547 2023] [slotmem_shm:debug] [pid 5058] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:23:48.809552 2023] [slotmem_shm:debug] [pid 5058] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:23:48.809578 2023] [proxy:debug] [pid 5058] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:23:48.809596 2023] [proxy:debug] [pid 5058] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:23:48.809609 2023] [proxy:debug] [pid 5058] proxy_util.c(2034): AH00930: initialized pool in child 5058 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:24:07.523371 2023] [http2:trace1] [pid 5013] h2_h2.c(588): [client 172.28.200.1:50757] h2_h2, process_conn
+[Tue Dec 05 23:24:07.523413 2023] [http2:trace1] [pid 5013] h2_h2.c(602): [client 172.28.200.1:50757] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:24:07.523416 2023] [http2:trace1] [pid 5013] h2_h2.c(661): [client 172.28.200.1:50757] h2_h2, declined
+[Tue Dec 05 23:25:00.182529 2023] [core:info] [pid 5009] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=5009)
+[Tue Dec 05 23:25:00.182558 2023] [mpm_prefork:notice] [pid 5009] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:25:01.303077 2023] [suexec:notice] [pid 5117] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:25:01.303123 2023] [http2:debug] [pid 5117] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:25:01.382286 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:25:01.382304 2023] [lbmethod_heartbeat:notice] [pid 5117] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:25:01.382326 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:25:01.382328 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.382357 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:25:01.382373 2023] [proxy:debug] [pid 5117] proxy_util.c(1237): AH02337: copying shm[0] (0x7f081090e018) for balancer://cluster
+[Tue Dec 05 23:25:01.382416 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:25:01.382418 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.382438 2023] [slotmem_shm:debug] [pid 5117] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:25:01.382449 2023] [proxy:debug] [pid 5117] proxy_util.c(1916): AH02338: copying shm[0] (0x7f081090d018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:25:01.382453 2023] [proxy:debug] [pid 5117] proxy_util.c(1916): AH02338: copying shm[1] (0x7f081090d440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:25:01.382463 2023] [http2:info] [pid 5117] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:25:01.382493 2023] [http2:warn] [pid 5117] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:25:01.382500 2023] [http2:trace1] [pid 5117] h2_h2.c(447): h2_h2, child_init
+[Tue Dec 05 23:25:01.382502 2023] [http2:warn] [pid 5117] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:25:01.382523 2023] [http2:trace1] [pid 5117] h2_switch.c(44): h2_switch init
+[Tue Dec 05 23:25:01.382527 2023] [proxy_http2:info] [pid 5117] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:25:01.382532 2023] [proxy_hcheck:debug] [pid 5117] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:25:01.382538 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:25:01.382542 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:25:01.382543 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:25:01.382545 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:25:01.382546 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:25:01.382548 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.382551 2023] [watchdog:debug] [pid 5117] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.384587 2023] [mpm_prefork:notice] [pid 5117] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:25:01.384598 2023] [mpm_prefork:info] [pid 5117] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:25:01.384606 2023] [core:notice] [pid 5117] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:25:01.384609 2023] [core:debug] [pid 5117] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:25:01.384611 2023] [mpm_prefork:debug] [pid 5117] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:25:01.385409 2023] [watchdog:debug] [pid 5120] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:25:01.385424 2023] [proxy_hcheck:debug] [pid 5120] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:25:01.385414 2023] [watchdog:debug] [pid 5121] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.385444 2023] [slotmem_shm:debug] [pid 5121] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:01.385452 2023] [slotmem_shm:debug] [pid 5121] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.385459 2023] [slotmem_shm:debug] [pid 5121] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:01.385463 2023] [slotmem_shm:debug] [pid 5121] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.385546 2023] [proxy:debug] [pid 5121] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:01.385550 2023] [proxy:debug] [pid 5121] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:01.385557 2023] [proxy:debug] [pid 5121] proxy_util.c(2034): AH00930: initialized pool in child 5121 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:01.385935 2023] [watchdog:debug] [pid 5119] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.385954 2023] [slotmem_shm:debug] [pid 5119] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:01.385966 2023] [slotmem_shm:debug] [pid 5119] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.385974 2023] [slotmem_shm:debug] [pid 5119] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:01.385973 2023] [watchdog:debug] [pid 5120] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.385978 2023] [slotmem_shm:debug] [pid 5119] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.385989 2023] [slotmem_shm:debug] [pid 5120] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:01.385996 2023] [proxy:debug] [pid 5119] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:01.385996 2023] [slotmem_shm:debug] [pid 5120] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.386004 2023] [slotmem_shm:debug] [pid 5120] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:01.386009 2023] [slotmem_shm:debug] [pid 5120] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.386010 2023] [proxy:debug] [pid 5119] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:01.386022 2023] [proxy:debug] [pid 5119] proxy_util.c(2034): AH00930: initialized pool in child 5119 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:01.386025 2023] [proxy:debug] [pid 5120] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:01.386037 2023] [proxy:debug] [pid 5120] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:01.386048 2023] [proxy:debug] [pid 5120] proxy_util.c(2034): AH00930: initialized pool in child 5120 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:01.386145 2023] [watchdog:debug] [pid 5123] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.386160 2023] [slotmem_shm:debug] [pid 5123] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:01.386167 2023] [slotmem_shm:debug] [pid 5123] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.386174 2023] [slotmem_shm:debug] [pid 5123] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:01.386178 2023] [slotmem_shm:debug] [pid 5123] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.386195 2023] [proxy:debug] [pid 5123] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:01.386207 2023] [proxy:debug] [pid 5123] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:01.386218 2023] [proxy:debug] [pid 5123] proxy_util.c(2034): AH00930: initialized pool in child 5123 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:01.386510 2023] [proxy_hcheck:debug] [pid 5120] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:25:01.386778 2023] [watchdog:debug] [pid 5122] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:01.386817 2023] [slotmem_shm:debug] [pid 5122] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:01.386825 2023] [slotmem_shm:debug] [pid 5122] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:01.386831 2023] [slotmem_shm:debug] [pid 5122] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:01.386841 2023] [slotmem_shm:debug] [pid 5122] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:01.386888 2023] [proxy:debug] [pid 5122] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:01.386901 2023] [proxy:debug] [pid 5122] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:01.386912 2023] [proxy:debug] [pid 5122] proxy_util.c(2034): AH00930: initialized pool in child 5122 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:25.474792 2023] [http2:trace1] [pid 5121] h2_h2.c(588): [client 172.28.200.1:50760] h2_h2, process_conn
+[Tue Dec 05 23:25:25.474850 2023] [http2:trace1] [pid 5121] h2_h2.c(602): [client 172.28.200.1:50760] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:25:25.474852 2023] [http2:trace1] [pid 5121] h2_h2.c(661): [client 172.28.200.1:50760] h2_h2, declined
+[Tue Dec 05 23:25:26.418987 2023] [watchdog:debug] [pid 5173] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:25:26.419033 2023] [slotmem_shm:debug] [pid 5173] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:25:26.419042 2023] [slotmem_shm:debug] [pid 5173] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:25:26.419049 2023] [slotmem_shm:debug] [pid 5173] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:25:26.419054 2023] [slotmem_shm:debug] [pid 5173] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:25:26.419092 2023] [proxy:debug] [pid 5173] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:25:26.419108 2023] [proxy:debug] [pid 5173] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:25:26.419121 2023] [proxy:debug] [pid 5173] proxy_util.c(2034): AH00930: initialized pool in child 5173 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:25:57.618962 2023] [http2:trace1] [pid 5119] h2_h2.c(588): [client 172.28.200.1:50763] h2_h2, process_conn
+[Tue Dec 05 23:25:57.619008 2023] [http2:trace1] [pid 5119] h2_h2.c(602): [client 172.28.200.1:50763] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:25:57.619011 2023] [http2:trace1] [pid 5119] h2_h2.c(661): [client 172.28.200.1:50763] h2_h2, declined
+[Tue Dec 05 23:26:52.874586 2023] [core:info] [pid 5117] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=5117)
+[Tue Dec 05 23:26:52.874617 2023] [mpm_prefork:notice] [pid 5117] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:26:53.990299 2023] [suexec:notice] [pid 5240] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:26:53.990343 2023] [http2:debug] [pid 5240] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:26:54.072301 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:26:54.072319 2023] [lbmethod_heartbeat:notice] [pid 5240] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:26:54.072351 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:26:54.072354 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.072382 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:26:54.072401 2023] [proxy:debug] [pid 5240] proxy_util.c(1237): AH02337: copying shm[0] (0x7f0c1a4af018) for balancer://cluster
+[Tue Dec 05 23:26:54.072444 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:26:54.072447 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.072468 2023] [slotmem_shm:debug] [pid 5240] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:26:54.072479 2023] [proxy:debug] [pid 5240] proxy_util.c(1916): AH02338: copying shm[0] (0x7f0c1a4ae018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:26:54.072482 2023] [proxy:debug] [pid 5240] proxy_util.c(1916): AH02338: copying shm[1] (0x7f0c1a4ae440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:26:54.072508 2023] [http2:info] [pid 5240] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:26:54.072558 2023] [http2:warn] [pid 5240] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:26:54.072562 2023] [http2:trace1] [pid 5240] h2_h2.c(447): h2_h2, child_init
+[Tue Dec 05 23:26:54.072564 2023] [http2:warn] [pid 5240] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:26:54.072585 2023] [http2:trace1] [pid 5240] h2_switch.c(44): h2_switch init
+[Tue Dec 05 23:26:54.072589 2023] [proxy_http2:info] [pid 5240] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:26:54.072594 2023] [proxy_hcheck:debug] [pid 5240] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:26:54.072599 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:26:54.072602 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:26:54.072604 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:26:54.072605 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.072634 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.072639 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:26:54.072641 2023] [watchdog:debug] [pid 5240] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:26:54.074632 2023] [mpm_prefork:notice] [pid 5240] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:26:54.074648 2023] [mpm_prefork:info] [pid 5240] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:26:54.074656 2023] [core:notice] [pid 5240] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:26:54.074659 2023] [core:debug] [pid 5240] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:26:54.074660 2023] [mpm_prefork:debug] [pid 5240] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:26:54.075361 2023] [watchdog:debug] [pid 5244] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:26:54.075388 2023] [watchdog:debug] [pid 5244] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.075404 2023] [proxy_hcheck:debug] [pid 5244] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:26:54.075450 2023] [slotmem_shm:debug] [pid 5244] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:26:54.075470 2023] [slotmem_shm:debug] [pid 5244] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.075492 2023] [slotmem_shm:debug] [pid 5244] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:26:54.075497 2023] [slotmem_shm:debug] [pid 5244] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.075632 2023] [proxy:debug] [pid 5244] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:26:54.075638 2023] [proxy:debug] [pid 5244] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:26:54.075651 2023] [proxy:debug] [pid 5244] proxy_util.c(2034): AH00930: initialized pool in child 5244 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:26:54.075697 2023] [watchdog:debug] [pid 5242] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.075728 2023] [slotmem_shm:debug] [pid 5242] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:26:54.075736 2023] [slotmem_shm:debug] [pid 5242] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.075743 2023] [slotmem_shm:debug] [pid 5242] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:26:54.075747 2023] [slotmem_shm:debug] [pid 5242] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.075778 2023] [proxy:debug] [pid 5242] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:26:54.075793 2023] [proxy:debug] [pid 5242] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:26:54.075805 2023] [proxy:debug] [pid 5242] proxy_util.c(2034): AH00930: initialized pool in child 5242 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:26:54.076116 2023] [watchdog:debug] [pid 5243] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.076137 2023] [slotmem_shm:debug] [pid 5243] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:26:54.076145 2023] [slotmem_shm:debug] [pid 5243] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.076151 2023] [slotmem_shm:debug] [pid 5243] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:26:54.076156 2023] [slotmem_shm:debug] [pid 5243] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.076178 2023] [proxy:debug] [pid 5243] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:26:54.076192 2023] [proxy:debug] [pid 5243] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:26:54.076204 2023] [proxy:debug] [pid 5243] proxy_util.c(2034): AH00930: initialized pool in child 5243 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:26:54.076553 2023] [proxy_hcheck:debug] [pid 5244] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:26:54.076848 2023] [watchdog:debug] [pid 5246] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.076869 2023] [slotmem_shm:debug] [pid 5246] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:26:54.076877 2023] [slotmem_shm:debug] [pid 5246] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.076887 2023] [slotmem_shm:debug] [pid 5246] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:26:54.076891 2023] [slotmem_shm:debug] [pid 5246] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.076913 2023] [proxy:debug] [pid 5246] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:26:54.076926 2023] [proxy:debug] [pid 5246] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:26:54.076938 2023] [proxy:debug] [pid 5246] proxy_util.c(2034): AH00930: initialized pool in child 5246 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:26:54.077183 2023] [watchdog:debug] [pid 5245] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:26:54.077198 2023] [slotmem_shm:debug] [pid 5245] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:26:54.077205 2023] [slotmem_shm:debug] [pid 5245] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:26:54.077211 2023] [slotmem_shm:debug] [pid 5245] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:26:54.077215 2023] [slotmem_shm:debug] [pid 5245] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:26:54.077244 2023] [proxy:debug] [pid 5245] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:26:54.077255 2023] [proxy:debug] [pid 5245] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:26:54.077267 2023] [proxy:debug] [pid 5245] proxy_util.c(2034): AH00930: initialized pool in child 5245 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:27:00.717817 2023] [http2:trace1] [pid 5242] h2_h2.c(588): [client 172.28.200.1:50768] h2_h2, process_conn
+[Tue Dec 05 23:27:00.717854 2023] [http2:trace1] [pid 5242] h2_h2.c(602): [client 172.28.200.1:50768] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:27:00.717857 2023] [http2:trace1] [pid 5242] h2_h2.c(661): [client 172.28.200.1:50768] h2_h2, declined
+[Tue Dec 05 23:27:01.085151 2023] [watchdog:debug] [pid 5290] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:27:01.085195 2023] [slotmem_shm:debug] [pid 5290] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:27:01.085203 2023] [slotmem_shm:debug] [pid 5290] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:27:01.085210 2023] [slotmem_shm:debug] [pid 5290] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:27:01.085214 2023] [slotmem_shm:debug] [pid 5290] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:27:01.085258 2023] [proxy:debug] [pid 5290] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:27:01.085275 2023] [proxy:debug] [pid 5290] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:27:01.085287 2023] [proxy:debug] [pid 5290] proxy_util.c(2034): AH00930: initialized pool in child 5290 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:27:48.945745 2023] [http2:trace1] [pid 5244] h2_h2.c(588): [client 172.28.200.1:50775] h2_h2, process_conn
+[Tue Dec 05 23:27:48.945799 2023] [http2:trace1] [pid 5244] h2_h2.c(602): [client 172.28.200.1:50775] h2_h2, process_conn, new connection using protocol 'http/1.1', direct=0, tls acceptable=1
+[Tue Dec 05 23:27:48.945802 2023] [http2:trace1] [pid 5244] h2_h2.c(661): [client 172.28.200.1:50775] h2_h2, declined
+[Tue Dec 05 23:55:18.231873 2023] [core:info] [pid 5240] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=5240)
+[Tue Dec 05 23:55:18.231906 2023] [mpm_prefork:notice] [pid 5240] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:55:19.339817 2023] [suexec:notice] [pid 5885] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:55:19.339864 2023] [http2:debug] [pid 5885] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:55:19.421269 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:55:19.421287 2023] [lbmethod_heartbeat:notice] [pid 5885] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:55:19.421303 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:55:19.421305 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.421330 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:55:19.421344 2023] [proxy:debug] [pid 5885] proxy_util.c(1237): AH02337: copying shm[0] (0x7ff2fd258018) for balancer://cluster
+[Tue Dec 05 23:55:19.421369 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:55:19.421371 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.421392 2023] [slotmem_shm:debug] [pid 5885] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:55:19.421402 2023] [proxy:debug] [pid 5885] proxy_util.c(1916): AH02338: copying shm[0] (0x7ff2fd257018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:55:19.421406 2023] [proxy:debug] [pid 5885] proxy_util.c(1916): AH02338: copying shm[1] (0x7ff2fd257440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:55:19.421414 2023] [http2:info] [pid 5885] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:55:19.421439 2023] [http2:warn] [pid 5885] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:55:19.421442 2023] [http2:warn] [pid 5885] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:55:19.421463 2023] [proxy_http2:info] [pid 5885] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:55:19.421469 2023] [proxy_hcheck:debug] [pid 5885] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:55:19.421474 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:55:19.421478 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:55:19.421480 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:55:19.421481 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:55:19.421483 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:55:19.421488 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.421492 2023] [watchdog:debug] [pid 5885] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.423380 2023] [mpm_prefork:notice] [pid 5885] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:55:19.423390 2023] [mpm_prefork:info] [pid 5885] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:55:19.423397 2023] [core:notice] [pid 5885] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:55:19.423400 2023] [core:debug] [pid 5885] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:55:19.423401 2023] [mpm_prefork:debug] [pid 5885] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:55:19.424261 2023] [watchdog:debug] [pid 5887] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:55:19.424288 2023] [watchdog:debug] [pid 5887] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.424307 2023] [proxy_hcheck:debug] [pid 5887] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:55:19.424323 2023] [slotmem_shm:debug] [pid 5887] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:19.424370 2023] [slotmem_shm:debug] [pid 5887] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.424392 2023] [slotmem_shm:debug] [pid 5887] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:19.424410 2023] [slotmem_shm:debug] [pid 5887] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.424536 2023] [proxy:debug] [pid 5887] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:19.424541 2023] [proxy:debug] [pid 5887] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:19.424670 2023] [proxy:debug] [pid 5887] proxy_util.c(2034): AH00930: initialized pool in child 5887 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:55:19.425145 2023] [watchdog:debug] [pid 5890] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.425155 2023] [watchdog:debug] [pid 5891] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.425158 2023] [slotmem_shm:debug] [pid 5890] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:19.425166 2023] [slotmem_shm:debug] [pid 5890] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.425170 2023] [slotmem_shm:debug] [pid 5891] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:19.425173 2023] [slotmem_shm:debug] [pid 5890] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:19.425177 2023] [slotmem_shm:debug] [pid 5890] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.425177 2023] [slotmem_shm:debug] [pid 5891] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.425185 2023] [slotmem_shm:debug] [pid 5891] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:19.425189 2023] [proxy:debug] [pid 5890] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:19.425189 2023] [slotmem_shm:debug] [pid 5891] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.425201 2023] [proxy:debug] [pid 5890] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:19.425211 2023] [proxy:debug] [pid 5891] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:19.425213 2023] [proxy:debug] [pid 5890] proxy_util.c(2034): AH00930: initialized pool in child 5890 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:55:19.425225 2023] [proxy:debug] [pid 5891] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:19.425238 2023] [proxy:debug] [pid 5891] proxy_util.c(2034): AH00930: initialized pool in child 5891 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:55:19.425522 2023] [watchdog:debug] [pid 5888] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.425533 2023] [slotmem_shm:debug] [pid 5888] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:19.425540 2023] [slotmem_shm:debug] [pid 5888] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.425546 2023] [slotmem_shm:debug] [pid 5888] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:19.425550 2023] [slotmem_shm:debug] [pid 5888] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.425561 2023] [watchdog:debug] [pid 5889] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:19.425562 2023] [proxy:debug] [pid 5888] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:19.425575 2023] [proxy:debug] [pid 5888] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:19.425590 2023] [slotmem_shm:debug] [pid 5889] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:19.425591 2023] [proxy:debug] [pid 5888] proxy_util.c(2034): AH00930: initialized pool in child 5888 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:55:19.425597 2023] [slotmem_shm:debug] [pid 5889] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:19.425603 2023] [slotmem_shm:debug] [pid 5889] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:19.425607 2023] [slotmem_shm:debug] [pid 5889] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:19.425623 2023] [proxy:debug] [pid 5889] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:19.425635 2023] [proxy:debug] [pid 5889] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:19.425646 2023] [proxy:debug] [pid 5889] proxy_util.c(2034): AH00930: initialized pool in child 5889 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:55:19.425791 2023] [proxy_hcheck:debug] [pid 5887] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:55:23.430935 2023] [watchdog:debug] [pid 5933] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:55:23.430981 2023] [slotmem_shm:debug] [pid 5933] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:55:23.430990 2023] [slotmem_shm:debug] [pid 5933] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:55:23.430997 2023] [slotmem_shm:debug] [pid 5933] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:55:23.431001 2023] [slotmem_shm:debug] [pid 5933] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:55:23.431020 2023] [proxy:debug] [pid 5933] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:55:23.431039 2023] [proxy:debug] [pid 5933] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:55:23.431051 2023] [proxy:debug] [pid 5933] proxy_util.c(2034): AH00930: initialized pool in child 5933 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:23.291022 2023] [core:info] [pid 5885] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=5885)
+[Tue Dec 05 23:56:23.291054 2023] [mpm_prefork:notice] [pid 5885] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Dec 05 23:56:24.398728 2023] [suexec:notice] [pid 5959] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Tue Dec 05 23:56:24.398777 2023] [http2:debug] [pid 5959] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Tue Dec 05 23:56:24.478380 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Tue Dec 05 23:56:24.478394 2023] [lbmethod_heartbeat:notice] [pid 5959] AH02282: No slotmem from mod_heartmonitor
+[Tue Dec 05 23:56:24.478407 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Tue Dec 05 23:56:24.478409 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.478431 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Tue Dec 05 23:56:24.478445 2023] [proxy:debug] [pid 5959] proxy_util.c(1237): AH02337: copying shm[0] (0x7fcf6680a018) for balancer://cluster
+[Tue Dec 05 23:56:24.478470 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Tue Dec 05 23:56:24.478472 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.478492 2023] [slotmem_shm:debug] [pid 5959] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Tue Dec 05 23:56:24.478501 2023] [proxy:debug] [pid 5959] proxy_util.c(1916): AH02338: copying shm[0] (0x7fcf66809018) for worker: http://172.28.200.101:8010
+[Tue Dec 05 23:56:24.478505 2023] [proxy:debug] [pid 5959] proxy_util.c(1916): AH02338: copying shm[1] (0x7fcf66809440) for worker: http://172.28.200.101:8011
+[Tue Dec 05 23:56:24.478512 2023] [http2:info] [pid 5959] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:56:24.478534 2023] [http2:warn] [pid 5959] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Tue Dec 05 23:56:24.478537 2023] [http2:warn] [pid 5959] AH02951: mod_ssl does not seem to be enabled
+[Tue Dec 05 23:56:24.478559 2023] [proxy_http2:info] [pid 5959] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Tue Dec 05 23:56:24.478565 2023] [proxy_hcheck:debug] [pid 5959] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Tue Dec 05 23:56:24.478570 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Tue Dec 05 23:56:24.478573 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Tue Dec 05 23:56:24.478575 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Tue Dec 05 23:56:24.478579 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.478583 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.478584 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Tue Dec 05 23:56:24.478586 2023] [watchdog:debug] [pid 5959] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Tue Dec 05 23:56:24.480539 2023] [mpm_prefork:notice] [pid 5959] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Tue Dec 05 23:56:24.480551 2023] [mpm_prefork:info] [pid 5959] AH00164: Server built: Aug 17 2023 23:57:25
+[Tue Dec 05 23:56:24.480558 2023] [core:notice] [pid 5959] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Tue Dec 05 23:56:24.480561 2023] [core:debug] [pid 5959] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Tue Dec 05 23:56:24.480563 2023] [mpm_prefork:debug] [pid 5959] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Tue Dec 05 23:56:24.481500 2023] [watchdog:debug] [pid 5960] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Tue Dec 05 23:56:24.481527 2023] [watchdog:debug] [pid 5960] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.481548 2023] [proxy_hcheck:debug] [pid 5960] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Tue Dec 05 23:56:24.481565 2023] [slotmem_shm:debug] [pid 5960] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:24.481642 2023] [slotmem_shm:debug] [pid 5960] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.481651 2023] [slotmem_shm:debug] [pid 5960] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:24.481656 2023] [slotmem_shm:debug] [pid 5960] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.481814 2023] [proxy:debug] [pid 5960] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:24.481819 2023] [proxy:debug] [pid 5960] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:24.481974 2023] [proxy:debug] [pid 5960] proxy_util.c(2034): AH00930: initialized pool in child 5960 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:24.481999 2023] [watchdog:debug] [pid 5961] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.482013 2023] [slotmem_shm:debug] [pid 5961] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:24.482020 2023] [slotmem_shm:debug] [pid 5961] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.482026 2023] [slotmem_shm:debug] [pid 5961] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:24.482030 2023] [slotmem_shm:debug] [pid 5961] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.482045 2023] [proxy:debug] [pid 5961] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:24.482059 2023] [proxy:debug] [pid 5961] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:24.482069 2023] [proxy:debug] [pid 5961] proxy_util.c(2034): AH00930: initialized pool in child 5961 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:24.482242 2023] [watchdog:debug] [pid 5962] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.482256 2023] [slotmem_shm:debug] [pid 5962] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:24.482265 2023] [slotmem_shm:debug] [pid 5962] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.482272 2023] [slotmem_shm:debug] [pid 5962] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:24.482276 2023] [slotmem_shm:debug] [pid 5962] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.482292 2023] [proxy:debug] [pid 5962] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:24.482304 2023] [proxy:debug] [pid 5962] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:24.482315 2023] [proxy:debug] [pid 5962] proxy_util.c(2034): AH00930: initialized pool in child 5962 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:24.482595 2023] [watchdog:debug] [pid 5964] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.482612 2023] [slotmem_shm:debug] [pid 5964] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:24.482619 2023] [slotmem_shm:debug] [pid 5964] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.482626 2023] [slotmem_shm:debug] [pid 5964] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:24.482630 2023] [slotmem_shm:debug] [pid 5964] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.482646 2023] [proxy:debug] [pid 5964] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:24.482658 2023] [proxy:debug] [pid 5964] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:24.482669 2023] [proxy:debug] [pid 5964] proxy_util.c(2034): AH00930: initialized pool in child 5964 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:24.482824 2023] [proxy_hcheck:debug] [pid 5960] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Tue Dec 05 23:56:24.482841 2023] [watchdog:debug] [pid 5963] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:24.482859 2023] [slotmem_shm:debug] [pid 5963] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:24.482879 2023] [slotmem_shm:debug] [pid 5963] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:24.482887 2023] [slotmem_shm:debug] [pid 5963] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:24.482892 2023] [slotmem_shm:debug] [pid 5963] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:24.482909 2023] [proxy:debug] [pid 5963] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:24.482922 2023] [proxy:debug] [pid 5963] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:24.482934 2023] [proxy:debug] [pid 5963] proxy_util.c(2034): AH00930: initialized pool in child 5963 for (*) min=0 max=4 smax=4
+[Tue Dec 05 23:56:30.490940 2023] [watchdog:debug] [pid 6008] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Tue Dec 05 23:56:30.490988 2023] [slotmem_shm:debug] [pid 6008] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Tue Dec 05 23:56:30.490997 2023] [slotmem_shm:debug] [pid 6008] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Tue Dec 05 23:56:30.491005 2023] [slotmem_shm:debug] [pid 6008] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Tue Dec 05 23:56:30.491013 2023] [slotmem_shm:debug] [pid 6008] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Tue Dec 05 23:56:30.491036 2023] [proxy:debug] [pid 6008] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Tue Dec 05 23:56:30.491052 2023] [proxy:debug] [pid 6008] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Tue Dec 05 23:56:30.491065 2023] [proxy:debug] [pid 6008] proxy_util.c(2034): AH00930: initialized pool in child 6008 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:14:57.264109 2023] [core:info] [pid 5959] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=5959)
+[Wed Dec 06 00:14:57.264155 2023] [mpm_prefork:notice] [pid 5959] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Dec 06 00:14:58.378150 2023] [suexec:notice] [pid 10643] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 06 00:14:58.378201 2023] [http2:debug] [pid 10643] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 06 00:14:58.457586 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Wed Dec 06 00:14:58.457599 2023] [lbmethod_heartbeat:notice] [pid 10643] AH02282: No slotmem from mod_heartmonitor
+[Wed Dec 06 00:14:58.457619 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Wed Dec 06 00:14:58.457620 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.457644 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Wed Dec 06 00:14:58.457655 2023] [proxy:debug] [pid 10643] proxy_util.c(1237): AH02337: copying shm[0] (0x7f3ec4482018) for balancer://cluster
+[Wed Dec 06 00:14:58.457681 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Wed Dec 06 00:14:58.457682 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.457702 2023] [slotmem_shm:debug] [pid 10643] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Wed Dec 06 00:14:58.457714 2023] [proxy:debug] [pid 10643] proxy_util.c(1916): AH02338: copying shm[0] (0x7f3ec4481018) for worker: http://172.28.200.101:8010
+[Wed Dec 06 00:14:58.457718 2023] [proxy:debug] [pid 10643] proxy_util.c(1916): AH02338: copying shm[1] (0x7f3ec4481440) for worker: http://172.28.200.101:8011
+[Wed Dec 06 00:14:58.457727 2023] [http2:info] [pid 10643] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:14:58.457749 2023] [http2:warn] [pid 10643] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Wed Dec 06 00:14:58.457752 2023] [http2:warn] [pid 10643] AH02951: mod_ssl does not seem to be enabled
+[Wed Dec 06 00:14:58.457776 2023] [proxy_http2:info] [pid 10643] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:14:58.457782 2023] [proxy_hcheck:debug] [pid 10643] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Wed Dec 06 00:14:58.457790 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Wed Dec 06 00:14:58.457792 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Wed Dec 06 00:14:58.457794 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Wed Dec 06 00:14:58.457796 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.457799 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.457801 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Wed Dec 06 00:14:58.457802 2023] [watchdog:debug] [pid 10643] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Wed Dec 06 00:14:58.459807 2023] [mpm_prefork:notice] [pid 10643] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Wed Dec 06 00:14:58.459818 2023] [mpm_prefork:info] [pid 10643] AH00164: Server built: Aug 17 2023 23:57:25
+[Wed Dec 06 00:14:58.459826 2023] [core:notice] [pid 10643] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Dec 06 00:14:58.459828 2023] [core:debug] [pid 10643] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Wed Dec 06 00:14:58.459830 2023] [mpm_prefork:debug] [pid 10643] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Wed Dec 06 00:14:58.460794 2023] [watchdog:debug] [pid 10646] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Wed Dec 06 00:14:58.460812 2023] [proxy_hcheck:debug] [pid 10646] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Wed Dec 06 00:14:58.460958 2023] [watchdog:debug] [pid 10645] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.460969 2023] [watchdog:debug] [pid 10644] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.460981 2023] [slotmem_shm:debug] [pid 10645] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:14:58.460988 2023] [slotmem_shm:debug] [pid 10644] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:14:58.460989 2023] [slotmem_shm:debug] [pid 10645] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.460996 2023] [slotmem_shm:debug] [pid 10644] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.460997 2023] [slotmem_shm:debug] [pid 10645] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:14:58.461003 2023] [slotmem_shm:debug] [pid 10645] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.461003 2023] [slotmem_shm:debug] [pid 10644] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:14:58.461008 2023] [slotmem_shm:debug] [pid 10644] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.461341 2023] [watchdog:debug] [pid 10646] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.461359 2023] [slotmem_shm:debug] [pid 10646] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:14:58.461381 2023] [slotmem_shm:debug] [pid 10646] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.461388 2023] [slotmem_shm:debug] [pid 10646] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:14:58.461396 2023] [slotmem_shm:debug] [pid 10646] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.461481 2023] [watchdog:debug] [pid 10647] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.461499 2023] [slotmem_shm:debug] [pid 10647] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:14:58.461506 2023] [slotmem_shm:debug] [pid 10647] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.461512 2023] [slotmem_shm:debug] [pid 10647] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:14:58.461517 2023] [slotmem_shm:debug] [pid 10647] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.461584 2023] [proxy_hcheck:debug] [pid 10646] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Wed Dec 06 00:14:58.461627 2023] [proxy:debug] [pid 10645] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:14:58.461682 2023] [proxy:debug] [pid 10646] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:14:58.461712 2023] [proxy:debug] [pid 10647] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:14:58.461844 2023] [watchdog:debug] [pid 10648] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:14:58.461878 2023] [slotmem_shm:debug] [pid 10648] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:14:58.461885 2023] [slotmem_shm:debug] [pid 10648] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:14:58.461892 2023] [slotmem_shm:debug] [pid 10648] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:14:58.461896 2023] [slotmem_shm:debug] [pid 10648] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:14:58.461905 2023] [proxy:debug] [pid 10644] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:14:58.461910 2023] [proxy:debug] [pid 10648] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:14:58.461913 2023] [proxy:debug] [pid 10645] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:14:58.461923 2023] [proxy:debug] [pid 10645] proxy_util.c(2034): AH00930: initialized pool in child 10645 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:14:58.461945 2023] [proxy:debug] [pid 10646] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:14:58.461958 2023] [proxy:debug] [pid 10646] proxy_util.c(2034): AH00930: initialized pool in child 10646 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:14:58.461982 2023] [proxy:debug] [pid 10647] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:14:58.461995 2023] [proxy:debug] [pid 10647] proxy_util.c(2034): AH00930: initialized pool in child 10647 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:14:58.462159 2023] [proxy:debug] [pid 10644] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:14:58.462168 2023] [proxy:debug] [pid 10644] proxy_util.c(2034): AH00930: initialized pool in child 10644 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:14:58.462431 2023] [proxy:debug] [pid 10648] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:14:58.462443 2023] [proxy:debug] [pid 10648] proxy_util.c(2034): AH00930: initialized pool in child 10648 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:15:12.479655 2023] [watchdog:debug] [pid 10697] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:15:12.479710 2023] [slotmem_shm:debug] [pid 10697] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:15:12.479719 2023] [slotmem_shm:debug] [pid 10697] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:15:12.479726 2023] [slotmem_shm:debug] [pid 10697] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:15:12.479731 2023] [slotmem_shm:debug] [pid 10697] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:15:12.479753 2023] [proxy:debug] [pid 10697] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:15:12.479771 2023] [proxy:debug] [pid 10697] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:15:12.479783 2023] [proxy:debug] [pid 10697] proxy_util.c(2034): AH00930: initialized pool in child 10697 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:18:26.762970 2023] [core:info] [pid 10643] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=10643)
+[Wed Dec 06 00:18:26.763002 2023] [mpm_prefork:notice] [pid 10643] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Dec 06 00:19:02.096864 2023] [suexec:notice] [pid 10806] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 06 00:19:02.096920 2023] [http2:debug] [pid 10806] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 06 00:19:02.183082 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Wed Dec 06 00:19:02.183098 2023] [lbmethod_heartbeat:notice] [pid 10806] AH02282: No slotmem from mod_heartmonitor
+[Wed Dec 06 00:19:02.183114 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Wed Dec 06 00:19:02.183116 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.183143 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Wed Dec 06 00:19:02.183154 2023] [proxy:debug] [pid 10806] proxy_util.c(1237): AH02337: copying shm[0] (0x7f172fdcf018) for balancer://cluster
+[Wed Dec 06 00:19:02.183190 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Wed Dec 06 00:19:02.183192 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.183213 2023] [slotmem_shm:debug] [pid 10806] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Wed Dec 06 00:19:02.183226 2023] [proxy:debug] [pid 10806] proxy_util.c(1916): AH02338: copying shm[0] (0x7f172fdce018) for worker: http://172.28.200.101:8010
+[Wed Dec 06 00:19:02.183230 2023] [proxy:debug] [pid 10806] proxy_util.c(1916): AH02338: copying shm[1] (0x7f172fdce440) for worker: http://172.28.200.101:8011
+[Wed Dec 06 00:19:02.183239 2023] [http2:info] [pid 10806] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:19:02.183266 2023] [http2:warn] [pid 10806] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Wed Dec 06 00:19:02.183272 2023] [http2:warn] [pid 10806] AH02951: mod_ssl does not seem to be enabled
+[Wed Dec 06 00:19:02.183295 2023] [proxy_http2:info] [pid 10806] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:19:02.183301 2023] [proxy_hcheck:debug] [pid 10806] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Wed Dec 06 00:19:02.183307 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Wed Dec 06 00:19:02.183311 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Wed Dec 06 00:19:02.183312 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Wed Dec 06 00:19:02.183314 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Wed Dec 06 00:19:02.183315 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Wed Dec 06 00:19:02.183317 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.183321 2023] [watchdog:debug] [pid 10806] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.185319 2023] [mpm_prefork:notice] [pid 10806] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Wed Dec 06 00:19:02.185330 2023] [mpm_prefork:info] [pid 10806] AH00164: Server built: Aug 17 2023 23:57:25
+[Wed Dec 06 00:19:02.185337 2023] [core:notice] [pid 10806] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Dec 06 00:19:02.185340 2023] [core:debug] [pid 10806] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Wed Dec 06 00:19:02.185342 2023] [mpm_prefork:debug] [pid 10806] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Wed Dec 06 00:19:02.186022 2023] [watchdog:debug] [pid 10809] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Wed Dec 06 00:19:02.186037 2023] [proxy_hcheck:debug] [pid 10809] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Wed Dec 06 00:19:02.186202 2023] [watchdog:debug] [pid 10807] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.186224 2023] [slotmem_shm:debug] [pid 10807] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:02.186232 2023] [slotmem_shm:debug] [pid 10807] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.186239 2023] [slotmem_shm:debug] [pid 10807] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:02.186243 2023] [slotmem_shm:debug] [pid 10807] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.186310 2023] [proxy:debug] [pid 10807] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:02.186315 2023] [proxy:debug] [pid 10807] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:02.186321 2023] [proxy:debug] [pid 10807] proxy_util.c(2034): AH00930: initialized pool in child 10807 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:19:02.186532 2023] [watchdog:debug] [pid 10808] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.186551 2023] [slotmem_shm:debug] [pid 10808] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:02.186560 2023] [slotmem_shm:debug] [pid 10808] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.186567 2023] [slotmem_shm:debug] [pid 10808] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:02.186575 2023] [slotmem_shm:debug] [pid 10808] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.186597 2023] [proxy:debug] [pid 10808] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:02.186610 2023] [proxy:debug] [pid 10808] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:02.186622 2023] [proxy:debug] [pid 10808] proxy_util.c(2034): AH00930: initialized pool in child 10808 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:19:02.186639 2023] [proxy_hcheck:debug] [pid 10809] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Wed Dec 06 00:19:02.186668 2023] [watchdog:debug] [pid 10809] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.186682 2023] [slotmem_shm:debug] [pid 10809] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:02.186698 2023] [slotmem_shm:debug] [pid 10809] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.186705 2023] [slotmem_shm:debug] [pid 10809] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:02.186709 2023] [slotmem_shm:debug] [pid 10809] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.186725 2023] [proxy:debug] [pid 10809] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:02.186752 2023] [proxy:debug] [pid 10809] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:02.186762 2023] [proxy:debug] [pid 10809] proxy_util.c(2034): AH00930: initialized pool in child 10809 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:19:02.187058 2023] [watchdog:debug] [pid 10810] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.187076 2023] [slotmem_shm:debug] [pid 10810] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:02.187083 2023] [slotmem_shm:debug] [pid 10810] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.187089 2023] [slotmem_shm:debug] [pid 10810] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:02.187094 2023] [slotmem_shm:debug] [pid 10810] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.187109 2023] [proxy:debug] [pid 10810] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:02.187122 2023] [proxy:debug] [pid 10810] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:02.187133 2023] [proxy:debug] [pid 10810] proxy_util.c(2034): AH00930: initialized pool in child 10810 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:19:02.187811 2023] [watchdog:debug] [pid 10811] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:02.187853 2023] [slotmem_shm:debug] [pid 10811] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:02.187863 2023] [slotmem_shm:debug] [pid 10811] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:02.187870 2023] [slotmem_shm:debug] [pid 10811] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:02.187874 2023] [slotmem_shm:debug] [pid 10811] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:02.187892 2023] [proxy:debug] [pid 10811] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:02.187908 2023] [proxy:debug] [pid 10811] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:02.187920 2023] [proxy:debug] [pid 10811] proxy_util.c(2034): AH00930: initialized pool in child 10811 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:19:09.196289 2023] [watchdog:debug] [pid 10857] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:19:09.196346 2023] [slotmem_shm:debug] [pid 10857] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:19:09.196357 2023] [slotmem_shm:debug] [pid 10857] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:19:09.196364 2023] [slotmem_shm:debug] [pid 10857] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:19:09.196369 2023] [slotmem_shm:debug] [pid 10857] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:19:09.196394 2023] [proxy:debug] [pid 10857] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:19:09.196413 2023] [proxy:debug] [pid 10857] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:19:09.196426 2023] [proxy:debug] [pid 10857] proxy_util.c(2034): AH00930: initialized pool in child 10857 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:14.123305 2023] [core:info] [pid 10806] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=10806)
+[Wed Dec 06 00:20:14.123335 2023] [mpm_prefork:notice] [pid 10806] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Dec 06 00:20:15.234231 2023] [suexec:notice] [pid 10884] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 06 00:20:15.234276 2023] [http2:debug] [pid 10884] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 06 00:20:15.312299 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Wed Dec 06 00:20:15.312323 2023] [lbmethod_heartbeat:notice] [pid 10884] AH02282: No slotmem from mod_heartmonitor
+[Wed Dec 06 00:20:15.312342 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Wed Dec 06 00:20:15.312343 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.312371 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Wed Dec 06 00:20:15.312382 2023] [proxy:debug] [pid 10884] proxy_util.c(1237): AH02337: copying shm[0] (0x7fb7b745f018) for balancer://cluster
+[Wed Dec 06 00:20:15.312410 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Wed Dec 06 00:20:15.312411 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.312431 2023] [slotmem_shm:debug] [pid 10884] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Wed Dec 06 00:20:15.312445 2023] [proxy:debug] [pid 10884] proxy_util.c(1916): AH02338: copying shm[0] (0x7fb7b745e018) for worker: http://172.28.200.101:8010
+[Wed Dec 06 00:20:15.312449 2023] [proxy:debug] [pid 10884] proxy_util.c(1916): AH02338: copying shm[1] (0x7fb7b745e440) for worker: http://172.28.200.101:8011
+[Wed Dec 06 00:20:15.312458 2023] [http2:info] [pid 10884] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:20:15.312495 2023] [http2:warn] [pid 10884] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Wed Dec 06 00:20:15.312499 2023] [http2:warn] [pid 10884] AH02951: mod_ssl does not seem to be enabled
+[Wed Dec 06 00:20:15.312521 2023] [proxy_http2:info] [pid 10884] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:20:15.312527 2023] [proxy_hcheck:debug] [pid 10884] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Wed Dec 06 00:20:15.312534 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Wed Dec 06 00:20:15.312537 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Wed Dec 06 00:20:15.312539 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Wed Dec 06 00:20:15.312540 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Wed Dec 06 00:20:15.312542 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.312546 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.312547 2023] [watchdog:debug] [pid 10884] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Wed Dec 06 00:20:15.314518 2023] [mpm_prefork:notice] [pid 10884] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Wed Dec 06 00:20:15.314529 2023] [mpm_prefork:info] [pid 10884] AH00164: Server built: Aug 17 2023 23:57:25
+[Wed Dec 06 00:20:15.314537 2023] [core:notice] [pid 10884] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Dec 06 00:20:15.314540 2023] [core:debug] [pid 10884] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Wed Dec 06 00:20:15.314541 2023] [mpm_prefork:debug] [pid 10884] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Wed Dec 06 00:20:15.315266 2023] [watchdog:debug] [pid 10887] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Wed Dec 06 00:20:15.315280 2023] [proxy_hcheck:debug] [pid 10887] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Wed Dec 06 00:20:15.315852 2023] [watchdog:debug] [pid 10889] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.315875 2023] [slotmem_shm:debug] [pid 10889] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:15.315884 2023] [slotmem_shm:debug] [pid 10889] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.315885 2023] [watchdog:debug] [pid 10887] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.315891 2023] [slotmem_shm:debug] [pid 10889] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:15.315895 2023] [slotmem_shm:debug] [pid 10889] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.315902 2023] [slotmem_shm:debug] [pid 10887] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:15.315911 2023] [slotmem_shm:debug] [pid 10887] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.315918 2023] [slotmem_shm:debug] [pid 10887] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:15.315925 2023] [slotmem_shm:debug] [pid 10887] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.316007 2023] [proxy:debug] [pid 10889] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:15.316043 2023] [proxy:debug] [pid 10889] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:15.316043 2023] [proxy:debug] [pid 10887] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:15.316046 2023] [watchdog:debug] [pid 10886] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.316055 2023] [proxy:debug] [pid 10889] proxy_util.c(2034): AH00930: initialized pool in child 10889 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:15.316087 2023] [slotmem_shm:debug] [pid 10886] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:15.316093 2023] [proxy:debug] [pid 10887] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:15.316097 2023] [slotmem_shm:debug] [pid 10886] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.316105 2023] [slotmem_shm:debug] [pid 10886] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:15.316107 2023] [proxy:debug] [pid 10887] proxy_util.c(2034): AH00930: initialized pool in child 10887 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:15.316110 2023] [slotmem_shm:debug] [pid 10886] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.316129 2023] [proxy:debug] [pid 10886] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:15.316143 2023] [proxy:debug] [pid 10886] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:15.316155 2023] [proxy:debug] [pid 10886] proxy_util.c(2034): AH00930: initialized pool in child 10886 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:15.316449 2023] [watchdog:debug] [pid 10890] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.316466 2023] [slotmem_shm:debug] [pid 10890] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:15.316473 2023] [slotmem_shm:debug] [pid 10890] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.316480 2023] [slotmem_shm:debug] [pid 10890] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:15.316485 2023] [slotmem_shm:debug] [pid 10890] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.316501 2023] [proxy:debug] [pid 10890] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:15.316514 2023] [proxy:debug] [pid 10890] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:15.316526 2023] [proxy:debug] [pid 10890] proxy_util.c(2034): AH00930: initialized pool in child 10890 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:15.316621 2023] [proxy_hcheck:debug] [pid 10887] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Wed Dec 06 00:20:15.316815 2023] [watchdog:debug] [pid 10888] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:15.316861 2023] [slotmem_shm:debug] [pid 10888] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:15.316870 2023] [slotmem_shm:debug] [pid 10888] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:15.316877 2023] [slotmem_shm:debug] [pid 10888] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:15.316883 2023] [slotmem_shm:debug] [pid 10888] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:15.316901 2023] [proxy:debug] [pid 10888] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:15.316913 2023] [proxy:debug] [pid 10888] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:15.316926 2023] [proxy:debug] [pid 10888] proxy_util.c(2034): AH00930: initialized pool in child 10888 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:20:19.323010 2023] [watchdog:debug] [pid 10932] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:20:19.323056 2023] [slotmem_shm:debug] [pid 10932] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:20:19.323064 2023] [slotmem_shm:debug] [pid 10932] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:20:19.323072 2023] [slotmem_shm:debug] [pid 10932] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:20:19.323076 2023] [slotmem_shm:debug] [pid 10932] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:20:19.323111 2023] [proxy:debug] [pid 10932] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:20:19.323127 2023] [proxy:debug] [pid 10932] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:20:19.323140 2023] [proxy:debug] [pid 10932] proxy_util.c(2034): AH00930: initialized pool in child 10932 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:16.831375 2023] [core:info] [pid 10884] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=10884)
+[Wed Dec 06 00:21:16.831400 2023] [mpm_prefork:notice] [pid 10884] AH00170: caught SIGWINCH, shutting down gracefully
+[Wed Dec 06 00:21:17.948818 2023] [suexec:notice] [pid 10957] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Dec 06 00:21:17.948873 2023] [http2:debug] [pid 10957] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Wed Dec 06 00:21:18.029373 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Wed Dec 06 00:21:18.029397 2023] [lbmethod_heartbeat:notice] [pid 10957] AH02282: No slotmem from mod_heartmonitor
+[Wed Dec 06 00:21:18.029412 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_0.shm in global list
+[Wed Dec 06 00:21:18.029413 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.029439 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_0.shm) succeeded
+[Wed Dec 06 00:21:18.029450 2023] [proxy:debug] [pid 10957] proxy_util.c(1237): AH02337: copying shm[0] (0x7ff10822f018) for balancer://cluster
+[Wed Dec 06 00:21:18.029477 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm in global list
+[Wed Dec 06 00:21:18.029479 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.029499 2023] [slotmem_shm:debug] [pid 10957] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm) succeeded
+[Wed Dec 06 00:21:18.029512 2023] [proxy:debug] [pid 10957] proxy_util.c(1916): AH02338: copying shm[0] (0x7ff10822e018) for worker: http://172.28.200.101:8010
+[Wed Dec 06 00:21:18.029518 2023] [proxy:debug] [pid 10957] proxy_util.c(1916): AH02338: copying shm[1] (0x7ff10822e440) for worker: http://172.28.200.101:8011
+[Wed Dec 06 00:21:18.029527 2023] [http2:info] [pid 10957] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:21:18.029553 2023] [http2:warn] [pid 10957] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Wed Dec 06 00:21:18.029556 2023] [http2:warn] [pid 10957] AH02951: mod_ssl does not seem to be enabled
+[Wed Dec 06 00:21:18.029578 2023] [proxy_http2:info] [pid 10957] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Wed Dec 06 00:21:18.029584 2023] [proxy_hcheck:debug] [pid 10957] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Wed Dec 06 00:21:18.029591 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Wed Dec 06 00:21:18.029594 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Wed Dec 06 00:21:18.029596 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Wed Dec 06 00:21:18.029598 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Wed Dec 06 00:21:18.029599 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Wed Dec 06 00:21:18.029600 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.029604 2023] [watchdog:debug] [pid 10957] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.031556 2023] [mpm_prefork:notice] [pid 10957] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Wed Dec 06 00:21:18.031566 2023] [mpm_prefork:info] [pid 10957] AH00164: Server built: Aug 17 2023 23:57:25
+[Wed Dec 06 00:21:18.031574 2023] [core:notice] [pid 10957] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Dec 06 00:21:18.031576 2023] [core:debug] [pid 10957] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Wed Dec 06 00:21:18.031578 2023] [mpm_prefork:debug] [pid 10957] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Wed Dec 06 00:21:18.032348 2023] [watchdog:debug] [pid 10959] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Wed Dec 06 00:21:18.032364 2023] [proxy_hcheck:debug] [pid 10959] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Wed Dec 06 00:21:18.032432 2023] [watchdog:debug] [pid 10960] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.032448 2023] [slotmem_shm:debug] [pid 10960] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:18.032456 2023] [slotmem_shm:debug] [pid 10960] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.032463 2023] [slotmem_shm:debug] [pid 10960] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:18.032470 2023] [slotmem_shm:debug] [pid 10960] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.032506 2023] [watchdog:debug] [pid 10959] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.032539 2023] [slotmem_shm:debug] [pid 10959] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:18.032565 2023] [proxy:debug] [pid 10960] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:18.032570 2023] [proxy:debug] [pid 10960] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:18.032575 2023] [slotmem_shm:debug] [pid 10959] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.032578 2023] [proxy:debug] [pid 10960] proxy_util.c(2034): AH00930: initialized pool in child 10960 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:18.032583 2023] [slotmem_shm:debug] [pid 10959] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:18.032607 2023] [slotmem_shm:debug] [pid 10959] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.032638 2023] [proxy:debug] [pid 10959] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:18.032690 2023] [proxy:debug] [pid 10959] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:18.032759 2023] [proxy:debug] [pid 10959] proxy_util.c(2034): AH00930: initialized pool in child 10959 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:18.032905 2023] [watchdog:debug] [pid 10961] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.032921 2023] [slotmem_shm:debug] [pid 10961] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:18.032928 2023] [slotmem_shm:debug] [pid 10961] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.032935 2023] [slotmem_shm:debug] [pid 10961] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:18.032942 2023] [slotmem_shm:debug] [pid 10961] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.032963 2023] [proxy:debug] [pid 10961] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:18.032976 2023] [proxy:debug] [pid 10961] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:18.032988 2023] [proxy:debug] [pid 10961] proxy_util.c(2034): AH00930: initialized pool in child 10961 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:18.033368 2023] [proxy_hcheck:debug] [pid 10959] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Wed Dec 06 00:21:18.033387 2023] [watchdog:debug] [pid 10962] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.033401 2023] [slotmem_shm:debug] [pid 10962] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:18.033408 2023] [slotmem_shm:debug] [pid 10962] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.033414 2023] [slotmem_shm:debug] [pid 10962] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:18.033421 2023] [slotmem_shm:debug] [pid 10962] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.033436 2023] [proxy:debug] [pid 10962] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:18.033448 2023] [proxy:debug] [pid 10962] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:18.033460 2023] [proxy:debug] [pid 10962] proxy_util.c(2034): AH00930: initialized pool in child 10962 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:18.033484 2023] [watchdog:debug] [pid 10963] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:18.033525 2023] [slotmem_shm:debug] [pid 10963] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:18.033534 2023] [slotmem_shm:debug] [pid 10963] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:18.033541 2023] [slotmem_shm:debug] [pid 10963] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:18.033548 2023] [slotmem_shm:debug] [pid 10963] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:18.033564 2023] [proxy:debug] [pid 10963] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:18.033577 2023] [proxy:debug] [pid 10963] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:18.033589 2023] [proxy:debug] [pid 10963] proxy_util.c(2034): AH00930: initialized pool in child 10963 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:21:54.098163 2023] [watchdog:debug] [pid 11013] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Wed Dec 06 00:21:54.098209 2023] [slotmem_shm:debug] [pid 11013] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_0.shm
+[Wed Dec 06 00:21:54.098218 2023] [slotmem_shm:debug] [pid 11013] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_0.shm: 544/6
+[Wed Dec 06 00:21:54.098226 2023] [slotmem_shm:debug] [pid 11013] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm
+[Wed Dec 06 00:21:54.098233 2023] [slotmem_shm:debug] [pid 11013] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53f23645_cluster_0.shm: 1064/2
+[Wed Dec 06 00:21:54.098256 2023] [proxy:debug] [pid 11013] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Wed Dec 06 00:21:54.098272 2023] [proxy:debug] [pid 11013] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Wed Dec 06 00:21:54.098284 2023] [proxy:debug] [pid 11013] proxy_util.c(2034): AH00930: initialized pool in child 11013 for (*) min=0 max=4 smax=4
+[Wed Dec 06 00:24:06.013238 2023] [core:info] [pid 10957] AH00096: removed PID file /etc/httpd/run/httpd.pid (pid=10957)
+[Wed Dec 06 00:24:06.013260 2023] [mpm_prefork:notice] [pid 10957] AH00170: caught SIGWINCH, shutting down gracefully
+[Thu Dec 07 21:32:24.451517 2023] [suexec:notice] [pid 854] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Dec 07 21:32:24.451693 2023] [http2:debug] [pid 854] mod_http2.c(112): AH03089: initializing post config dry run
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::20c:29ff:fe6e:de5c. Set the 'ServerName' directive globally to suppress this message
+[Thu Dec 07 21:32:24.461222 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-mod_heartmonitor_0.shm
+[Thu Dec 07 21:32:24.461229 2023] [lbmethod_heartbeat:notice] [pid 854] AH02282: No slotmem from mod_heartmonitor
+[Thu Dec 07 21:32:24.461456 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53fb6863_0.shm in global list
+[Thu Dec 07 21:32:24.461462 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.461499 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53fb6863_0.shm) succeeded
+[Thu Dec 07 21:32:24.461512 2023] [proxy:debug] [pid 854] proxy_util.c(1237): AH02337: copying shm[0] (0x7f7b15e6b018) for balancer://cluster
+[Thu Dec 07 21:32:24.461535 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(380): AH02602: create didn't find /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm in global list
+[Thu Dec 07 21:32:24.461541 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(390): AH02300: create /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.461560 2023] [slotmem_shm:debug] [pid 854] mod_slotmem_shm.c(413): AH02611: create: apr_shm_create(/etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm) succeeded
+[Thu Dec 07 21:32:24.461571 2023] [proxy:debug] [pid 854] proxy_util.c(1916): AH02338: copying shm[0] (0x7f7b15e6a018) for worker: http://172.28.200.101:8010
+[Thu Dec 07 21:32:24.461575 2023] [proxy:debug] [pid 854] proxy_util.c(1916): AH02338: copying shm[1] (0x7f7b15e6a440) for worker: http://172.28.200.101:8011
+[Thu Dec 07 21:32:24.461584 2023] [http2:info] [pid 854] AH03090: mod_http2 (v1.15.7-git, feats=CHPRIO+SHA256+INVHD+DWINS, nghttp2 1.33.0), initializing...
+[Thu Dec 07 21:32:24.461646 2023] [http2:warn] [pid 854] AH10034: The mpm module (prefork.c) is not supported by mod_http2. The mpm determines how things are processed in your server. HTTP/2 has more demands in this regard and the currently selected mpm will just not do. This is an advisory warning. Your server will continue to work, but the HTTP/2 protocol will be inactive.
+[Thu Dec 07 21:32:24.461670 2023] [http2:warn] [pid 854] AH02951: mod_ssl does not seem to be enabled
+[Thu Dec 07 21:32:24.461717 2023] [proxy_http2:info] [pid 854] AH03349: mod_proxy_http2 (v1.15.7-git, nghttp2 1.33.0), initializing...
+[Thu Dec 07 21:32:24.461722 2023] [proxy_hcheck:debug] [pid 854] mod_proxy_hcheck.c(1067): AH03265: watchdog callback registered (_proxy_hcheck_ for fe80::20c:29ff:fe6e:de5c)
+[Thu Dec 07 21:32:24.461741 2023] [watchdog:debug] [pid 854] mod_watchdog.c(454): AH010033: Watchdog: Running with WatchdogInterval 1000ms
+[Thu Dec 07 21:32:24.461745 2023] [watchdog:debug] [pid 854] mod_watchdog.c(462): AH02974: Watchdog: found parent providers.
+[Thu Dec 07 21:32:24.461746 2023] [watchdog:debug] [pid 854] mod_watchdog.c(508): AH02977: Watchdog: found child providers.
+[Thu Dec 07 21:32:24.461748 2023] [watchdog:debug] [pid 854] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_singleton_).
+[Thu Dec 07 21:32:24.461749 2023] [watchdog:debug] [pid 854] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_default_).
+[Thu Dec 07 21:32:24.461751 2023] [watchdog:debug] [pid 854] mod_watchdog.c(516): AH02978: Watchdog: Looking for child (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.461754 2023] [watchdog:debug] [pid 854] mod_watchdog.c(542): AH02979: Watchdog: Created singleton mutex (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.464958 2023] [mpm_prefork:notice] [pid 854] AH00163: Apache/2.4.37 (rocky) configured -- resuming normal operations
+[Thu Dec 07 21:32:24.464965 2023] [mpm_prefork:info] [pid 854] AH00164: Server built: Aug 17 2023 23:57:25
+[Thu Dec 07 21:32:24.464993 2023] [core:notice] [pid 854] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Dec 07 21:32:24.464995 2023] [core:debug] [pid 854] log.c(1571): AH02639: Using SO_REUSEPORT: yes (1)
+[Thu Dec 07 21:32:24.464996 2023] [mpm_prefork:debug] [pid 854] prefork.c(919): AH00165: Accept mutex: none (default: sysvsem)
+[Thu Dec 07 21:32:24.466698 2023] [watchdog:debug] [pid 950] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.466739 2023] [slotmem_shm:debug] [pid 950] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_0.shm
+[Thu Dec 07 21:32:24.466772 2023] [slotmem_shm:debug] [pid 950] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.466775 2023] [slotmem_shm:debug] [pid 950] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm
+[Thu Dec 07 21:32:24.466777 2023] [slotmem_shm:debug] [pid 950] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.466977 2023] [proxy:debug] [pid 950] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Thu Dec 07 21:32:24.466979 2023] [proxy:debug] [pid 950] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Thu Dec 07 21:32:24.467051 2023] [proxy:debug] [pid 950] proxy_util.c(2034): AH00930: initialized pool in child 950 for (*) min=0 max=4 smax=4
+[Thu Dec 07 21:32:24.467800 2023] [watchdog:debug] [pid 950] mod_watchdog.c(158): AH02972: Singleton Watchdog (_proxy_hcheck_) running
+[Thu Dec 07 21:32:24.467882 2023] [proxy_hcheck:debug] [pid 950] mod_proxy_hcheck.c(900): AH03258: _proxy_hcheck_ watchdog started.
+[Thu Dec 07 21:32:24.469396 2023] [watchdog:debug] [pid 951] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.469417 2023] [slotmem_shm:debug] [pid 951] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_0.shm
+[Thu Dec 07 21:32:24.469448 2023] [slotmem_shm:debug] [pid 951] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.469468 2023] [slotmem_shm:debug] [pid 951] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm
+[Thu Dec 07 21:32:24.469471 2023] [slotmem_shm:debug] [pid 951] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.469500 2023] [proxy:debug] [pid 951] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Thu Dec 07 21:32:24.469517 2023] [proxy:debug] [pid 951] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Thu Dec 07 21:32:24.469558 2023] [proxy:debug] [pid 951] proxy_util.c(2034): AH00930: initialized pool in child 951 for (*) min=0 max=4 smax=4
+[Thu Dec 07 21:32:24.474494 2023] [watchdog:debug] [pid 952] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.474510 2023] [slotmem_shm:debug] [pid 952] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_0.shm
+[Thu Dec 07 21:32:24.474516 2023] [slotmem_shm:debug] [pid 952] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.474519 2023] [slotmem_shm:debug] [pid 952] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm
+[Thu Dec 07 21:32:24.474521 2023] [slotmem_shm:debug] [pid 952] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.474532 2023] [proxy:debug] [pid 952] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Thu Dec 07 21:32:24.474540 2023] [proxy:debug] [pid 952] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Thu Dec 07 21:32:24.474547 2023] [proxy:debug] [pid 952] proxy_util.c(2034): AH00930: initialized pool in child 952 for (*) min=0 max=4 smax=4
+[Thu Dec 07 21:32:24.474811 2023] [watchdog:debug] [pid 949] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.474845 2023] [slotmem_shm:debug] [pid 949] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_0.shm
+[Thu Dec 07 21:32:24.474881 2023] [slotmem_shm:debug] [pid 949] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.474885 2023] [slotmem_shm:debug] [pid 949] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm
+[Thu Dec 07 21:32:24.474886 2023] [slotmem_shm:debug] [pid 949] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.474915 2023] [proxy:debug] [pid 949] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Thu Dec 07 21:32:24.474934 2023] [proxy:debug] [pid 949] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Thu Dec 07 21:32:24.475008 2023] [proxy:debug] [pid 949] proxy_util.c(2034): AH00930: initialized pool in child 949 for (*) min=0 max=4 smax=4
+[Thu Dec 07 21:32:24.475185 2023] [proxy_hcheck:debug] [pid 950] mod_proxy_hcheck.c(914): AH03313: apr_thread_pool_create() with 16 threads succeeded
+[Thu Dec 07 21:32:24.481413 2023] [watchdog:debug] [pid 953] mod_watchdog.c(590): AH02981: Watchdog: Created child worker thread (_proxy_hcheck_).
+[Thu Dec 07 21:32:24.481445 2023] [slotmem_shm:debug] [pid 953] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_0.shm
+[Thu Dec 07 21:32:24.481495 2023] [slotmem_shm:debug] [pid 953] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_0.shm: 544/6
+[Thu Dec 07 21:32:24.481500 2023] [slotmem_shm:debug] [pid 953] mod_slotmem_shm.c(497): AH02301: attach looking for /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm
+[Thu Dec 07 21:32:24.481501 2023] [slotmem_shm:debug] [pid 953] mod_slotmem_shm.c(510): AH02302: attach found /etc/httpd/run/slotmem-shm-p53fb6863_cluster_0.shm: 1064/2
+[Thu Dec 07 21:32:24.481551 2023] [proxy:debug] [pid 953] proxy_util.c(1939): AH00925: initializing worker proxy:reverse shared
+[Thu Dec 07 21:32:24.481580 2023] [proxy:debug] [pid 953] proxy_util.c(1999): AH00927: initializing worker proxy:reverse local
+[Thu Dec 07 21:32:24.481615 2023] [proxy:debug] [pid 953] proxy_util.c(2034): AH00930: initialized pool in child 953 for (*) min=0 max=4 smax=4

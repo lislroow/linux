@@ -1,0 +1,46 @@
+20231203 20:48:44 Scouter Server Version 2.20.0 2023-05-29 05:14 GMT
+20231203 20:48:44 [PID]5523
+  ____                  _            
+ / ___|  ___ ___  _   _| |_ ___ _ __ 
+ \___ \ / __/   \| | | | __/ _ \ '__|
+  ___) | (_| (+) | |_| | ||  __/ |   
+ |____/ \___\___/ \__,_|\__\___|_|                                      
+ Open Source S/W Performance Monitoring  
+ Scouter version 2.20.0
+ 
+20231203 20:48:44 Load Account Group File
+20231203 20:48:44 Load Account File
+20231203 20:48:44 Load Account Group File
+20231203 20:48:44 udp listen 0.0.0.0:6100
+20231203 20:48:44 	udp_host=0.0.0.0
+20231203 20:48:44 	udp_port=6100
+20231203 20:48:44 	udp_buffer=65535
+20231203 20:48:44 	udp_so_rcvbuf=4194304
+20231203 20:48:44 Load Account File
+20231203 20:48:44 	tcp_port=6100
+20231203 20:48:44 	cp_agent_so_timeout=60000
+20231203 20:48:44 	cp_client_so_timeout=8000
+20231203 20:48:49 [A1601] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 [S215] Alert rule detected : ErrorRate.alert
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.IAlert loaded #x7tosp7
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.ICounter loaded #x1r4riqk
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.IObject loaded #xh4qs5s
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.IXLog loaded #x1ji9mk
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.IXLog loaded #x1ns4jd3
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.IXLogProfile loaded #xrrmb8t
+20231203 20:48:49 [S1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 20:48:49 PLUG-IN : scouter.server.plugin.ISummary loaded #x1ccqv8j
+20231203 21:01:38 [S104] New OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-03 21:01:38.544 {detected=tomcat,ADC=false}
+20231203 21:05:15 [S145] GeoIP db file is not readable : /engn/scouter/server/conf/GeoLiteCity.dat
+20231203 22:00:55 [S104] New OBJECT  objType=tomcat objHash=z1eklhkq objName=/tomcat/smpl_2 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-03 22:00:55.179 {detected=tomcat,ADC=false}
+20231203 22:04:27 [S104] New OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-03 22:04:27.213 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}
+20231203 22:49:14 [S178] Server Shutdown
+20231203 22:49:14 [S179] Shutdown scouter.server.db.DBCtr$$anon$1@79de8660 ...
+20231203 22:49:14 [S179] Shutdown scouter.server.core.CoreRun$$anon$1@2ddccbeb ...
+20231203 22:49:14 [S179] Shutdown scouter.server.tagcnt.core.CountEnv$$anon$1@30fa44e5 ...

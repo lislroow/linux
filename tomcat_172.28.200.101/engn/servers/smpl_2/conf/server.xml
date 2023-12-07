@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Server port="8016" shutdown="SHUTDOWN"><!-- default-port: 8005 -->
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+
+  <GlobalNamingResources>
+    <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+    <Resource name="oracle/smplDS" type="javax.sql.DataSource" auth="Container" url="jdbc:oracle:thin:@172.28.200.31:1521:ORCLCDB"
+              driverClassName="oracle.jdbc.driver.OracleDriver" username="SYSTEM" password="1" maxTotal="10" initialSize="1"
+              maxWaitMillis="3000" testWhileIdle="true" validationQuery="SELECT 1 FROM DUAL" />
+  </GlobalNamingResources>
+
+  <Service name="Catalina">
+
+    <Executor name="tomcatThreadPool" namePrefix="catalina-exec-" maxThreads="150" minSpareThreads="4"/>
+    <!-- default-port: 8080 -->
+    <Connector port="8011" protocol="HTTP/1.1" server=""
+               connectionTimeout="20000" redirectPort="8443" maxParameterCount="1000" />
+    <Engine name="Catalina" defaultHost="localhost" jvmRoute="worker1">
+      <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" />
+      </Realm>
+      
+      <!-- cluster -->
+      <!-- default-port: 4000 -->
+      <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster" channelSendOptions="8" channelStartOptions="3">
+        <Manager className="org.apache.catalina.ha.session.DeltaManager" expireSessionsOnShutdown="false" notifyListenersOnReplication="true" />
+        <Channel className="org.apache.catalina.tribes.group.GroupChannel">
+          <Sender className="org.apache.catalina.tribes.transport.ReplicationTransmitter">
+            <Transport className="org.apache.catalina.tribes.transport.nio.PooledParallelSender" />
+          </Sender>
+          <Receiver className="org.apache.catalina.tribes.transport.nio.NioReceiver"
+                    address="127.0.0.1" port="4011" autoBind="0" maxThreads="6" selectorTimeout="5000" />
+          <Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpPingInterceptor" staticOnly="true" />
+          <Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector" />
+          <Interceptor className="org.apache.catalina.tribes.group.interceptors.StaticMembershipInterceptor">
+            <Member className="org.apache.catalina.tribes.membership.StaticMember" 
+                    host="127.0.0.1" port="4010" uniqueId="{0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1}" />
+          </Interceptor>
+          <Interceptor className="org.apache.catalina.tribes.group.interceptors.MessageDispatchInterceptor" />
+        </Channel>
+        <Valve className="org.apache.catalina.ha.tcp.ReplicationValve" filter=".*\.gif;.*\.js;.*\.jpg;.*\.png;.*\.htm;.*\.html;.*\.css;.*\.txt;" />
+        <ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener" />
+      </Cluster>
+      <!-- //cluster -->
+
+      <Host name="localhost"  appBase="webapps" unpackWARs="false" autoDeploy="false">
+        <!--
+        <Valve className="org.apache.catalina.authenticator.SingleSignOn" />
+        -->
+        <Valve className="org.apache.catalina.valves.AccessLogValve" 
+               rotatable="false" directory="${log.base}" prefix="${instance.id}-tomcat_access" suffix=".log"
+               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b %{User-Agent}i" />
+        <Valve className="org.apache.catalina.valves.HealthCheckValve" path="/health" checkContainersAvailable="true" />
+      </Host>
+    </Engine>
+  </Service>
+</Server>

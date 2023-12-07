@@ -1,0 +1,307 @@
+05-Dec-2023 21:03:17.621 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/8.5.96
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Nov 10 2023 14:56:59 UTC
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  8.5.96.0
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     4.18.0-513.9.1.el8_9.x86_64
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+05-Dec-2023 21:03:17.629 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.392.b08-4.el8_8.x86_64/jre
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          1.8.0_392-b08
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Red Hat, Inc.
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /engn/servers/smpl
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /engn/tomcat-8.5.96
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/engn/servers/smpl/conf/logging.properties
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Xms512m
+05-Dec-2023 21:03:17.630 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Xmx512m
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-HeapDumpOnOutOfMemoryError
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:HeapDumpPath=/logs/smpl
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:ParallelGCThreads=2
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-UseConcMarkSweepGC
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGC
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGCDetails
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGCTimeStamps
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-TraceClassUnloading
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-TraceClassLoading
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dinstance.id=smpl
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dlog.base=/logs/smpl
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dfile.encoding=utf-8
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.library.path=/engn/servers/smpl/lib
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Doracle.jdbc.autoCommitSpecCompliant=false
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -javaagent:/engn/scouter/agent.java/scouter.agent.jar
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dscuter.config=/engn/scouter/agent.java/conf/scouter.conf
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dobj_name=smpl_1
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.net.preferIPv4Stack=true
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Dec-2023 21:03:17.631 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2023 21:03:17.632 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+05-Dec-2023 21:03:17.632 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/engn/servers/smpl
+05-Dec-2023 21:03:17.632 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/engn/tomcat-8.5.96
+05-Dec-2023 21:03:17.632 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/engn/tomcat-8.5.96/temp
+05-Dec-2023 21:03:17.632 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/engn/servers/smpl/lib]
+05-Dec-2023 21:03:17.686 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8010"]을(를) 초기화합니다.
+05-Dec-2023 21:03:17.705 정보 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 763 ms
+05-Dec-2023 21:03:24.261 경고 [main] org.apache.naming.NamingContext.lookup 참조를 결정하는 중 예기치 않은 예외 발생
+	java.sql.SQLException: Cannot create PoolableConnectionFactory (IO 오류: The Network Adapter could not establish the connection)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:669)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:547)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getLogWriter(BasicDataSource.java:1065)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.createDataSource(BasicDataSourceFactory.java:565)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance(BasicDataSourceFactory.java:239)
+		at org.apache.naming.factory.FactoryBase.getObjectInstance(FactoryBase.java:96)
+		at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:332)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:846)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:157)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:834)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:171)
+		at org.apache.catalina.core.NamingContextListener.addResource(NamingContextListener.java:986)
+		at org.apache.catalina.core.NamingContextListener.createNamingContext(NamingContextListener.java:536)
+		at org.apache.catalina.core.NamingContextListener.lifecycleEvent(NamingContextListener.java:243)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:768)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:695)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: java.sql.SQLRecoverableException: IO 오류: The Network Adapter could not establish the connection
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:903)
+		at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:820)
+		at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:80)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:820)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:624)
+		at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+		at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:365)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:116)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:665)
+		... 23 more
+	Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:720)
+		at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:586)
+		at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:729)
+		at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+		at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1702)
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:627)
+		... 31 more
+	Caused by: java.io.IOException: 호스트로 갈 루트가 없음, socket connect lapse 3071 ms. /172.28.200.31 1521 0 1 true
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:252)
+		at oracle.net.nt.ConnOption.connect(ConnOption.java:195)
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:653)
+		... 36 more
+	Caused by: java.net.NoRouteToHostException: 호스트로 갈 루트가 없음
+		at sun.nio.ch.Net.connect0(Native Method)
+		at sun.nio.ch.Net.connect(Net.java:482)
+		at sun.nio.ch.Net.connect(Net.java:474)
+		at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:647)
+		at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+		at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:109)
+		at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:95)
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:211)
+		... 38 more
+05-Dec-2023 21:03:24.264 경고 [main] org.apache.catalina.core.NamingContextListener.addResource JMX 내에서 등록 실패했습니다: [javax.naming.NamingException: 참조를 결정하는 중 예기치 않은 예외 발생 [Root exception is java.sql.SQLException: Cannot create PoolableConnectionFactory (IO 오류: The Network Adapter could not establish the connection)]]
+05-Dec-2023 21:03:30.404 경고 [main] org.apache.naming.NamingContext.lookup 참조를 결정하는 중 예기치 않은 예외 발생
+	java.sql.SQLException: Cannot create PoolableConnectionFactory (IO 오류: The Network Adapter could not establish the connection)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:669)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:547)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getLogWriter(BasicDataSource.java:1065)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.createDataSource(BasicDataSourceFactory.java:565)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance(BasicDataSourceFactory.java:239)
+		at org.apache.naming.factory.FactoryBase.getObjectInstance(FactoryBase.java:96)
+		at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:332)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:846)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:157)
+		at org.apache.naming.NamingContextBindingsEnumeration.nextElementInternal(NamingContextBindingsEnumeration.java:115)
+		at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:69)
+		at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:32)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:137)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:144)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:113)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.lifecycleEvent(GlobalResourcesLifecycleListener.java:88)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:769)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:695)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: java.sql.SQLRecoverableException: IO 오류: The Network Adapter could not establish the connection
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:903)
+		at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:820)
+		at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:80)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:820)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:624)
+		at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+		at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:365)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:116)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:665)
+		... 27 more
+	Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:720)
+		at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:586)
+		at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:729)
+		at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+		at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1702)
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:627)
+		... 35 more
+	Caused by: java.io.IOException: 호스트로 갈 루트가 없음, socket connect lapse 3071 ms. /172.28.200.31 1521 0 1 true
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:252)
+		at oracle.net.nt.ConnOption.connect(ConnOption.java:195)
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:653)
+		... 40 more
+	Caused by: java.net.NoRouteToHostException: 호스트로 갈 루트가 없음
+		at sun.nio.ch.Net.connect0(Native Method)
+		at sun.nio.ch.Net.connect(Net.java:482)
+		at sun.nio.ch.Net.connect(Net.java:474)
+		at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:647)
+		at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+		at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:109)
+		at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:95)
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:211)
+		... 42 more
+05-Dec-2023 21:03:30.406 심각 [main] org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans 글로벌 JNDI 리소스들을 처리하는 중 예외 발생
+	javax.naming.NamingException: 참조를 결정하는 중 예기치 않은 예외 발생 [Root exception is java.sql.SQLException: Cannot create PoolableConnectionFactory (IO 오류: The Network Adapter could not establish the connection)]
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:865)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:157)
+		at org.apache.naming.NamingContextBindingsEnumeration.nextElementInternal(NamingContextBindingsEnumeration.java:115)
+		at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:69)
+		at org.apache.naming.NamingContextBindingsEnumeration.next(NamingContextBindingsEnumeration.java:32)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:137)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:144)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.createMBeans(GlobalResourcesLifecycleListener.java:113)
+		at org.apache.catalina.mbeans.GlobalResourcesLifecycleListener.lifecycleEvent(GlobalResourcesLifecycleListener.java:88)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:769)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:695)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: java.sql.SQLException: Cannot create PoolableConnectionFactory (IO 오류: The Network Adapter could not establish the connection)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:669)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createDataSource(BasicDataSource.java:547)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.getLogWriter(BasicDataSource.java:1065)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.createDataSource(BasicDataSourceFactory.java:565)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance(BasicDataSourceFactory.java:239)
+		at org.apache.naming.factory.FactoryBase.getObjectInstance(FactoryBase.java:96)
+		at javax.naming.spi.NamingManager.getObjectInstance(NamingManager.java:332)
+		at org.apache.naming.NamingContext.lookup(NamingContext.java:846)
+		... 20 more
+	Caused by: java.sql.SQLRecoverableException: IO 오류: The Network Adapter could not establish the connection
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:903)
+		at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:820)
+		at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:80)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:820)
+		at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:624)
+		at org.apache.tomcat.dbcp.dbcp2.DriverConnectionFactory.createConnection(DriverConnectionFactory.java:52)
+		at org.apache.tomcat.dbcp.dbcp2.PoolableConnectionFactory.makeObject(PoolableConnectionFactory.java:365)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.validateConnectionFactory(BasicDataSource.java:116)
+		at org.apache.tomcat.dbcp.dbcp2.BasicDataSource.createPoolableConnectionFactory(BasicDataSource.java:665)
+		... 27 more
+	Caused by: oracle.net.ns.NetException: The Network Adapter could not establish the connection
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:720)
+		at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:586)
+		at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:729)
+		at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+		at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1702)
+		at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:627)
+		... 35 more
+	Caused by: java.io.IOException: 호스트로 갈 루트가 없음, socket connect lapse 3071 ms. /172.28.200.31 1521 0 1 true
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:252)
+		at oracle.net.nt.ConnOption.connect(ConnOption.java:195)
+		at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:653)
+		... 40 more
+	Caused by: java.net.NoRouteToHostException: 호스트로 갈 루트가 없음
+		at sun.nio.ch.Net.connect0(Native Method)
+		at sun.nio.ch.Net.connect(Net.java:482)
+		at sun.nio.ch.Net.connect(Net.java:474)
+		at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:647)
+		at java.nio.channels.SocketChannel.open(SocketChannel.java:189)
+		at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:109)
+		at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:95)
+		at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:211)
+		... 42 more
+05-Dec-2023 21:03:30.407 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+05-Dec-2023 21:03:30.407 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/8.5.96]
+05-Dec-2023 21:03:30.411 정보 [main] org.apache.catalina.ha.tcp.SimpleTcpCluster.startInternal 클러스터가 막 시작하려 합니다.
+05-Dec-2023 21:03:30.419 정보 [main] org.apache.catalina.tribes.transport.ReceiverBase.bind Receiver 서버 소켓이 [/127.0.0.1:4010]에 바인딩 되었습니다.
+05-Dec-2023 21:03:30.445 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/engn/servers/smpl/conf/Catalina/localhost/ROOT.xml]을(를) 배치합니다.
+05-Dec-2023 21:03:30.851 정보 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+05-Dec-2023 21:03:30.873 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.startInternal 매니저 [localhost#]을(를), [Catalina](이)라는 이름의 클러스터 엘리먼트 [Engine](으)로 등록합니다.
+05-Dec-2023 21:03:30.873 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.startInternal [localhost#]에서 클러스터 매니저를 시작합니다.
+05-Dec-2023 21:03:30.873 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.getAllClusterSessions 매니저 [localhost#]: 상태 이전 작업을 건너뜁니다. 클러스터 그룹 내에 활성화된 멤버가 없습니다.
+05-Dec-2023 21:03:30.885 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/engn/servers/smpl/conf/Catalina/localhost/ROOT.xml]의 배치가 [440] 밀리초 내에 완료되었습니다.
+05-Dec-2023 21:03:30.897 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8010"]을(를) 시작합니다.
+05-Dec-2023 21:03:30.911 정보 [main] org.apache.catalina.startup.Catalina.start Server startup in 13205 ms
+05-Dec-2023 22:22:01.468 정보 [Thread-13] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8010"]을(를) 일시 정지 중
+05-Dec-2023 22:22:01.469 정보 [Thread-13] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+05-Dec-2023 22:22:01.473 정보 [localhost-startStop-2] org.apache.catalina.ha.session.DeltaManager.stopInternal 매니저 [localhost#]이(가) 셧다운 시에 세션들을 만료시킵니다.
+05-Dec-2023 22:22:01.587 정보 [Thread-13] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8010"]을(를) 중지시킵니다.
+05-Dec-2023 22:22:01.599 정보 [Thread-13] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8010"]을(를) 소멸시킵니다.
+05-Dec-2023 22:22:45.946 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 서버 버전 이름:    Apache Tomcat/8.5.96
+05-Dec-2023 22:22:45.950 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 빌드 시각:  Nov 10 2023 14:56:59 UTC
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log Server 버전 번호:  8.5.96.0
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 이름:     Linux
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 운영체제 버전:     4.18.0-513.9.1.el8_9.x86_64
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 아키텍처:          amd64
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 자바 홈:           /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.392.b08-4.el8_8.x86_64/jre
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 버전:          1.8.0_392-b08
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM 벤더:          Red Hat, Inc.
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:     /engn/servers/smpl
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:     /engn/tomcat/tomcat-8.5.96
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.config.file=/engn/servers/smpl/conf/logging.properties
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Xms512m
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Xmx512m
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-HeapDumpOnOutOfMemoryError
+05-Dec-2023 22:22:45.951 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:HeapDumpPath=/logs/smpl
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:ParallelGCThreads=2
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-UseConcMarkSweepGC
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGC
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGCDetails
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-PrintGCTimeStamps
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-TraceClassUnloading
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -XX:-TraceClassLoading
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dinstance.id=smpl
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dlog.base=/logs/smpl
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dfile.encoding=utf-8
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.library.path=/engn/servers/smpl/lib
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Doracle.jdbc.autoCommitSpecCompliant=false
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -javaagent:/engn/scouter/agent.java/scouter.agent.jar
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dscuter.config=/engn/scouter/agent.java/conf/scouter.conf
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dobj_name=smpl_1
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.net.preferIPv4Stack=true
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+05-Dec-2023 22:22:45.952 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+05-Dec-2023 22:22:45.953 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.base=/engn/servers/smpl
+05-Dec-2023 22:22:45.953 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Dcatalina.home=/engn/tomcat/tomcat-8.5.96
+05-Dec-2023 22:22:45.953 정보 [main] org.apache.catalina.startup.VersionLoggerListener.log 명령 행 아규먼트:  -Djava.io.tmpdir=/engn/tomcat/tomcat-8.5.96/temp
+05-Dec-2023 22:22:45.953 정보 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/engn/servers/smpl/lib]
+05-Dec-2023 22:22:45.984 정보 [main] org.apache.coyote.AbstractProtocol.init 프로토콜 핸들러 ["http-nio-8010"]을(를) 초기화합니다.
+05-Dec-2023 22:22:46.000 정보 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 415 ms
+05-Dec-2023 22:22:46.637 정보 [main] org.apache.catalina.core.StandardService.startInternal 서비스 [Catalina]을(를) 시작합니다.
+05-Dec-2023 22:22:46.637 정보 [main] org.apache.catalina.core.StandardEngine.startInternal 서버 엔진을 시작합니다: [Apache Tomcat/8.5.96]
+05-Dec-2023 22:22:46.640 정보 [main] org.apache.catalina.ha.tcp.SimpleTcpCluster.startInternal 클러스터가 막 시작하려 합니다.
+05-Dec-2023 22:22:46.646 정보 [main] org.apache.catalina.tribes.transport.ReceiverBase.bind Receiver 서버 소켓이 [/127.0.0.1:4010]에 바인딩 되었습니다.
+05-Dec-2023 22:22:46.662 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/engn/servers/smpl/conf/Catalina/localhost/ROOT.xml]을(를) 배치합니다.
+05-Dec-2023 22:22:47.023 정보 [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+05-Dec-2023 22:22:47.042 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.startInternal 매니저 [localhost#]을(를), [Catalina](이)라는 이름의 클러스터 엘리먼트 [Engine](으)로 등록합니다.
+05-Dec-2023 22:22:47.042 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.startInternal [localhost#]에서 클러스터 매니저를 시작합니다.
+05-Dec-2023 22:22:47.042 정보 [localhost-startStop-1] org.apache.catalina.ha.session.DeltaManager.getAllClusterSessions 매니저 [localhost#]: 상태 이전 작업을 건너뜁니다. 클러스터 그룹 내에 활성화된 멤버가 없습니다.
+05-Dec-2023 22:22:47.052 정보 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor 배치 descriptor [/engn/servers/smpl/conf/Catalina/localhost/ROOT.xml]의 배치가 [390] 밀리초 내에 완료되었습니다.
+05-Dec-2023 22:22:47.061 정보 [main] org.apache.coyote.AbstractProtocol.start 프로토콜 핸들러 ["http-nio-8010"]을(를) 시작합니다.
+05-Dec-2023 22:22:47.069 정보 [main] org.apache.catalina.startup.Catalina.start Server startup in 1069 ms

@@ -1,0 +1,2 @@
+- 172.28.200.1 - - [05/Dec/2023:21:01:23 +0900] "GET / HTTP/1.1" 403 199 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" 455 400
+- 172.28.200.1 - - [05/Dec/2023:21:01:23 +0900] "GET /favicon.ico HTTP/1.1" 404 196 "http://develop.net/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" 396 396

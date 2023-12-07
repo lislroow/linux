@@ -1,0 +1,13 @@
+/logs/smpl/apache_error.log
+/logs/smpl/apache_access.log
+/logs/smpl/smpl-apache_error.log
+/logs/smpl/smpl-apache_access.log
+{
+  missingok
+  daily
+  dateext
+  rotate 7
+  compress
+  copytruncate
+}
+

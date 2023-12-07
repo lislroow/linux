@@ -1,0 +1,14 @@
+[Unit]
+Description=Scouter Server
+After=network.target syslog.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+ExecStart=sh /engn/scouter/server/startup.sh
+ExecStop=sh /engn/scouter/server/stop.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

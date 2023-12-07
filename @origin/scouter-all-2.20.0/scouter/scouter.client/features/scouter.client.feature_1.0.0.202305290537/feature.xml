@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="scouter.client.feature"
+      label="Scouter Feature"
+      version="1.0.0.202305290537"
+      provider-name="Scouter Project"
+      os="linux,macosx,win32"
+      ws="cocoa,gtk,win32"
+      arch="aarch64,x86,x86_64">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="javax.servlet"
+         download-size="196"
+         install-size="703"
+         version="3.0.0.v201112011016"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.compare.core"
+         download-size="66"
+         install-size="127"
+         version="3.6.1000.v20201020-1107"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.draw2d"
+         download-size="602"
+         install-size="1165"
+         version="3.10.100.201606061308"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.jface.text"
+         download-size="1058"
+         install-size="2175"
+         version="3.20.0.v20220218-1549"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.text"
+         download-size="288"
+         install-size="577"
+         version="3.12.0.v20210512-1644"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.workbench.texteditor"
+         download-size="674"
+         install-size="1394"
+         version="3.16.400.v20220218-1619"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.zest.core"
+         download-size="147"
+         install-size="293"
+         version="1.5.300.201606061308"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.zest.layouts"
+         download-size="130"
+         install-size="251"
+         version="1.1.300.201606061308"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.console"
+         download-size="209"
+         install-size="378"
+         version="3.11.100.v20210721-1355"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.core.variables"
+         download-size="35"
+         install-size="64"
+         version="3.5.100.v20210721-1355"
+         unpack="false"/>
+
+   <plugin
+         id="scouter.client"
+         download-size="9472"
+         install-size="13228"
+         version="1.0.0.202305290537"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.ui.themes"
+         download-size="37"
+         install-size="99"
+         version="1.2.1700.v20220210-1145"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpclient"
+         download-size="1021"
+         install-size="2201"
+         version="4.5.13.v20210128-2225"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.httpcomponents.httpcore"
+         download-size="354"
+         install-size="695"
+         version="4.4.15.v20220209-2345"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.codec"
+         download-size="367"
+         install-size="700"
+         version="1.14.0.v20200818-1422"
+         unpack="false"/>
+
+   <plugin
+         id="org.apache.commons.logging"
+         download-size="71"
+         install-size="145"
+         version="1.2.0.v20180409-1502"
+         unpack="false"/>
+
+</feature>

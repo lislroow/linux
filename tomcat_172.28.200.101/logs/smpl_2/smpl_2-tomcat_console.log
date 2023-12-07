@@ -1,0 +1,166 @@
+  ____                  _            
+ / ___|  ___ ___  _   _| |_ ___ _ __ 
+ \___ \ / __/   \| | | | __/ _ \ '__|
+  ___) | (_| (+) | |_| | ||  __/ |   
+ |____/ \___\___/ \__,_|\__\___|_|                                      
+ Open Source S/W Performance Monitoring  
+ Scouter version 2.20.0
+ 
+20231203 22:14:57 [SCOUTER] loaded by system classloader 
+20231203 22:14:57 [SCOUTER] Version 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus
+20231203 22:14:57 [SCOUTER] jar:file:/engn/scouter/agent.java/scouter.agent.jar
+20231203 22:14:57 [SCOUTER] objType:tomcat
+20231203 22:14:57 [SCOUTER] objName:/tomcat/smpl_2
+20231203 22:14:57 [A113] Counter Collector Started (#19)
+20231203 22:14:57 [A113] InteractionCounter Collector Started (#19)
+20231203 22:14:58 [SCOUTER] Configure -Dscouter.config=/engn/scouter/agent.java/conf/scouter.conf
+20231203 22:14:58 [A100] agent boot seed=xsuknt2m58
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractAppService service.plug loaded #x1o28daa
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractHttpService httpservice.plug loaded #xt11v6s
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractCapture capture.plug loaded #xloqnq2
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractCapture springControllerCapture.plug loaded #xvnk4n8
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractJdbcPool jdbcpool.plug loaded #xisr2fg
+20231203 22:14:58 [NONE] LoadJarBytes scouter.jdbc 33670 bytes
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractHttpCall httpcall.plug loaded #x1b4artc
+20231203 22:14:58 [A1600] error on toClass with javassist. try to fallback for java8 below. err:java.lang.Class.getModule()Ljava/lang/Module;
+20231203 22:14:58 [SCOUTER] PLUG-IN : scouter.agent.plugin.AbstractCounter counter.plug loaded #x6e6l4b
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 서버 버전 이름:    Apache Tomcat/8.5.96
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server 빌드 시각:  Nov 10 2023 14:56:59 UTC
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: Server 버전 번호:  8.5.96.0
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 운영체제 이름:     Linux
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 운영체제 버전:     4.18.0-513.9.1.el8_9.x86_64
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 아키텍처:          amd64
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 자바 홈:           /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.392.b08-4.el8_8.x86_64/jre
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM 버전:          1.8.0_392-b08
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: JVM 벤더:          Red Hat, Inc.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_BASE:     /engn/servers/smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: CATALINA_HOME:     /engn/tomcat-8.5.96
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dnop
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Xms512m
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Xmx512m
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-HeapDumpOnOutOfMemoryError
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:HeapDumpPath=/logs/smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:ParallelGCThreads=2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-UseConcMarkSweepGC
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-PrintGC
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-PrintGCDetails
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-PrintGCTimeStamps
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-TraceClassUnloading
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -XX:-TraceClassLoading
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dinstance.id=smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dlog.base=/logs/smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dfile.encoding=utf-8
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djava.library.path=/engn/servers/smpl_2/lib
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Doracle.jdbc.autoCommitSpecCompliant=false
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -javaagent:/engn/scouter/agent.java/scouter.agent.jar
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dscuter.config=/engn/scouter/agent.java/conf/scouter.conf
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dobj_name=smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djava.net.preferIPv4Stack=true
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djdk.tls.ephemeralDHKeySize=2048
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dignore.endorsed.dirs=
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dcatalina.base=/engn/servers/smpl_2
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Dcatalina.home=/engn/tomcat-8.5.96
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.VersionLoggerListener log
+정보: 명령 행 아규먼트:  -Djava.io.tmpdir=/engn/tomcat-8.5.96/temp
+12월 03, 2023 10:14:58 오후 org.apache.catalina.core.AprLifecycleListener lifecycleEvent
+정보: 프로덕션 환경들에서 최적의 성능을 제공하는, APR 기반 Apache Tomcat Native 라이브러리가, 다음 java.library.path에서 발견되지 않습니다: [/engn/servers/smpl_2/lib]
+12월 03, 2023 10:14:58 오후 org.apache.coyote.AbstractProtocol init
+정보: 프로토콜 핸들러 ["http-nio-8011"]을(를) 초기화합니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.Catalina load
+정보: Initialization processed in 286 ms
+20231203 22:14:58 [A119] Agent UDP local.port=0
+20231203 22:14:58 [A108] jdbc stmt found: oracle/jdbc/driver/OracleStatement
+20231203 22:14:58 [A106] jdbc pstmt found: oracle/jdbc/driver/OraclePreparedStatement
+20231203 22:14:58 [A107] jdbc rs found: oracle/jdbc/driver/InsensitiveScrollableResultSet
+20231203 22:14:58 [A107] jdbc rs found: oracle/jdbc/driver/SensitiveScrollableResultSet
+12월 03, 2023 10:14:58 오후 org.apache.catalina.core.StandardService startInternal
+정보: 서비스 [Catalina]을(를) 시작합니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.core.StandardEngine startInternal
+정보: 서버 엔진을 시작합니다: [Apache Tomcat/8.5.96]
+12월 03, 2023 10:14:58 오후 org.apache.catalina.ha.tcp.SimpleTcpCluster startInternal
+정보: 클러스터가 막 시작하려 합니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.tribes.transport.ReceiverBase bind
+정보: Receiver 서버 소켓이 [/127.0.0.1:4011]에 바인딩 되었습니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.ha.tcp.SimpleTcpCluster memberAdded
+정보: 복제 멤버가 추가됨: [org.apache.catalina.tribes.membership.StaticMember[tcp://127.0.0.1:4010,127.0.0.1,4010, alive=0, securePort=-1, UDP Port=-1, id={0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 }, payload={}, command={}, domain={}]]
+12월 03, 2023 10:14:58 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: 배치 descriptor [/engn/servers/smpl_2/conf/Catalina/localhost/ROOT.xml]을(를) 배치합니다.
+20231203 22:14:58 [A103] HTTP javax/servlet/http/HttpServlet
+12월 03, 2023 10:14:58 오후 org.apache.jasper.servlet.TldScanner scanJars
+정보: 적어도 하나의 JAR가 TLD들을 찾기 위해 스캔되었으나 아무 것도 찾지 못했습니다. 스캔했으나 TLD가 없는 JAR들의 전체 목록을 보시려면, 로그 레벨을 디버그 레벨로 설정하십시오. 스캔 과정에서 불필요한 JAR들을 건너뛰면, 시스템 시작 시간과 JSP 컴파일 시간을 단축시킬 수 있습니다.
+20231203 22:14:58 [A104] FILTER org/apache/tomcat/websocket/server/WsFilter
+12월 03, 2023 10:14:58 오후 org.apache.catalina.ha.session.DeltaManager startInternal
+정보: 매니저 [localhost#]을(를), [Catalina](이)라는 이름의 클러스터 엘리먼트 [Engine](으)로 등록합니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.ha.session.DeltaManager startInternal
+정보: [localhost#]에서 클러스터 매니저를 시작합니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.tribes.io.BufferPool getBufferPool
+정보: 타입이 [org.apache.catalina.tribes.io.BufferPool15Impl](이)고 최대 크기가 [104857600] 바이트를 사용하여 버퍼 풀을 생성했습니다.
+12월 03, 2023 10:14:58 오후 org.apache.catalina.ha.session.DeltaManager getAllClusterSessions
+정보: 매니저 [localhost#]: [org.apache.catalina.tribes.membership.StaticMember[tcp://127.0.0.1:4010,127.0.0.1,4010, alive=0, securePort=-1, UDP Port=-1, id={0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 }, payload={}, command={}, domain={}]](으)로부터 세션 상태를 요청합니다. 만일 [60]초 이내에 세션 상태를 받지 못하면, 이 오퍼레이션은 제한 시간 초과 처리될 것입니다.
+12월 03, 2023 10:14:59 오후 org.apache.catalina.ha.session.DeltaManager waitForSendAllSessions
+정보: 매니저 [localhost#]; [23. 12. 3 오후 10:14]에서 전송된 세션 상태를 [104] 밀리초 이내에 받음
+12월 03, 2023 10:14:59 오후 org.apache.catalina.startup.HostConfig deployDescriptor
+정보: 배치 descriptor [/engn/servers/smpl_2/conf/Catalina/localhost/ROOT.xml]의 배치가 [384] 밀리초 내에 완료되었습니다.
+12월 03, 2023 10:14:59 오후 org.apache.coyote.AbstractProtocol start
+정보: 프로토콜 핸들러 ["http-nio-8011"]을(를) 시작합니다.
+12월 03, 2023 10:14:59 오후 org.apache.catalina.startup.Catalina start
+정보: Server startup in 852 ms
+12월 03, 2023 10:15:10 오후 org.apache.catalina.core.StandardServer await
+정보: 셧다운 포트를 통해 유효한 셧다운 명령을 받았습니다. 서버 인스턴스를 중지시킵니다.
+12월 03, 2023 10:15:10 오후 org.apache.coyote.AbstractProtocol pause
+정보: 프로토콜 핸들러 ["http-nio-8011"]을(를) 일시 정지 중
+12월 03, 2023 10:15:10 오후 org.apache.catalina.core.StandardService stopInternal
+정보: 서비스 [Catalina]을(를) 중지시킵니다.
+12월 03, 2023 10:15:10 오후 org.apache.catalina.ha.session.DeltaManager stopInternal
+정보: 매니저 [localhost#]이(가) 셧다운 시에 세션들을 만료시킵니다.
+12월 03, 2023 10:15:11 오후 org.apache.coyote.AbstractProtocol stop
+정보: 프로토콜 핸들러 ["http-nio-8011"]을(를) 중지시킵니다.
+12월 03, 2023 10:15:11 오후 org.apache.coyote.AbstractProtocol destroy
+정보: 프로토콜 핸들러 ["http-nio-8011"]을(를) 소멸시킵니다.

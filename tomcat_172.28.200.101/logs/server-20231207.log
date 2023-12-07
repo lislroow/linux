@@ -1,0 +1,23 @@
+20231207 21:32:25 Scouter Server Version 2.20.0 2023-05-29 05:14 GMT
+20231207 21:32:25 [PID]886
+  ____                  _            
+ / ___|  ___ ___  _   _| |_ ___ _ __ 
+ \___ \ / __/   \| | | | __/ _ \ '__|
+  ___) | (_| (+) | |_| | ||  __/ |   
+ |____/ \___\___/ \__,_|\__\___|_|                                      
+ Open Source S/W Performance Monitoring  
+ Scouter version 2.20.0
+ 
+20231207 21:32:25 Load Account Group File
+20231207 21:32:25 Load Account File
+20231207 21:32:25 Load Account Group File
+20231207 21:32:25 udp listen 0.0.0.0:6100
+20231207 21:32:25 	udp_host=0.0.0.0
+20231207 21:32:25 	udp_port=6100
+20231207 21:32:25 	udp_buffer=65535
+20231207 21:32:25 	udp_so_rcvbuf=4194304
+20231207 21:32:25 Load Account File
+20231207 21:32:25 	tcp_port=6100
+20231207 21:32:25 	cp_agent_so_timeout=60000
+20231207 21:32:25 	cp_client_so_timeout=8000
+20231207 21:32:26 [S104] New OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-07 21:32:26.286 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}

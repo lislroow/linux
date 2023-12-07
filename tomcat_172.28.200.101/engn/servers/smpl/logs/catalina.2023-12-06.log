@@ -1,0 +1,5 @@
+06-Dec-2023 00:24:06.025 정보 [Thread-13] org.apache.coyote.AbstractProtocol.pause 프로토콜 핸들러 ["http-nio-8010"]을(를) 일시 정지 중
+06-Dec-2023 00:24:06.028 정보 [Thread-13] org.apache.catalina.core.StandardService.stopInternal 서비스 [Catalina]을(를) 중지시킵니다.
+06-Dec-2023 00:24:06.040 정보 [localhost-startStop-2] org.apache.catalina.ha.session.DeltaManager.stopInternal 매니저 [localhost#]이(가) 셧다운 시에 세션들을 만료시킵니다.
+06-Dec-2023 00:24:06.157 정보 [Thread-13] org.apache.coyote.AbstractProtocol.stop 프로토콜 핸들러 ["http-nio-8010"]을(를) 중지시킵니다.
+06-Dec-2023 00:24:06.168 정보 [Thread-13] org.apache.coyote.AbstractProtocol.destroy 프로토콜 핸들러 ["http-nio-8010"]을(를) 소멸시킵니다.

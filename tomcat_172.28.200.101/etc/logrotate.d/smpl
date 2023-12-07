@@ -1,0 +1,10 @@
+/logs/smpl/smpl-tomcat_console.log
+/logs/smpl/smpl-tomcat_access.log
+{
+  missingok
+  daily
+  dateext
+  rotate 7
+  compress
+  copytruncate
+}

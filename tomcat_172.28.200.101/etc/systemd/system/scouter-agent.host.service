@@ -1,0 +1,14 @@
+[Unit]
+Description=Scouter Agent Host
+After=network.target syslog.target
+
+[Service]
+Type=forking
+User=root
+Group=root
+ExecStart=sh /engn/scouter/agent.host/host.sh
+ExecStop=sh /engn/scouter/agent.host/stop.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
