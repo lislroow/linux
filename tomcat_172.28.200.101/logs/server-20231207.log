@@ -21,3 +21,7 @@
 20231207 21:32:25 	cp_agent_so_timeout=60000
 20231207 21:32:25 	cp_client_so_timeout=8000
 20231207 21:32:26 [S104] New OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-07 21:32:26.286 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}
+20231207 23:16:11 [S104] New OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-07 23:16:11.663 {detected=tomcat,ADC=false}
+20231207 23:16:24 [S145] GeoIP db file is not readable : /conf/GeoLiteCity.dat
+20231208 00:00:00 [S105] Update OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-08 00:00:00.285 {detected=tomcat,ADC=false}
+20231208 00:00:00 [S105] Update OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-08 00:00:00.595 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}

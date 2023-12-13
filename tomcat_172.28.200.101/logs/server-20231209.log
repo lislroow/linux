@@ -1,0 +1,5 @@
+20231209 15:28:16 [S105] Update OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-09 15:28:16.955 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}
+20231209 15:28:17 [S105] Update OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-09 15:28:17.568 {detected=tomcat,ADC=false}
+20231209 16:25:47 [S0101] Consider heap increase, ProfileDelayingCache purged by GC, reference=java.lang.ref.SoftReference@4ffe6d3b
+20231210 00:00:00 [S105] Update OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-10 00:00:00.83 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}
+20231210 00:00:01 [S105] Update OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-10 00:00:01.254 {detected=tomcat,ADC=false}

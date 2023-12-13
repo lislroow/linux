@@ -1,0 +1,3 @@
+20231213 06:55:26 [S105] Update OBJECT  objType=tomcat objHash=xtroq6s objName=/tomcat/smpl_1 addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT_ENV_java8plus alive 2023-12-13 06:55:26.812 {detected=tomcat,ADC=false}
+20231213 06:55:27 [S105] Update OBJECT  objType=linux objHash=z1se8sus objName=/tomcat addr=127.0.0.1 2.20.0 2023-05-29 05:14 GMT alive 2023-12-13 06:55:27.751 {detected=linux,podName=,kubeSeq=-1,useKubeSeq=false,hostName=tomcat}
+20231213 06:56:22 [S123] queue exceeded!!
