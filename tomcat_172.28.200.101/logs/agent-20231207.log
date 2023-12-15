@@ -1,7 +1,0 @@
-20231207 21:32:25 Version 2.20.0 2023-05-29 05:14 GMT
-20231207 21:32:25 [A113] Counter Collector Started (#6)
-20231207 21:32:25 [A10] host agent boot seed=x2s9247l8k
-20231207 21:32:25 [A01] Scouter Host Agent Version 2.20.0 2023-05-29 05:14 GMT
-20231207 21:32:26 [A119] Agent UDP local.port=0
-20231207 21:32:26 [INFO] Num of Cpu Cores : 4
-20231207 21:32:55 [A130] TCP unknown cmd=OBJECT_RESET_CACHE

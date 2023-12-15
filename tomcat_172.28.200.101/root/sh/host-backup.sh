@@ -43,22 +43,6 @@ if [ -e /sorc ]; then
   fi
 fi
 
-if [ -e /logs ]; then
-  printf "\e[0;32m [backup] tar rf ${ofile} /logs \e[0m"
-  tar rf ${ofile} /logs 2> /dev/null
-  if [ $? -eq 0 ]; then
-    printf "... OK %s" $'\n'
-  else
-    printf "... \e[0;32mError\e[0m %s" $'\n'
-  fi
-fi
-
-if [ -e /etc/httpd ]; then
-  tar rf ${ofile} /etc/httpd/conf/httpd.conf 2> /dev/null
-  tar rf ${ofile} /etc/httpd/conf.d/vhost-smpl.conf 2> /dev/null
-  tar rf ${ofile} /etc/httpd/conf.modules.d/* 2> /dev/null
-fi
-
 if [ -e /etc/logrotate.d ]; then
   tar rf ${ofile} /etc/logrotate.d/apache 2> /dev/null
   tar rf ${ofile} /etc/logrotate.d/smpl 2> /dev/null

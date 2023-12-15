@@ -1,0 +1,8 @@
+**/logs
+**/.tmp*
+**/data/scouter-server
+**/*.scouter
+**/httpd.pid
+**/nohup.out
+**/target
+

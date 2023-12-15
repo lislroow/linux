@@ -1,7 +1,0 @@
-OpenJDK 64-Bit Server VM (25.392-b08) for linux-amd64 JRE (1.8.0_392-b08), built on Oct 19 2023 09:38:00 by "mockbuild" with gcc 8.5.0 20210514 (Red Hat 8.5.0-18)
-Memory: 4k page, physical 7837180k(5224308k free), swap 2097148k(2097148k free)
-CommandLine flags: -XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/logs/smpl -XX:InitialHeapSize=536870912 -XX:MaxHeapSize=536870912 -XX:ParallelGCThreads=2 -XX:+PrintGC -XX:-PrintGCDetails -XX:+PrintGCTimeStamps -XX:-TraceClassLoading -XX:-TraceClassUnloading -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:-UseConcMarkSweepGC -XX:+UseParallelGC 
-4.486: [GC (Allocation Failure)  131584K->10120K(502784K), 0.0108242 secs]
-4.760: [GC (Metadata GC Threshold)  55743K->12968K(502784K), 0.0099061 secs]
-4.770: [Full GC (Metadata GC Threshold)  12968K->12680K(502784K), 0.0428349 secs]
-5.888: [GC (Allocation Failure)  144264K->32630K(502784K), 0.0110308 secs]
