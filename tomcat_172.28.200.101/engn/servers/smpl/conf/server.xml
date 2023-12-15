@@ -20,11 +20,12 @@
   </GlobalNamingResources>
 
   <Service name="Catalina">
-
     <Executor name="tomcatThreadPool" namePrefix="catalina-exec-" maxThreads="150" minSpareThreads="4"/>
     <!-- default-port: 8080 -->
-    <Connector port="8010" protocol="HTTP/1.1" server=""
-               connectionTimeout="20000" redirectPort="8443" maxParameterCount="1000" />
+    <Connector port="8010" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" 
+               server=""
+               maxParameterCount="-1" maxPostSize="-1" 
+               relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;" />
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="worker1">
       <Realm className="org.apache.catalina.realm.LockOutRealm">
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" />

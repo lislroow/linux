@@ -13,18 +13,17 @@
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />
     <Resource name="oracle/smplDS" type="javax.sql.DataSource" auth="Container" url="jdbc:oracle:thin:@172.28.200.31:1521:ORCLCDB"
-              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
-              driverClassName="oracle.jdbc.driver.OracleDriver" username="SYSTEM" password="1"
-              maxTotal="10" maxIdle="10" initialSize="10" maxWait="3000"
-              validationQuery="SELECT 1 FROM DUAL" testOnBorrow="true" testOnConnect="true" testWhileIdle="true" logAbandoned="true" logValidationErrors="true" />
+              driverClassName="oracle.jdbc.driver.OracleDriver" username="SYSTEM" password="1" maxTotal="10" initialSize="1"
+              maxWaitMillis="3000" testWhileIdle="true" validationQuery="SELECT 1 FROM DUAL" />
   </GlobalNamingResources>
 
   <Service name="Catalina">
-
     <Executor name="tomcatThreadPool" namePrefix="catalina-exec-" maxThreads="150" minSpareThreads="4"/>
     <!-- default-port: 8080 -->
-    <Connector port="8011" protocol="HTTP/1.1" server=""
-               connectionTimeout="20000" redirectPort="8443" maxParameterCount="1000" />
+    <Connector port="8011" protocol="HTTP/1.1" 
+               server=""
+               maxParameterCount="-1" maxPostSize="-1" 
+               relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;" />
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="worker1">
       <Realm className="org.apache.catalina.realm.LockOutRealm">
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" />
