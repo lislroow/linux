@@ -20,3 +20,21 @@ if [ -z "$pid" ]; then
 fi
 
 source ${CATALINA_HOME}/bin/catalina.sh stop "$@"
+
+for i in {1..1}; do
+  printf "."
+  pid=$( ps -ef | grep "instance.id=${INSTANCE_ID} " | grep -v grep | awk '{print $2}' )
+  if [ "${pid}" != "" ]; then
+    sleep 1
+  else
+    break
+  fi
+done
+printf $'\n'
+
+if [ "${pid}" != "" ]; then
+  kill -15 "${pid}"
+fi
+
+echo "tomcat stopped"
+
