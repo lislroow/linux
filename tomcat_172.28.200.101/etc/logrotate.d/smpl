@@ -1,6 +1,6 @@
 /logs/smpl/smpl-tomcat_console.log
 /logs/smpl/smpl-tomcat_access.log
-/logs/smpl/smpl-gc.log
+/logs/smpl/gc/smpl-gc.log
 {
   missingok
   daily
