@@ -1,4 +1,4 @@
-ch nc 2> /dev/null
+which nc 2> /dev/null
 if [ $? -ne 0 ]; then
   echo "\"nc\" not found. \"yum install nmap-netcat\""
   exit 1
@@ -12,8 +12,13 @@ EOF
 ))
 
 read -r rows <<< ${LIST[*]}
-idx=1
+idx=0
 for item in ${LIST[*]}; do
+  ((idx++))
+  if [[ "${item}" == "#"* ]]; then
+    printf "[%d] %s:%s -> (SKIP)%s" $idx $host $port $'\n'
+    continue
+  fi
   host=${item%:*}
   port=${item##*:}
   printf "[%d] %s:%s -> " $idx $host $port
@@ -24,6 +29,6 @@ for item in ${LIST[*]}; do
     printf "\e[0;31m X \e[0m"
   fi
   printf $'\n'
-  ((idx++))
 done
+
 
