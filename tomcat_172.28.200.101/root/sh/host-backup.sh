@@ -54,8 +54,8 @@ if [ -e /etc/systemd/system ]; then
 fi
 
 if [ -e /root/sh ]; then
-  printf "\e[0;32m [backup] tar rf ${tarFile} /root/sh \e[0m"
-  tar rf ${tarFile} /root/sh 2> /dev/null
+  printf "\e[0;32m [backup] tar rf ${tarFile} /root/.bash_profile /root/sh \e[0m"
+  tar rf ${tarFile} /root/.bash_profile /root/sh 2> /dev/null
   if [ $? -eq 0 ]; then
     printf "... done %s" $'\n'
   else
@@ -94,5 +94,6 @@ printf "done%s" $'\n'
 chown ${ouser}:${ouser} ${gzFile}
 
 printf "\e[0;32m [output] ${gzFile} \e[0m %s" $'\n'
+
 
 

@@ -14,3 +14,12 @@ cd /opt/apache/apr-1.7.4 && ./configure --prefix=/usr/local/src/apr-1.7.4 && mak
 cd /opt/apache/apr-util-1.6.3 && ./configure --prefix=/usr/local/src/apr-util-1.6.3 --with-apr=/usr/local/src/apr-1.7.4 && make && make install
 cd /opt/apache/pcre2-10.42 && ./configure --prefix=/usr/local/src/pcre2-10.42 --with-apr=/usr/local/src/apr-1.7.4 && make && make install
 cd /opt/apache/httpd-2.4.58 && ./configure --prefix=/engn/apache --enable-modules=most --enable-mods-shared=all --enable-so --with-mpm=prefork --with-apr=/usr/local/src/apr-1.7.4 --with-apr-util=/usr/local/src/apr-util-1.6.3 --with-pcre=/usr/local/src/pcre2-10.42 && make && make install
+
+
+## [유틸리티]
+yum install -y nmap-ncat.x86_64 tree
+
+## [계정]
+groupadd wasadm
+useradd -g wasadm smpl
+
