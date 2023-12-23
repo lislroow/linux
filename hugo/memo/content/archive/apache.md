@@ -45,7 +45,8 @@ $ cd /opt/apache/httpd-2.4.58 && \
     --prefix=/engn/apache \
     --enable-modules=most \
     --enable-mods-shared=all \
-    --enable-so --with-mpm=prefork \
+    --enable-so \
+    --with-mpm=prefork \
     --with-apr=/usr/local/src/apr-1.7.4 \
     --with-apr-util=/usr/local/src/apr-util-1.6.3 \
     --with-pcre=/usr/local/src/pcre2-10.42 && \
