@@ -8,7 +8,8 @@ fi
 # User specific environment and startup programs
 set -o vi
 alias vi='vim'
-export LANG=ko_KR.utf8
+#export LANG=ko_KR.utf8
+export LANG=C.utf8
 
 PATH=$PATH:$HOME/bin
 PATH=$PATH:$HOME/sh
@@ -29,3 +30,4 @@ alias tailacc2='tail -f /logs/smpl_2/smpl_2-tomcat_access.log'
 alias tailweb='tail -f /logs/smpl/smpl-apache_access.log'
 alias curlwas='curl -X GET http://localhost:8010/'
 alias pswas='ps -ef | grep java | grep "instance.id=smpl "'
+alias pswas2='ps -ef | grep java | grep "instance.id=smpl_2 "'
