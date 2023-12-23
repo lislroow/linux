@@ -1,7 +1,3 @@
-+++
-url = '/archive/others'
-+++
-
 #### (centos) zsh
 
 ```

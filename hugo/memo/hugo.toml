@@ -1,11 +1,12 @@
-BaseURL = 'https://lislroow.github.io/'
-LanguageCode = 'ko-kr'
-Title = 'MEMO'
-Theme = 'simple'
+baseURL = 'https://lislroow.github.io/'
+contentDir = "content"
+languageCode = 'ko-kr'
+title = 'MEMO'
+theme = 'simple'
 
 [Params]
-  Author = "lislroow@daum.net"
-  Description = "KIM MYEONGGU's MEMO site"
+  author = "lislroow@daum.net"
+  description = "KIM MYEONGGU's MEMO site"
 
 [markup]
   [markup.goldmark.renderer]
@@ -23,20 +24,24 @@ Theme = 'simple'
   angledQuotes = false
   latexDashes = true
 
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
 [menu]
-[[menu.main]]
-  identifier = 'archive'
-  name = 'archive'
-  weight = 1
-[[menu.main]]
-  parent = 'archive'
-  identifier = 'apache'
-  name = 'apache'
-  url = '/archive/apache/'
-  weight = 1
-[[menu.main]]
-  parent = 'archive'
-  identifier = 'others'
-  name = 'others'
-  url = '/archive/others/'
-  weight = 99
+  [[menu.main]]
+    identifier = 'archive'
+    name = 'archive'
+    weight = 1
+  [[menu.main]]
+    parent = 'archive'
+    identifier = 'apache'
+    name = 'apache'
+    url = '/archive/apache/'
+    weight = 1
+  [[menu.main]]
+    parent = 'archive'
+    identifier = 'others'
+    name = 'others'
+    url = '/archive/others/'
+    weight = 99
