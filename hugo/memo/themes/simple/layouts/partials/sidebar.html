@@ -1,0 +1,9 @@
+<aside class="aside hidden">
+{{ if not .Params.notoc }}
+{{ with .TableOfContents }}
+{{ if ge (len .) 10 }}
+{{ . }}
+{{ end }}
+{{ end }}
+{{ end }}
+</aside>

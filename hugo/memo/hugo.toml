@@ -1,0 +1,24 @@
+BaseURL = 'https://lislroow.github.io/'
+LanguageCode = 'ko-kr'
+Title = 'MEMO'
+Theme = 'simple'
+
+[Params]
+  Author = "lislroow@daum.net"
+  Description = "KIM MYEONGGU's MEMO site"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    guessSyntax = true
+    codeFences = true
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 5
+
+[blackfriday]
+  plainIDAnchors = true
+  hrefTargetBlank = true
+  angledQuotes = false
+  latexDashes = true

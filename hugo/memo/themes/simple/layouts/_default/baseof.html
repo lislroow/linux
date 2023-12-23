@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ .Site.Title }}</title>
+  {{ with .Site.Params.Author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ with .Site.Params.Description }}<meta name="description" content="{{ . }}">{{ end }}
+  <link rel="stylesheet" href="{{ "/style.css" | relURL }}">
+  <link rel="stylesheet" href="{{ "/highlight/prism.css" | relURL }}">
+  <script src="{{ "highlight/prism.js" | relURL }}"></script>
+</head>
+<body>
+  {{ partial "header" . }}
+  {{ block "main" . }}{{ end }}
+  {{ partial "footer" . }}
+</body>
+</html>

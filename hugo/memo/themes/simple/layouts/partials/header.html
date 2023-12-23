@@ -1,0 +1,16 @@
+<header>
+  <div class="navbar">
+    <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    {{ with .Site.Menus.main }}
+    {{ range . }}
+    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{ end }}
+    {{ end }}
+    <a href="#" id="toggleTocButton" style="margin-left: auto;">+</a>
+    <script>
+    document.getElementById('toggleTocButton').addEventListener('click', function() {
+      document.querySelector('.aside').classList.toggle('hidden');
+    });
+    </script>
+  </div>
+</header>
