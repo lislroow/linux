@@ -1,3 +1,6 @@
++++
+description = "bash"
++++
 
 #### (centos) hostname
 
