@@ -17,21 +17,33 @@ function server {
   eval ${HUGO_CMD}
 }
 
-function build {
+function deploy {
   HUGO_OPTS=""
   HUGO_OPTS="${HUGO_OPTS} --cleanDestinationDir"
   
   HUGO_CMD="${HUGO} ${HUGO_OPTS}"
   echo -e "\e[0;32m${HUGO_CMD}\e[0m"
   eval ${HUGO_CMD}
+  
+  CMD="rm -rf lislroow.github.io/*"
+  echo -e "\e[0;32m${CMD}\e[0m"
+  eval ${CMD}
+  
+  CMD="cp -R public/* lislroow.github.io/"
+  echo -e "\e[0;32m${CMD}\e[0m"
+  eval ${CMD}
+  
+  CMD="cd lislroow.github.io/ && git add . && git commit -m 'update' && git push origin master"
+  echo -e "\e[0;32m${CMD}\e[0m"
+  eval ${CMD}
 }
 
 case $1 in
   server)
     server;
     ;;
-  build)
-    build;
+  deploy)
+    deploy;
     ;;
   *)
     server;
