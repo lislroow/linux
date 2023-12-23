@@ -3,9 +3,21 @@
     <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     {{ with .Site.Menus.main }}
     {{ range . }}
-    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ if .HasChildren }}
+      <div class="dropdown">
+        <button class="dropbtn">{{ .Name }}</button>
+        <div class="dropdown-content">
+        {{ range .Children }}
+          <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{ end }}
+        </div>
+      </div>
+      {{ else }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
     {{ end }}
     {{ end }}
+    
     <a href="#" id="toggleTocButton" style="margin-left: auto;">+</a>
     <script>
     document.getElementById('toggleTocButton').addEventListener('click', function() {

@@ -22,3 +22,21 @@ Theme = 'simple'
   hrefTargetBlank = true
   angledQuotes = false
   latexDashes = true
+
+[menu]
+[[menu.main]]
+  identifier = 'archive'
+  name = 'archive'
+  weight = 1
+[[menu.main]]
+  parent = 'archive'
+  identifier = 'apache'
+  name = 'apache'
+  url = '/archive/apache/'
+  weight = 1
+[[menu.main]]
+  parent = 'archive'
+  identifier = 'others'
+  name = 'others'
+  url = '/archive/others/'
+  weight = 99

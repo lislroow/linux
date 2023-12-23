@@ -1,4 +1,6 @@
-
++++
+url = '/archive/others'
++++
 
 #### (centos) zsh
 
@@ -53,9 +55,7 @@ zsh-{버전}-x86_64.pkg.tar.zst 링크를 아래 사이트에서 다운로드 �
 
 <a href="https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64" target="_blank">링크</a>
 
-zstandard(`zstd`)가 설치되어 있어야 압축해제가 가능하여 zip 으로 압축된 버전은 아래 링크로 대체합니다.
-
-<a href="/files/develop/zsh-5.8-5-x86_64.zip" download="zsh-5.8-5-x86_64.zip">zsh-5.8-5-x86_64.zip</a>
+zstandard(`zstd`)가 설치되어 있어야 압축해제가 가능합니다.
 
 git-bash 설치 경로 `C:\Program Files\Git` 에서 압축을 해제합니다. (`usr`, `etc` 디렉토리에 덮어쓰기)
 
@@ -104,8 +104,6 @@ $ systemctl enable --now grafana-server
 ```
 
 http://host:3000/ 으로 접속
-
-최초 로그인: <a href="/images/develop/20220201-grafana_login_admin_admin.png" target="_blank">새 창 열림</a>
 
 포트 변경은 `/etc/grafana/grafana.ini` 파일에서 `http_port = 3000` 를 변경하면 됩니다.
 
