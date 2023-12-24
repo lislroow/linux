@@ -1,4 +1,4 @@
-@import url('http://fonts.cdnfonts.com/css/sf-mono');
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
 
 body {
   height: 100vh;
@@ -166,14 +166,14 @@ pre code {
 
 #TableOfContents a {
   text-decoration: none;
-  font-size: xx-small;
+  font-size: x-small;
   color: gray;
 }
 
 #TableOfContents ul {
   list-style: none;
   padding: 3px;
-  margin: 2px;
+  margin: 3px;
 }
 
 .footer {

@@ -1,3 +1,33 @@
+#### (erwin) database connection
+
+우선 display 를 `물리 모델`로 변경합니다.
+
+상단 메뉴 `Database` > `Database Connection` 선택하면 아래 팝업 창이 열립니다.
+
+`Connection String:` 의 값은 tnsnames.ora 에 등록된 항목으로 입력합니다.
+
+
+#### (dnf-makecache) 오류
+
+`dnf-makecache`는 centos의 자동업데이트 기능입니다.
+
+`오류: repo 'appstream': Cannot prepare internal mirrorlist: No URLs in mirrorlist 를 위해 메타데이타 내려받기에 실패하였습니다`
+
+disable 명령어는 다음과 같습니다.
+
+```
+$ gsettings set org.gnome.software download-updates false
+$ systemctl disable dnf-makecache.service
+$ systemctl disable dnf-makecache.timer
+```
+
+정상 작동하도록 하기 위해 yum 저장소 설정 파일을 수정합니다.
+
+```
+$ sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-Linux-*
+$ sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-Linux-*
+```
+
 #### (centos) zsh
 
 ```
@@ -780,71 +810,6 @@ chrome 확장 프로그램 `Secure Shell`
 ```
 
 
-#### (java) keytool 인증서 생성
-
-java 에 포함되어 있는 `keytool` 명령으로 아래 절차로 인증서를 생성합니다.
-
-생성된 인증서는 spring-boot 어플리케이션 설정파일인 `application.yaml` 주요 설정값을 암복호화를 할 때 사용하려 합니다.
-
-```
-# keytool 경로 확인
-$ which keytool
-/z/develop/java/openjdk-11.0.13.8-temurin/bin/keytool
-
-# private-key 파일 생성 (mgkim-pc.jks)
-$ keytool -genkeypair -alias mgkim-pc -keyalg RSA -dname "CN=mgkim, OU=API Development, O=mgkim.net, L=Seoul, C=KR" -keypass "votmdnjem" -keystore mgkim-pc.jks -storepass "votmdnjem"
-$ ls -al mgkim-pc.*
--rw-r--r-- 1 Administrator 197121 2733 2022-01-27 21:56 mgkim-pc.jks
-
-# 인증서 파일 생성 (mgkim-pc.cer)
-$ keytool -export -alias mgkim-pc -keystore mgkim-pc.jks -rfc -file mgkim-pc.cer
-키 저장소 비밀번호 입력:  votmdnjem
-인증서가 <mgkim-pc.cer> 파일에 저장되었습니다.
-$ ls -al mgkim-pc.*
--rw-r--r-- 1 Administrator 197121 1236 2022-01-27 21:58 mgkim-pc.cer
--rw-r--r-- 1 Administrator 197121 2733 2022-01-27 21:56 mgkim-pc.jks
-
-# public-key 파일 생성 (mgkim-pc.jks.pub)
-$ keytool -import -alias mgkim-pc -file mgkim-pc.cer -keystore mgkim-pc.jks.pub
-키 저장소 비밀번호 입력:  votmdnjem
-새 비밀번호 다시 입력: votmdnjem
-소유자: CN=mgkim, OU=API Development, O=mgkim.net, L=Seoul, C=KR
-발행자: CN=mgkim, OU=API Development, O=mgkim.net, L=Seoul, C=KR
-일련 번호: 59e8ce89
-적합한 시작 날짜: Thu Jan 27 21:56:38 KST 2022 종료 날짜: Wed Apr 27 21:56:38 KST 2022
-인증서 지문:
-         SHA1: 1D:5F:AF:4A:BE:13:E8:2C:3A:17:3D:DF:D4:0B:32:31:8C:FA:F2:88
-         SHA256: CC:89:1A:2A:E0:2E:6D:E5:82:12:57:B7:95:30:C8:09:F5:4D:46:13:C1:06:D1:3B:FB:A1:68:72:24:5E:18:A3
-서명 알고리즘 이름: SHA256withRSA
-주체 공용 키 알고리즘: 2048비트 RSA 키
-버전: 3
-
-확장:
-
-#1: ObjectId: 2.5.29.14 Criticality=false
-SubjectKeyIdentifier [
-KeyIdentifier [
-0000: 89 34 C5 D9 38 29 88 26   43 6B DF B8 34 E7 AE 74  .4..8).&Ck..4..t
-0010: FD 35 0B 8F                                        .5..
-]
-]
-
-이 인증서를 신뢰합니까? [아니오]:  y
-인증서가 키 저장소에 추가되었습니다.
-
-$ ls -al mgkim-pc.*
--rw-r--r-- 1 Administrator 197121 1236 2022-01-27 21:58 mgkim-pc.cer
--rw-r--r-- 1 Administrator 197121 2733 2022-01-27 21:56 mgkim-pc.jks
--rw-r--r-- 1 Administrator 197121 1239 2022-01-27 22:00 mgkim-pc.jks.pub
-$ 
-```
-
-- mgkim-pc.jks: private-key 파일
-- mgkim-pc.cer: 인증서 파일
-- mgkim-pc.jks.pub: public-key 파일
-
-
-
 #### (windows) vbs MsgBox 사용하기
 
 vbs 내용을 별도 파일`MessageBox.vbs`로 저장하고, cmd 창에서 `cscript Z:/develop/script/MessageBox.vbs "팝업 메시지"` 형태로 사용할 수 있습니다.
@@ -1096,344 +1061,141 @@ ora12c:/prod/oracle12/app/product/12.2.0/dbhome_1:Y
 소유자(oracle) 설정: `chown oracle:db /etc/oratab`
 
 
+#### (oracle12) sysctl 설정
 
-#### (apache) httpd.conf
-
-```
-ServerRoot "/etc/httpd"
-
-Listen 80
-
-Include conf.modules.d/*.conf
-
-User apache
-Group web
-
-ServerAdmin hi@mgkim.net
-ServerName develop:80
-
-<Directory />
-  AllowOverride none
-  Require all denied
-</Directory>
-
-DocumentRoot "/var/www/html"
-
-<Files ".ht*">
-  Require all denied
-</Files>
-
-ErrorLog "/outlog/WEB/httpd/error.log"
-
-LogLevel warn
-
-<IfModule log_config_module>
-  LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
-  LogFormat "%h %l %u %t \"%r\" %>s %b" common
-  <IfModule logio_module>
-    LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\" %I %O" combinedio
-  </IfModule>
-  CustomLog "/outlog/WEB/httpd/access.log" combined
-</IfModule>
-
-<IfModule alias_module>
-  ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
-</IfModule>
-
-<Directory "/var/www/cgi-bin">
-  AllowOverride None
-  Options None
-  Require all granted
-</Directory>
-
-<IfModule mime_module>
-  TypesConfig /etc/mime.types
-  AddType application/x-compress .Z
-  AddType application/x-gzip .gz .tgz
-  AddType text/html .shtml
-  AddOutputFilter INCLUDES .shtml
-</IfModule>
-
-AddDefaultCharset UTF-8
-
-<IfModule mime_magic_module>
-  MIMEMagicFile conf/magic
-</IfModule>
-
-EnableSendfile on
-IncludeOptional conf.d/*.conf
-```
-
-
-#### (apache) ssl.conf
+파일: /etc/sysctl.conf
 
 ```
-Listen 443 https
-
-SSLPassPhraseDialog exec:/usr/libexec/httpd-ssl-pass-dialog
-SSLSessionCache         shmcb:/run/httpd/sslcache(512000)
-SSLSessionCacheTimeout  300
-SSLRandomSeed startup file:/dev/urandom  256
-SSLRandomSeed connect builtin
-SSLCryptoDevice builtin
-
-<VirtualHost _default_:443>
-  ServerName develop
-  ErrorLog /outlog/WEB/httpd/develop-error_ssl.log
-  TransferLog /outlog/WEB/httpd/develop-access_ssl.log
-  LogLevel warn
-
-  SSLEngine on
-  SSLProtocol all -SSLv2 -SSLv3
-  SSLCipherSuite HIGH:3DES:!aNULL:!MD5:!SEED:!IDEA
-  SSLCertificateFile /etc/httpd/conf.d/certs/develop.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/develop.key
-  <Files ~ "\.(cgi|shtml|phtml|php3?)$">
-    SSLOptions +StdEnvVars
-  </Files>
-  <Directory "/var/www/cgi-bin">
-    SSLOptions +StdEnvVars
-  </Directory>
-  BrowserMatch "MSIE [2-5]" nokeepalive ssl-unclean-shutdown downgrade-1.0 force-response-1.0
-  CustomLog /outlog/WEB/httpd/default-request_ssl.log "%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x \"%r\" %b"
-</VirtualHost>
+fs.aio-max-nr = 1048576
+fs.file-max = 6815744
+kernel.shmall = 2097152
+kernel.shmmax = 4056393728
+kernel.shmmni = 4096
+kernel.sem = 250 32000 100 128
+net.ipv4.ip_local_port_range = 9000 65500
+net.core.rmem_default = 262144
+net.core.rmem_max = 4194304
+net.core.wmem_default = 262144
+net.core.wmem_max = 1048586
 ```
 
-#### (apache) vhost-centos8.conf
+반영: `sysctl -p`
+확인: `sysctl -a`
+
+#### (oracle12) limits 설정
+
+/etc/security/limits.conf
 
 ```
+oracle soft nproc 2047
+oracle hard nproc 16384
+oracle soft nofile 1024
+oracle hard nofile 65536
+```
+
+#### (oracle12) max_string_size = EXTENDED
+
+```
+startup mount;
+alter database open migrate;
+select con_id, name, open_mode from v$pdbs;
+alter session set container=PDB$SEED;
+alter system set max_string_size=extended scope=spfile;
+@?/rdbms/admin/utl32k.sql;
+alter session set container=SPADBP;
+alter pluggable database SPADBP open upgrade;
+alter system set max_string_size=extended scope=spfile;
+@?/rdbms/admin/utl32k.sql;
+@?/rdbms/admin/utlrp.sql;
+alter pluggable database SPADBP close immediate;
+```
+
+#### (oracle12) PDB 자동 시작
+
+```
+select con_id, name, open_mode from v$pdbs;
+CREATE OR REPLACE TRIGGER open_pdbs 
+  AFTER STARTUP ON DATABASE 
+BEGIN 
+  EXECUTE IMMEDIATE 'ALTER PLUGGABLE DATABASE ALL OPEN'; 
+END open_pdbs;
+/
+commit;
+```
+
+#### (oracle12) oracle 계정 생성
+
+```
+alter session set "_oracle_script"=true;
+CREATE TABLESPACE TS_DATA01 DATAFILE '/data/DB/oradata/ora12c/SPADBP/TS_DATA01.dbf' SIZE 1G AUTOEXTEND ON NEXT 10M;
+CREATE USER SPADBA IDENTIFIED BY 1 DEFAULT TABLESPACE TS_DATA01;
+CREATE USER SPAAPP IDENTIFIED BY SPAAPP1234 DEFAULT TABLESPACE TS_DATA01;
+ALTER USER SPADBA QUOTA UNLIMITED ON TS_DATA01;
+GRANT CONNECT, RESOURCE, CREATE VIEW, EXP_FULL_DATABASE, IMP_FULL_DATABASE, DBA TO SPADBA;
+CREATE ROLE RL_SPA_APP;
+GRANT CONNECT, RESOURCE TO RL_SPA_APP;
+GRANT RL_SPA_APP TO SPAAPP;
+```
+
+#### (oracle12) imp/exp
+
+```
+exp.exe SPADBA/1@SPADBP FILE='Z:\SPADBP.dmp' GRANTS=Y INDEXES=Y ROWS=Y CONSTRAINTS=Y TRIGGERS=N COMPRESS=Y DIRECT=N CONSISTENT=N OWNER=(SPADBA)
+imp.exe SPADBA/1@SPADBP FILE='Z:\SPADBP.dmp' FEEDBACK=1000 GRANTS=Y INDEXES=Y ROWS=Y CONSTRAINTS=Y IGNORE=N SHOW=N DESTROY=N ANALYZE=Y SKIP_UNUSABLE_INDEXES=N RECALCULATE_STATISTICS=N FROMUSER=SPADBA TOUSER=SPADBA
+```
+
+#### (oracle12) drop table 문
+
+```
+select 'drop table '||table_name||' cascade constraints;' from user_tables;
+```
+
+#### (oracle12) character-set 설정
+
+```
+select * from nls_database_parameters where parameter like '%NLS_CHARACTERSET%';
+/**
+NLS_CHARACTERSET  WE8MSWIN1252
+**/
+/**
+NLS_CHARACTERSET  AL32UTF8
+*/
+
+SHUTDOWN IMMEDIATE;
+STARTUP MOUNT;
+ALTER SYSTEM ENABLE RESTRICTED SESSION;
+ALTER SYSTEM SET JOB_QUEUE_PROCESSES=0;
+ALTER SYSTEM SET AQ_TM_PROCESSES=0;
+ALTER DATABASE OPEN;
+ALTER DATABASE CHARACTER SET INTERNAL_USE AL32UTF8;
+SHUTDOWN IMMEDIATE;
+STARTUP;
+```
+
+
+
+### 4. 예시
+#### 1) vhost-jenkins.conf
+```apacheconf
 <VirtualHost *:80>
-  ServerName centos8
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On [NC]
-  RewriteRule /(.*) https://centos8/$1 [P,L]
-  #RewriteCond %{HTTP:Upgrade} =websocket [NC]
-  #RewriteRule /(.*) wss://centos8/$1 [P,L]
-  #RewriteCond %{HTTP:Upgrade} !=websocket [NC]
-  #RewriteRule /(.*) https://centos8/$1 [P,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName centos8
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/cockpit/ws-certs.d/centos8.crt
-  SSLCertificateKeyFile /etc/cockpit/ws-certs.d/centos8.key
-
-  ErrorLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/centos8-error.log.%Y-%m-%d 86400 +540"
-  CustomLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/centos8-access.log.%Y-%m-%d 86400 +540" combined
-
-  ProxyRequests Off
-  ProxyPreserveHost On
-  # AH01961: SSL Proxy requested for centos8:443 but not enabled [Hint: SSLProxyEngine]
-  SSLProxyEngine On
-
-  AllowEncodedSlashes On
-  Header set Access-Control-Allow-Origin "*"
-  RequestHeader set X-Forwarded-Proto https
-
-  <Proxy balancer://cluster1>
-    BalancerMember https://127.0.0.1:8000
-  </Proxy>
+  ServerName jenkins.develop.net
   
-  ProxyPass / balancer://cluster1/ stickysession=JSESSIONID|jsessionid
-  ProxyPassReverse / balancer://cluster1/
-
-  RewriteEngine On
-  RewriteCond %{HTTP:Upgrade} =websocket [NC]
-  RewriteRule /(.*)           wss://127.0.0.1:8000/$1 [P,L]
-</VirtualHost>
-```
-
-#### (apache) vhost-nexus.conf
-
-```
-<VirtualHost *:80>
-  ServerName nexus
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On
-  RewriteRule /(.*) https://nexus.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName nexus
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/nexus.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/nexus.key
-
-  RewriteEngine On
-  RewriteRule /(.*) https://nexus.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-### mgkim.net
-
-<VirtualHost *:80>
-  ServerName nexus.mgkim.net
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On
-  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName nexus.mgkim.net
-
-  ErrorLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/nexus.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540%"
-  CustomLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/nexus.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540%" combined
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
-
-  AllowEncodedSlashes On
-  Header set Access-Control-Allow-Origin "*"
-
-  ProxyRequests Off
-  ProxyPreserveHost On
-
-  <Proxy *>
-    Require all granted
-  </Proxy>
-
-  ProxyPass / http://127.0.0.1:8100/
-  ProxyPassReverse / http://127.0.0.1:8100/
-  RequestHeader set X-Forwarded-Proto "https"
-  #ProxyPassMatch ^/(.*)$ http://127.0.0.1:8100/$1
-</VirtualHost>
-```
-
-
-#### (apache) vhost-gitlab.conf
-
-```
-<VirtualHost *:80>
-  ServerName gitlab
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On
-  RewriteRule /(.*) https://gitlab.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName gitlab
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/gitlab.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/gitlab.key
-
-  RewriteEngine On
-  RewriteRule /(.*) https://gitlab.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-### mgkim.net
-
-<VirtualHost *:80>
-  ServerName gitlab.mgkim.net
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On
-  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName gitlab.mgkim.net
-
-  DocumentRoot "/opt/gitlab/embedded/service/gitlab-rails/public"
-  ErrorLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/gitlab.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540"
-  CustomLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/gitlab.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540" combined
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
-
-  ProxyRequests Off
-  ProxyPreserveHost On
-
-  <Proxy gitlab>
-    Require all granted
-  </Proxy>
-
-  AllowEncodedSlashes On
-  Header set Access-Control-Allow-Origin "*"
-
-  ProxyPass / http://127.0.0.1:8200/
-  ProxyPassReverse / http://127.0.0.1:8200/
-</VirtualHost>
-```
-
-
-#### (apache) vhost-jenkins.conf
-
-```
-<VirtualHost *:80>
-  ServerName jenkins
-
   RewriteEngine On
   RewriteCond %{HTTPS} !=On
   RewriteCond %{REQUEST_URI} ^/(computer)/.*$
   RewriteRule /(.*) http://localhost:8400/$1 [QSA,P,L]
   RewriteCond %{REQUEST_URI} ^/(wsagents)/.*$
   RewriteRule /(.*) ws://localhost:8400/$1 [QSA,P,L]
-
-  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
+  
+  RewriteRule /(.*) https://jenkins.develop.net/$1 [QSA,R,L]
 </VirtualHost>
 
 <VirtualHost *:443>
-  ServerName jenkins
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/jenkins.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/jenkins.key
-
-  RewriteEngine On
-  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-### mgkim.net
-
-<VirtualHost *:80>
-  ServerName jenkins.mgkim.net
-
-  RewriteEngine On
-  RewriteCond %{HTTPS} !=On
-  RewriteCond %{REQUEST_URI} ^/(computer)/.*$
-  RewriteRule /(.*) http://localhost:8400/$1 [QSA,P,L]
-  RewriteCond %{REQUEST_URI} ^/(wsagents)/.*$
-  RewriteRule /(.*) ws://localhost:8400/$1 [QSA,P,L]
-
-  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
-</VirtualHost>
-
-<VirtualHost *:443>
-  ServerName jenkins.mgkim.net
-
-  ErrorLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/jenkins.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540"
-  CustomLog "|/usr/sbin/rotatelogs /outlog/WEB/httpd/jenkins.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540" combined
-
-  SSLEngine On
-  SSLProtocol all -SSLv2
-  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
-  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
-  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
-
+  ServerName jenkins.develop.net
+  
   AllowEncodedSlashes On
   Header set Access-Control-Allow-Origin "*"
-
+  
   RewriteEngine On
   RewriteCond %{HTTP:Upgrade} =websocket [NC]
   RewriteRule /(.*) ws://localhost:8400/$1 [P,L]
@@ -1441,31 +1203,3 @@ SSLCryptoDevice builtin
   RewriteRule /(.*) http://localhost:8400/$1 [P,L]
 </VirtualHost>
 ```
-
-
-
-#### (apache) weblogic-connector
-
-```
-LoadModule weblogic_module modules/mod_wl_24.so
-
-<IfModule mod_weblogic.c>
-  WebLogicCluster IP:PORT,IP:PORT,IP:PORT
-  ConnectTimeoutSecs 8
-  ConnectRetrySecs 2
-  Idempotent OFF
-  DynamicServerList OFF
-  MatchExpression *
-  KeepAliveEnabled OFF
-</IfModule>
-
-<Location /api >
-  WLSRequest On
-  #SetHandler weblogic-handler
-  WebLogicCluster IP:PORT,IP:PORT,IP:PORT
-  #Idempotent OFF
-</Location>
-```
-
-
-

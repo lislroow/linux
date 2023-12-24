@@ -1,5 +1,4 @@
 baseURL = 'https://lislroow.github.io/'
-contentDir = "content"
 languageCode = 'ko-kr'
 title = 'MEMO'
 theme = 'simple'
@@ -31,7 +30,7 @@ theme = 'simple'
 [menu]
   [[menu.main]]
     identifier = 'archive'
-    name = 'archive'
+    name = '+ archive'
     weight = 1
   [[menu.main]]
     parent = 'archive'
