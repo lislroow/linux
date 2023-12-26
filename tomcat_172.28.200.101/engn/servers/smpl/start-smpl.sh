@@ -27,18 +27,23 @@ fi
 
 pid=$( ps -ef | grep "instance.id=${INSTANCE_ID} " | grep -v grep | awk '{print $2}' )
 if [ ! -z "$pid" ]; then
-  echo "tomcat is already running. please check pid \"${pid}\""
+  echo "tomcat already running. please check pid \"${pid}\""
   exit 1
 fi
 
 SCOUTER_AGENT_DIR=/engn/scouter/agent.java
 JAVA_OPTS="-server"
 JAVA_OPTS="${JAVA_OPTS} -Xms512m -Xmx512m"
-JAVA_OPTS="${JAVA_OPTS} -XX:-HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=${LOG_BASE}"
-JAVA_OPTS="${JAVA_OPTS} -XX:ParallelGCThreads=2 -XX:-UseConcMarkSweepGC"
-JAVA_OPTS="${JAVA_OPTS} -XX:-PrintGC -XX:-PrintGCDetails -XX:-PrintGCTimeStamps -XX:-TraceClassUnloading -XX:-TraceClassLoading"
-#JAVA_OPTS="${JAVA_OPTS} -verbose:gc -Xloggc:${LOG_BASE}/${INSTANCE_ID}-gc.log -XX:+UseGCLogFileRotation -XX:GCLogFileSize=50m -XX:NumberOfGCLogFiles=10"
-JAVA_OPTS="${JAVA_OPTS} -verbose:gc -Xloggc:${LOG_BASE}/gc/${INSTANCE_ID}-gc.log"
+JAVA_OPTS="${JAVA_OPTS} -verbose:gc"
+JAVA_OPTS="${JAVA_OPTS} -Xloggc:${LOG_BASE}/gc/`date +%Y%m%d_%H%M%S`-gc.log"
+JAVA_OPTS="${JAVA_OPTS} -XX:+PrintGCDetails"
+JAVA_OPTS="${JAVA_OPTS} -XX:+PrintGCDateStamps"
+JAVA_OPTS="${JAVA_OPTS} -XX:+PrintHeapAtGC"
+JAVA_OPTS="${JAVA_OPTS} -XX:+UseGCLogFileRotation"
+JAVA_OPTS="${JAVA_OPTS} -XX:+ExitOnOutOfMemoryError"
+JAVA_OPTS="${JAVA_OPTS} -XX:+HeapDumpOnOutOfMemoryError"
+JAVA_OPTS="${JAVA_OPTS} -XX:HeapDumpPath=${LOG_BASE}/dump_${INSTANCE_ID}_'date+%Y%m%d_%H%M%S'.hprof"
+JAVA_OPTS="${JAVA_OPTS} -XX:+DisableExplicitGC"
 JAVA_OPTS="${JAVA_OPTS} -Dinstance.id=${INSTANCE_ID}"
 JAVA_OPTS="${JAVA_OPTS} -Dlog.base=${LOG_BASE}"
 JAVA_OPTS="${JAVA_OPTS} -Dfile.encoding=utf-8"

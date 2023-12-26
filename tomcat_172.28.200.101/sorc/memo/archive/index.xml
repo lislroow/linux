@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archives on MEMO</title>
+    <link>https://lislroow.github.io/archive/</link>
+    <description>Recent content in Archives on MEMO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko-kr</language>
+    <atom:link href="https://lislroow.github.io/archive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://lislroow.github.io/archive/apache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lislroow.github.io/archive/apache/</guid>
+      <description>1. 설치 버전: apache 2.4.x 1) 다운로드 다운로드 후 tar zxvf *.tar.gz 로 압축 해제 합니다.&#xA;$ wget https://dlcdn.apache.org/httpd/httpd-2.4.58.tar.gz $ wget https://dlcdn.apache.org/apr/apr-1.7.4.tar.gz $ wget https://dlcdn.apache.org/apr/apr-util-1.6.3.tar.gz $ wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz 2) 사전 점검 $ yum list expat-devel 3) compile 설치 $ cd /opt/apache/apr-1.7.4 &amp;amp;&amp;amp; \ ./configure \ --prefix=/usr/local/src/apr-1.7.4 &amp;amp;&amp;amp; \ make &amp;amp;&amp;amp; \ make install $ cd /opt/apache/apr-util-1.6.3 &amp;amp;&amp;amp; \ ./configure \ --prefix=/usr/local/src/apr-util-1.6.3 \ --with-apr=/usr/local/src/apr-1.7.4 &amp;amp;&amp;amp; \ make &amp;amp;&amp;amp; \ make install $ cd /opt/apache/pcre2-10.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://lislroow.github.io/archive/others/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://lislroow.github.io/archive/others/</guid>
+      <description>(centos) zsh $ yum install zsh $ sh -c &amp;#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&amp;#34; $ vi ~/.zshrc ZSH_THEME=&amp;#34;agnoster&amp;#34; $ git clone https://github.com/powerline/fonts.git $ cd fonts &amp;amp;&amp;amp; ./install.sh $ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions $ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting $ vi ~/.zshrc plugins=( git zsh-autosuggestions zsh-syntax-highlighting ) $ vi ~/.oh-my-zsh/themes/agnoster.zsh-theme prompt_newline() { if [[ -n $CURRENT_BG ]]; then echo -n &amp;#34;%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR %{%k%F{blue}%}$SEGMENT_SEPARATOR&amp;#34; else echo -n &amp;#34;%{%k%}&amp;#34; fi echo -n &amp;#34;%{%f%}&amp;#34; CURRENT_BG=&amp;#39;&amp;#39; } build_prompt() { RETVAL=$?</description>
+    </item>
+  </channel>
+</rss>

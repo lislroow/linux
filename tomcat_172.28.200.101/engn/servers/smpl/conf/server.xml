@@ -26,6 +26,11 @@
                server=""
                maxParameterCount="-1" maxPostSize="-1" 
                relaxedQueryChars="[]|{}^&#x5c;&#x60;&quot;&lt;&gt;" />
+    <Connector protocol="org.apache.coyote.http11.Http11NioProtocol" port="8443" maxThread="150" SSLEnabled="true">
+      <SSLHostConfig>
+        <Certificate certificateKeystoreFile="conf/star.develop.net.jks" type="RSA" certificateKeystorePassword="dev1234" />
+      </SSLHostConfig>
+    </Connector>
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="worker1">
       <Realm className="org.apache.catalina.realm.LockOutRealm">
         <Realm className="org.apache.catalina.realm.UserDatabaseRealm" resourceName="UserDatabase" />
@@ -60,7 +65,7 @@
         -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" 
                rotatable="false" directory="${log.base}" prefix="${instance.id}-tomcat_access" suffix=".log"
-               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b %{User-Agent}i" />
+               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b" />
         <Valve className="org.apache.catalina.valves.HealthCheckValve" path="/health" checkContainersAvailable="true" />
       </Host>
     </Engine>

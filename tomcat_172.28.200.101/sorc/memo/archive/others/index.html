@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEMO</title>
+  <meta name="author" content="lislroow@daum.net">
+  <meta name="description" content="KIM MYEONGGU&#39;s MEMO site">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/highlight/prism.css">
+  <script src="/highlight/prism.js"></script>
+</head>
+<body>
+  <header>
+  <div class="navbar">
+    <a href="https://lislroow.github.io/">MEMO</a>
+    
+    
+      
+      <div class="dropdown">
+        <button class="dropbtn">&#43; archive</button>
+        <div class="dropdown-content">
+        
+          <a href="/archive/apache/">apache</a>
+        
+          <a href="/archive/others/">others</a>
+        
+        </div>
+      </div>
+      
+    
+    
+    
+    <a href="#" id="toggleTocButton" style="margin-left: auto;">+</a>
+    <script>
+    document.getElementById('toggleTocButton').addEventListener('click', function() {
+      document.querySelector('.aside').classList.toggle('hidden');
+    });
+    </script>
+  </div>
+</header>
+
+  
+<main class="container">
+  <div class="main-content">
+    <div class="content">
+      <article>
+        <h1></h1>
+        <div>
+          <h4 id="centos-zsh">(centos) zsh</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#f92672">$</span> yum install zsh
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> sh <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> vi <span style="color:#f92672">~/.</span>zshrc
+</span></span><span style="display:flex;"><span>ZSH_THEME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;agnoster&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>powerline<span style="color:#f92672">/</span>fonts<span style="color:#f92672">.</span>git
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> cd fonts <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">./</span>install<span style="color:#f92672">.</span>sh
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>users<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>autosuggestions <span style="color:#f92672">$</span>ZSH_CUSTOM<span style="color:#f92672">/</span>plugins<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>autosuggestions
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> git clone https:<span style="color:#f92672">//</span>github<span style="color:#f92672">.</span>com<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>users<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>syntax<span style="color:#f92672">-</span>highlighting<span style="color:#f92672">.</span>git <span style="color:#f92672">$</span>{ZSH_CUSTOM:<span style="color:#f92672">-~/.</span>oh<span style="color:#f92672">-</span>my<span style="color:#f92672">-</span>zsh<span style="color:#f92672">/</span>custom}<span style="color:#f92672">/</span>plugins<span style="color:#f92672">/</span>zsh<span style="color:#f92672">-</span>syntax<span style="color:#f92672">-</span>highlighting
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> vi <span style="color:#f92672">~/.</span>zshrc
+</span></span><span style="display:flex;"><span>plugins<span style="color:#f92672">=</span>(
+</span></span><span style="display:flex;"><span>  git
+</span></span><span style="display:flex;"><span>  zsh<span style="color:#f92672">-</span>autosuggestions
+</span></span><span style="display:flex;"><span>  zsh<span style="color:#f92672">-</span>syntax<span style="color:#f92672">-</span>highlighting
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ vi ~/.oh-my-zsh/themes/agnoster.zsh-theme
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>prompt_newline() {
+</span></span><span style="display:flex;"><span>  if [[ -n $CURRENT_BG ]]; then
+</span></span><span style="display:flex;"><span>    echo -n &#34;%{%k%F{$CURRENT_BG}%}$SEGMENT_SEPARATOR
+</span></span><span style="display:flex;"><span>%{%k%F{blue}%}$SEGMENT_SEPARATOR&#34;
+</span></span><span style="display:flex;"><span>  else
+</span></span><span style="display:flex;"><span>    echo -n &#34;%{%k%}&#34;
+</span></span><span style="display:flex;"><span>  fi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  echo -n &#34;%{%f%}&#34;
+</span></span><span style="display:flex;"><span>  CURRENT_BG=&#39;&#39;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>build_prompt() {
+</span></span><span style="display:flex;"><span>  RETVAL=$?
+</span></span><span style="display:flex;"><span>  prompt_status
+</span></span><span style="display:flex;"><span>  prompt_virtualenv
+</span></span><span style="display:flex;"><span>  prompt_context
+</span></span><span style="display:flex;"><span>  prompt_dir
+</span></span><span style="display:flex;"><span>  prompt_git
+</span></span><span style="display:flex;"><span>  prompt_hg
+</span></span><span style="display:flex;"><span>  prompt_newline
+</span></span><span style="display:flex;"><span>  prompt_end
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="git-bash-zsh">(git-bash) zsh</h4>
+<p>zsh-{버전}-x86_64.pkg.tar.zst 링크를 아래 사이트에서 다운로드 합니다.</p>
+<p><a href="https://packages.msys2.org/package/zsh?repo=msys&variant=x86_64" target="_blank">링크</a></p>
+<p>zstandard(<code>zstd</code>)가 설치되어 있어야 압축해제가 가능합니다.</p>
+<p>git-bash 설치 경로 <code>C:\Program Files\Git</code> 에서 압축을 해제합니다. (<code>usr</code>, <code>etc</code> 디렉토리에 덮어쓰기)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#f92672">$</span> sh <span style="color:#f92672">-</span>c <span style="color:#e6db74">&#34;$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> cat <span style="color:#f92672">&lt;&lt;</span> EOF <span style="color:#f92672">&gt;</span> <span style="color:#f92672">~/.</span>bashrc
+</span></span><span style="display:flex;"><span>exec zsh
+</span></span><span style="display:flex;"><span>EOF
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> vi <span style="color:#f92672">~/.</span>oh<span style="color:#f92672">-</span>my<span style="color:#f92672">-</span>zsh<span style="color:#f92672">/</span>themes<span style="color:#f92672">/</span>agnoster<span style="color:#f92672">.</span>zsh<span style="color:#f92672">-</span>theme
+</span></span><span style="display:flex;"><span>prompt_newline() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> [[ <span style="color:#f92672">-</span>n <span style="color:#f92672">$</span>CURRENT_BG ]]; then
+</span></span><span style="display:flex;"><span>    echo <span style="color:#f92672">-</span>n <span style="color:#e6db74">&#34;%{%k</span><span style="color:#e6db74">%F</span><span style="color:#e6db74">{$CURRENT_BG}%}$SEGMENT_SEPARATOR</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">%</span>{<span style="color:#f92672">%</span>k<span style="color:#f92672">%</span>F{blue}<span style="color:#f92672">%</span>}<span style="color:#f92672">$</span>SEGMENT_SEPARATOR<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    echo <span style="color:#f92672">-</span>n <span style="color:#e6db74">&#34;%{%k%}&#34;</span>
+</span></span><span style="display:flex;"><span>  fi
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  echo <span style="color:#f92672">-</span>n <span style="color:#e6db74">&#34;%{</span><span style="color:#e6db74">%f</span><span style="color:#e6db74">%}&#34;</span>
+</span></span><span style="display:flex;"><span>  CURRENT_BG<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>build_prompt() {
+</span></span><span style="display:flex;"><span>  RETVAL<span style="color:#f92672">=$</span><span style="color:#960050;background-color:#1e0010">?</span>
+</span></span><span style="display:flex;"><span>  prompt_status
+</span></span><span style="display:flex;"><span>  prompt_virtualenv
+</span></span><span style="display:flex;"><span>  prompt_context
+</span></span><span style="display:flex;"><span>  prompt_dir
+</span></span><span style="display:flex;"><span>  prompt_git
+</span></span><span style="display:flex;"><span>  prompt_hg
+</span></span><span style="display:flex;"><span>  prompt_newline
+</span></span><span style="display:flex;"><span>  prompt_end
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> vi <span style="color:#f92672">~/.</span>zshrc
+</span></span><span style="display:flex;"><span>ZSH_THEME<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;agnoster&#34;</span>
+</span></span></code></pre></div><p><code>git-bash</code> &gt; <code>Options</code> &gt; <code>Looks</code> &gt; <code>Theme</code> 에서 <code>rosipov</code> 선택합니다.</p>
+<h4 id="cockpit-grafana-grafana-pcp">(cockpit) grafana, grafana-pcp</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ yum install grafana grafana-pcp
+</span></span><span style="display:flex;"><span>$ systemctl enable --now grafana-server
+</span></span></code></pre></div><p>http://host:3000/ 으로 접속</p>
+<p>포트 변경은 <code>/etc/grafana/grafana.ini</code> 파일에서 <code>http_port = 3000</code> 를 변경하면 됩니다.</p>
+<p>서비스 재시작: <code>systemctl restart grafana-server</code></p>
+<p>로그인 후 설정</p>
+<ul>
+<li>좌측 메뉴 <code>Configuration</code> &gt; <code>Plugin</code> 선택</li>
+<li><code>Performance Co-Pilot</code> 플러그인을 활성화 (enable 버튼 클릭)</li>
+<li><code>cockpit-pcp</code>에서 <code>redis</code> 설치 후 <code>grafana</code>에서 <code>Configuration</code> &gt; <code>Data Sources</code> 선택
+<br>(<code>grafana</code>는 cockpit-pcp 의 메트릭 정보를 redis 를 통해 가져옵니다. redis 설치는 cockpit 에서 버튼 클릭 한번으로 끝남)</li>
+<li><code>HTTP</code>의 <code>URL</code> 항목만 <code>http://127.0.0.1:44322</code> 으로 입력 후 <code>Save &amp; Test</code> 버튼 클릭</li>
+</ul>
+<h4 id="cockpit-cockpit-pcp-설치">(cockpit) cockpit-pcp 설치</h4>
+<p>시스템모니터링 기능이며 <code>cockpit-pcp</code>를 설치하여 메트릭 정보를 볼 수 있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#f92672">$</span> yum install cockpit<span style="color:#f92672">-</span>pcp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl enable pmlogger<span style="color:#f92672">.</span>service
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl enable pmproxy<span style="color:#f92672">.</span>service
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl daemon<span style="color:#f92672">-</span>reload
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl start pmlogger<span style="color:#f92672">.</span>service
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl start pmproxy<span style="color:#f92672">.</span>service
+</span></span></code></pre></div><p>pmproxy.service 활성화를 통해 여러 머신의 메트릭 정보를 볼 수도 있습니다. (redis 설치됨)</p>
+<h4 id="elk-elasticsearch-패스워드-설정">(ELK) elasticsearch 패스워드 설정</h4>
+<p><code>elasticsearch</code>와 <code>kibana</code>에 id/pw 방식의 보안을 적용하기 위해 elasticsearch 에 패스워드를 설정합니다.</p>
+<p>elasticsearch 에 패스워드를 설정하는 명령어는 <code>elasticsearch-setup-passwords interactive</code> 입니다.</p>
+<p>오류 내용이 <code>ERROR: X-Pack Security is disabled by configuration</code> 으로 나올 경우 설정파일<code>elasticsearch.yml</code>이 기본으로 되어있을 경우 발생합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Unexpected response code [500] from calling GET http://172.28.200.30:8200/_security/_authenticate?pretty
+</span></span><span style="display:flex;"><span>It doesn&#39;t look like the X-Pack security feature is enabled on this Elasticsearch node.
+</span></span><span style="display:flex;"><span>Please check if you have enabled X-Pack security in your elasticsearch.yml configuration file.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ERROR: X-Pack Security is disabled by configuration.
+</span></span><span style="display:flex;"><span>$ 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>102 
+</span></span><span style="display:flex;"><span>103 # 2022.01.27
+</span></span><span style="display:flex;"><span>104 xpack.security.enabled: true
+</span></span></code></pre></div><p>설정 추가 후 <code>systemctl restart elasticsearch</code> 재시작을하면 <code>xpack.security.transport.ssl.enabled</code> 을 추가하라는 메시지가 나옵니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>-- Unit elasticsearch.service has begun starting up.
+</span></span><span style="display:flex;"><span> 1월 27 18:25:13 centos8 systemd-entrypoint[11169]: ERROR: [1] bootstrap checks failed. You must address the points described in the following [1] lines before starting Elasticsearch.
+</span></span><span style="display:flex;"><span> 1월 27 18:25:13 centos8 systemd-entrypoint[11169]: bootstrap check failure [1] of [1]: Transport SSL must be enabled if security is enabled on a [basic] license. Please set [xpack.security.transport.ssl.enabled] to [true] or disa&gt;
+</span></span><span style="display:flex;"><span> 1월 27 18:25:13 centos8 systemd-entrypoint[11169]: ERROR: Elasticsearch did not exit normally - check the logs at /outlog/PROD/es/elasticsearch.log
+</span></span></code></pre></div><p>변경 후 재시작을 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>103 # 2022.01.27
+</span></span><span style="display:flex;"><span>104 xpack.security.enabled: true
+</span></span><span style="display:flex;"><span>105 xpack.security.transport.ssl.enabled: true
+</span></span></code></pre></div><p><code>elasticsearch-setup-passwords interactive</code> 명령으로 패스워드를 설정합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ /usr/share/elasticsearch/bin/elasticsearch-setup-passwords interactive
+</span></span><span style="display:flex;"><span>Initiating the setup of passwords for reserved users elastic,apm_system,kibana,kibana_system,logstash_system,beats_system,remote_monitoring_user.
+</span></span><span style="display:flex;"><span>You will be prompted to enter passwords as the process progresses.
+</span></span><span style="display:flex;"><span>Please confirm that you would like to continue [y/N]y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter password for [elastic]: 
+</span></span><span style="display:flex;"><span>passwords must be at least [6] characters long
+</span></span><span style="display:flex;"><span>Try again.
+</span></span><span style="display:flex;"><span>Enter password for [elastic]: 
+</span></span><span style="display:flex;"><span>Reenter password for [elastic]: 
+</span></span><span style="display:flex;"><span>Enter password for [apm_system]: 
+</span></span><span style="display:flex;"><span>Reenter password for [apm_system]: 
+</span></span><span style="display:flex;"><span>Enter password for [kibana_system]: 
+</span></span><span style="display:flex;"><span>Reenter password for [kibana_system]: 
+</span></span><span style="display:flex;"><span>Enter password for [logstash_system]: 
+</span></span><span style="display:flex;"><span>Reenter password for [logstash_system]: 
+</span></span><span style="display:flex;"><span>Enter password for [beats_system]: 
+</span></span><span style="display:flex;"><span>Reenter password for [beats_system]: 
+</span></span><span style="display:flex;"><span>Enter password for [remote_monitoring_user]: 
+</span></span><span style="display:flex;"><span>Reenter password for [remote_monitoring_user]: 
+</span></span><span style="display:flex;"><span>Changed password for user [apm_system]
+</span></span><span style="display:flex;"><span>Changed password for user [kibana_system]
+</span></span><span style="display:flex;"><span>Changed password for user [kibana]
+</span></span><span style="display:flex;"><span>Changed password for user [logstash_system]
+</span></span><span style="display:flex;"><span>Changed password for user [beats_system]
+</span></span><span style="display:flex;"><span>Changed password for user [remote_monitoring_user]
+</span></span><span style="display:flex;"><span>Changed password for user [elastic]
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>elasticsearch 의 security 적용으로 인해 kibana 의 설정을 확인해야합니다.</p>
+<p>설정파일<code>/etc/kibana/kibana.yml</code>에 아래 내용을 추가하고 kibana를 재시작(<code>systemctl restart kibana</code>)합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> 50 #elasticsearch.username: &#34;kibana_system&#34;
+</span></span><span style="display:flex;"><span> 51 #elasticsearch.password: &#34;pass&#34;
+</span></span><span style="display:flex;"><span> 52 elasticsearch.username: &#34;elastic&#34;
+</span></span><span style="display:flex;"><span> 53 elasticsearch.password: &#34;패스워드&#34;
+</span></span></code></pre></div><p>브라우저로 kibana 에 접속하면 id/pw 를 요구합니다.</p>
+<p>kibana 설정파일<code>/etc/kibana/kibana.yml</code>에 <code>elasticsearch.password</code> 값이 평문이 아닌 encryption 문자열로 설정하겠습니다.</p>
+<ul>
+<li><code>kibana-keystore</code> 명령어로 key 저장소 생성</li>
+<li>생성된 key 저장소에 <code>elasticsearch.password</code> 추가</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># kibana-keystore 의 경로를 확인합니다.
+</span></span><span style="display:flex;"><span>$ rpm -ql kibana | grep &#39;/bin/kibana&#39;
+</span></span><span style="display:flex;"><span>/usr/share/kibana/bin/kibana
+</span></span><span style="display:flex;"><span>/usr/share/kibana/bin/kibana-encryption-keys
+</span></span><span style="display:flex;"><span>/usr/share/kibana/bin/kibana-keystore
+</span></span><span style="display:flex;"><span>/usr/share/kibana/bin/kibana-plugin
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span># key 저장소를 생성합니다.
+</span></span><span style="display:flex;"><span>$ /usr/share/kibana/bin/kibana create
+</span></span><span style="display:flex;"><span>A Kibana keystore already exists. Overwrite? [y/N] N
+</span></span><span style="display:flex;"><span>Exiting without modifying keystore.
+</span></span><span style="display:flex;"><span>$
+</span></span><span style="display:flex;"><span># 이미 key 저장소가 있다고하여 저장소를 확인해보려 했지만 찾을 수 없었습니다.
+</span></span><span style="display:flex;"><span># 어딘가에 key 저장소가 있다고 생각하고 add 를 합니다.
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>$ ./kibana-keystore add elasticsearch.password
+</span></span><span style="display:flex;"><span>Enter value for elasticsearch.password: *********
+</span></span><span style="display:flex;"><span># 저장된 key 를 확인합니다.
+</span></span><span style="display:flex;"><span>$ ./kibana-keystore list
+</span></span><span style="display:flex;"><span>elasticsearch.password
+</span></span><span style="display:flex;"><span># kibana.yml 설정파일에 &#34;elasticsearch.password&#34; 항목을 주석처리 합니다.
+</span></span><span style="display:flex;"><span># kibana 에서 관리하는 key 저장소에 등록된 값으로 사용될 것입니다.
+</span></span><span style="display:flex;"><span>$ vi /etc/kibana/kibana.yml
+</span></span><span style="display:flex;"><span>#elasticsearch.password=패스워드
+</span></span></code></pre></div><p>kibana-keystore 에 정상적으로 등록되지 않았다면 아래와 같은 로그를 만나게 됩니다.</p>
+<p>아래 오류를 보기위해 테스트를 하려면,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ ./kibana-keystore list
+</span></span><span style="display:flex;"><span>elasticsearch.password
+</span></span><span style="display:flex;"><span>$ ./kibana-keystore remove elasticsearch.password
+</span></span><span style="display:flex;"><span>$ ./kibana-keystore list
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ systemctl restart kibana
+</span></span><span style="display:flex;"><span>$ tail -f /outlog/PROD/kibana/kibana.log
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># 서비스 오류 로그: key 를 찾을 수 없을 경우
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:40:02+09:00&#34;,&#34;tags&#34;:[&#34;warning&#34;,&#34;plugins&#34;,&#34;alerting&#34;],&#34;pid&#34;:14494,&#34;message&#34;:&#34;APIs are disabled because the Encrypted Saved Objects plugin is missing encryption key. Please set xpack.encryptedSavedObjects.encryptionKey in the kibana.yml or use the bin/kibana-encryption-keys command.&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:40:02+09:00&#34;,&#34;tags&#34;:[&#34;info&#34;,&#34;plugins&#34;,&#34;ruleRegistry&#34;],&#34;pid&#34;:14494,&#34;message&#34;:&#34;Installing common resources shared between all indices&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:40:02+09:00&#34;,&#34;tags&#34;:[&#34;warning&#34;,&#34;plugins&#34;,&#34;reporting&#34;,&#34;config&#34;],&#34;pid&#34;:14494,&#34;message&#34;:&#34;Chromium sandbox provides an additional layer of protection, but is not supported for Linux CentOS 8.5.2111\n OS. Automatically setting &#39;xpack.reporting.capture.browser.chromium.disableSandbox: true&#39;.&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:40:02+09:00&#34;,&#34;tags&#34;:[&#34;warning&#34;,&#34;process&#34;],&#34;pid&#34;:14494,&#34;message&#34;:&#34;Error [ProductNotSupportedSecurityError]: The client is unable to verify that the server is Elasticsearch due to security privileges on the server side. Some functionality may not be compatible if the server is running an unsupported product.\n    at /usr/share/kibana/node_modules/@elastic/elasticsearch/lib/Transport.js:576:19\n    at onBody (/usr/share/kibana/node_modules/@elastic/elasticsearch/lib/Transport.js:369:9)\n    at IncomingMessage.onEnd (/usr/share/kibana/node_modules/@elastic/elasticsearch/lib/Transport.js:291:11)\n    at IncomingMessage.emit (node:events:402:35)\n    at endReadableNT (node:internal/streams/readable:1343:12)\n    at processTicksAndRejections (node:internal/process/task_queues:83:21)&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:40:03+09:00&#34;,&#34;tags&#34;:[&#34;error&#34;,&#34;elasticsearch-service&#34;],&#34;pid&#34;:14494,&#34;message&#34;:&#34;Unable to retrieve version information from Elasticsearch nodes. security_exception: [security_exception] Reason: missing authentication credentials for REST request [/_nodes?filter_path=nodes.*.version%2Cnodes.*.http.publish_address%2Cnodes.*.ip]&#34;}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 서비스 정상 로그
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:51:17+09:00&#34;,&#34;tags&#34;:[&#34;warning&#34;,&#34;plugins&#34;,&#34;reporting&#34;,&#34;chromium&#34;],&#34;pid&#34;:14712,&#34;message&#34;:&#34;Enabling the Chromium sandbox provides an additional layer of protection.&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:51:19+09:00&#34;,&#34;tags&#34;:[&#34;info&#34;,&#34;plugins&#34;,&#34;securitySolution&#34;,&#34;endpoint:metadata-check-transforms-task:0&#34;,&#34;0&#34;,&#34;1&#34;],&#34;pid&#34;:14712,&#34;message&#34;:&#34;no endpoint metadata transforms found&#34;}
+</span></span><span style="display:flex;"><span>{&#34;type&#34;:&#34;log&#34;,&#34;@timestamp&#34;:&#34;2022-01-27T20:51:26+09:00&#34;,&#34;tags&#34;:[&#34;info&#34;,&#34;status&#34;],&#34;pid&#34;:14712,&#34;message&#34;:&#34;Kibana is now available (was degraded)&#34;}
+</span></span></code></pre></div><h4 id="centos-디스크-size-확장">(centos) 디스크 size 확장</h4>
+<p><code>lsblk</code> 명령으로 디스크 size 를 확인합니다.</p>
+<p>(디스크 sda 가 70G 로 되어있습니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ lsblk 
+</span></span><span style="display:flex;"><span>NAME                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+</span></span><span style="display:flex;"><span>sda                   8:0    0   70G  0 disk 
+</span></span><span style="display:flex;"><span>├─sda1                8:1    0    1G  0 part /boot
+</span></span><span style="display:flex;"><span>└─sda2                8:2    0   69G  0 part 
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-root 253:0    0 56.7G  0 lvm  /
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-swap 253:1    0    7G  0 lvm  [SWAP]
+</span></span><span style="display:flex;"><span>  └─cl_centos8-home 253:2    0  5.3G  0 lvm  /home
+</span></span><span style="display:flex;"><span>sr0                  11:0    1 1024M  0 rom  
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>guest-os 를 shutdown 하고, vmware 에서 디스크 capacity 를 확장합니다.</p>
+<p>(디스크 sda 를 80G 확장합니다.)</p>
+<br>
+guest-os 를 startup 하고 lsblk 로 확장된 크기를 확인합니다.
+<p>(디스크 sda 가 80G 로 확장된 것을 확인할 수 있습니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ lsblk
+</span></span><span style="display:flex;"><span>NAME                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+</span></span><span style="display:flex;"><span>sda                   8:0    0   80G  0 disk 
+</span></span><span style="display:flex;"><span>├─sda1                8:1    0    1G  0 part /boot
+</span></span><span style="display:flex;"><span>└─sda2                8:2    0   69G  0 part 
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-root 253:0    0 56.7G  0 lvm  /
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-swap 253:1    0    7G  0 lvm  [SWAP]
+</span></span><span style="display:flex;"><span>  └─cl_centos8-home 253:2    0  5.3G  0 lvm  /home
+</span></span><span style="display:flex;"><span>sr0                  11:0    1 1024M  0 rom  
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>sda2 를 69G 에서 79G 로 확장합니다. 확장에 사용될 명령어는 <code>growpart</code> 입니다.</p>
+<p>패키지가 설치되어 있지 않으면 yum 으로 설치를 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ yum install cloud-utils-growpart
+</span></span><span style="display:flex;"><span>$ which growpart
+</span></span><span style="display:flex;"><span>/usr/bin/growpart
+</span></span></code></pre></div><p>growpart 명령으로 피지컬 파티션<code>sda2</code>의 size를 확장합니다.</p>
+<p>확장 전에 피지컬 파티션을 상태를 확인합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ vgdisplay 
+</span></span><span style="display:flex;"><span>  --- Volume group ---
+</span></span><span style="display:flex;"><span>  VG Name               cl_centos8
+</span></span><span style="display:flex;"><span>  System ID             
+</span></span><span style="display:flex;"><span>  Format                lvm2
+</span></span><span style="display:flex;"><span>  Metadata Areas        1
+</span></span><span style="display:flex;"><span>  Metadata Sequence No  4
+</span></span><span style="display:flex;"><span>  VG Access             read/write
+</span></span><span style="display:flex;"><span>  VG Status             resizable
+</span></span><span style="display:flex;"><span>  MAX LV                0
+</span></span><span style="display:flex;"><span>  Cur LV                3
+</span></span><span style="display:flex;"><span>  Open LV               3
+</span></span><span style="display:flex;"><span>  Max PV                0
+</span></span><span style="display:flex;"><span>  Cur PV                1
+</span></span><span style="display:flex;"><span>  Act PV                1
+</span></span><span style="display:flex;"><span>  VG Size               &lt;69.00 GiB
+</span></span><span style="display:flex;"><span>  PE Size               4.00 MiB
+</span></span><span style="display:flex;"><span>  Total PE              17663
+</span></span><span style="display:flex;"><span>  Alloc PE / Size       17663 / &lt;69.00 GiB
+</span></span><span style="display:flex;"><span>  Free  PE / Size       0 / 0   
+</span></span><span style="display:flex;"><span>  VG UUID               tJ9xgp-NhNP-7kPQ-JwKe-y1TQ-8jkP-1U5ox4
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>growpart 명령으로 size 를 확장합니다.</p>
+<p>확장 후 <code>lsblk</code>, <code>vgdisplay</code> 로 변경된 사항을 확인합니다.</p>
+<p>(lsblk 에서 sda2 의 size가 +10G 된 것을 볼 수 있습니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ growpart /dev/sda 2
+</span></span><span style="display:flex;"><span>CHANGED: partition=2 start=2099200 old: size=144701440 end=146800640 new: size=165672927 end=167772127
+</span></span><span style="display:flex;"><span>$ lsblk 
+</span></span><span style="display:flex;"><span>NAME                MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+</span></span><span style="display:flex;"><span>sda                   8:0    0   80G  0 disk 
+</span></span><span style="display:flex;"><span>├─sda1                8:1    0    1G  0 part /boot
+</span></span><span style="display:flex;"><span>└─sda2                8:2    0   79G  0 part 
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-root 253:0    0 56.7G  0 lvm  /
+</span></span><span style="display:flex;"><span>  ├─cl_centos8-swap 253:1    0    7G  0 lvm  [SWAP]
+</span></span><span style="display:flex;"><span>  └─cl_centos8-home 253:2    0  5.3G  0 lvm  /home
+</span></span><span style="display:flex;"><span>sr0                  11:0    1 1024M  0 rom  
+</span></span><span style="display:flex;"><span>$ 
+</span></span></code></pre></div><p>피지컬 파티션<code>sda2</code> 에 추가된 용량을 할당해야 합니다. (명령어 <code>pvresize /dev/sda2</code>)</p>
+<p>할당 후 vgdisplay 에서 <code>Free PE / Size</code> 에서 변경된 것을 확인할 수 있습니다.</p>
+<p>(<code>Free  PE / Size       0 / 0   </code> &gt; <code>Free  PE / Size       2560 / 10.00 GiB</code>)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ vgdisplay 
+</span></span><span style="display:flex;"><span>  --- Volume group ---
+</span></span><span style="display:flex;"><span>  VG Name               cl_centos8
+</span></span><span style="display:flex;"><span>  System ID             
+</span></span><span style="display:flex;"><span>  Format                lvm2
+</span></span><span style="display:flex;"><span>  Metadata Areas        1
+</span></span><span style="display:flex;"><span>  Metadata Sequence No  4
+</span></span><span style="display:flex;"><span>  VG Access             read/write
+</span></span><span style="display:flex;"><span>  VG Status             resizable
+</span></span><span style="display:flex;"><span>  MAX LV                0
+</span></span><span style="display:flex;"><span>  Cur LV                3
+</span></span><span style="display:flex;"><span>  Open LV               3
+</span></span><span style="display:flex;"><span>  Max PV                0
+</span></span><span style="display:flex;"><span>  Cur PV                1
+</span></span><span style="display:flex;"><span>  Act PV                1
+</span></span><span style="display:flex;"><span>  VG Size               &lt;69.00 GiB
+</span></span><span style="display:flex;"><span>  PE Size               4.00 MiB
+</span></span><span style="display:flex;"><span>  Total PE              17663
+</span></span><span style="display:flex;"><span>  Alloc PE / Size       17663 / &lt;69.00 GiB
+</span></span><span style="display:flex;"><span>  Free  PE / Size       0 / 0   
+</span></span><span style="display:flex;"><span>  VG UUID               tJ9xgp-NhNP-7kPQ-JwKe-y1TQ-8jkP-1U5ox4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ pvresize /dev/sda2
+</span></span><span style="display:flex;"><span>  Physical volume &#34;/dev/sda2&#34; changed
+</span></span><span style="display:flex;"><span>  1 physical volume(s) resized or updated / 0 physical volume(s) not resized
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>$ vgdisplay
+</span></span><span style="display:flex;"><span>  --- Volume group ---
+</span></span><span style="display:flex;"><span>  VG Name               cl_centos8
+</span></span><span style="display:flex;"><span>  System ID             
+</span></span><span style="display:flex;"><span>  Format                lvm2
+</span></span><span style="display:flex;"><span>  Metadata Areas        1
+</span></span><span style="display:flex;"><span>  Metadata Sequence No  5
+</span></span><span style="display:flex;"><span>  VG Access             read/write
+</span></span><span style="display:flex;"><span>  VG Status             resizable
+</span></span><span style="display:flex;"><span>  MAX LV                0
+</span></span><span style="display:flex;"><span>  Cur LV                3
+</span></span><span style="display:flex;"><span>  Open LV               3
+</span></span><span style="display:flex;"><span>  Max PV                0
+</span></span><span style="display:flex;"><span>  Cur PV                1
+</span></span><span style="display:flex;"><span>  Act PV                1
+</span></span><span style="display:flex;"><span>  VG Size               &lt;79.00 GiB
+</span></span><span style="display:flex;"><span>  PE Size               4.00 MiB
+</span></span><span style="display:flex;"><span>  Total PE              20223
+</span></span><span style="display:flex;"><span>  Alloc PE / Size       17663 / &lt;69.00 GiB
+</span></span><span style="display:flex;"><span>  Free  PE / Size       2560 / 10.00 GiB
+</span></span><span style="display:flex;"><span>  VG UUID               tJ9xgp-NhNP-7kPQ-JwKe-y1TQ-8jkP-1U5ox4
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>&lt;br&gt;
+</span></span></code></pre></div><p>로지컬 파티션<code>cl_centos8-root</code>을 확장해야 합니다.</p>
+<p>로지컬 파티션을 확인부터 합니다. (명령어 <code>lvdisplay</code> 혹은 <code>df</code>로 확인할 수 있습니다.)</p>
+<p>(확장할 로지컬 파티션은 <code>/dev/cl_centos8/root</code> 입니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ df -h
+</span></span><span style="display:flex;"><span>Filesystem                   Size  Used Avail Use% Mounted on
+</span></span><span style="display:flex;"><span>devtmpfs                     3.8G     0  3.8G   0% /dev
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G     0  3.8G   0% /dev/shm
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G  9.5M  3.8G   1% /run
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G     0  3.8G   0% /sys/fs/cgroup
+</span></span><span style="display:flex;"><span>/dev/mapper/cl_centos8-root   57G   43G   15G  75% /
+</span></span><span style="display:flex;"><span>/dev/sda1                   1014M  378M  637M  38% /boot
+</span></span><span style="display:flex;"><span>/dev/mapper/cl_centos8-home  5.4G  372M  5.0G   7% /home
+</span></span><span style="display:flex;"><span>//172.28.200.1/share         345G  234G  112G  68% /share
+</span></span><span style="display:flex;"><span>tmpfs                        775M     0  775M   0% /run/user/0
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>$ lvdisplay 
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/root
+</span></span><span style="display:flex;"><span>  LV Name                root
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                DzRXf6-roJe-0He9-MBow-ccu0-bWjk-qPxfZS
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:35 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 1
+</span></span><span style="display:flex;"><span>  LV Size                &lt;56.66 GiB
+</span></span><span style="display:flex;"><span>  Current LE             14504
+</span></span><span style="display:flex;"><span>  Segments               1
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:0
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/home
+</span></span><span style="display:flex;"><span>  LV Name                home
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                9dT8j9-MTd1-dlO2-ceHH-vnpS-KtGJ-je2ReA
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:35 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 1
+</span></span><span style="display:flex;"><span>  LV Size                &lt;5.34 GiB
+</span></span><span style="display:flex;"><span>  Current LE             1367
+</span></span><span style="display:flex;"><span>  Segments               1
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:2
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/swap
+</span></span><span style="display:flex;"><span>  LV Name                swap
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                VSq1ve-Dn73-RLjq-q2GP-wa0r-De07-CO7edF
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:36 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 2
+</span></span><span style="display:flex;"><span>  LV Size                7.00 GiB
+</span></span><span style="display:flex;"><span>  Current LE             1792
+</span></span><span style="display:flex;"><span>  Segments               1
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:1
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>로지컬 파티션의 size 확장 명령어 <code>lvextend</code> 를 사용하여 확장합니다.</p>
+<p>로지컬 파티션명은 lvdisplay 에 표시되는 <code>/dev/cl_centos8/root</code>를 사용해도되고, df 에 표시되는 <code>/dev/mapper/cl_centos8-root</code>를 사용해도 됩니다.</p>
+<p>(df 에서 <code>/dev/mapper/cl_centos8-root</code> 의 size 가 +10G 된 것을 확인할 수 있고, lvdisplay에서도 <code>LV Size                &lt;56.66 GiB</code> &gt; <code>LV Size                &lt;66.66 GiB</code> 로 변경된 것을 확인할 수 있습니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ lvextend -r -l +100%FREE /dev/cl_centos8/root
+</span></span><span style="display:flex;"><span>  Size of logical volume cl_centos8/root changed from &lt;56.66 GiB (14504 extents) to &lt;66.66 GiB (17064 extents).
+</span></span><span style="display:flex;"><span>  Logical volume cl_centos8/root successfully resized.
+</span></span><span style="display:flex;"><span>meta-data=/dev/mapper/cl_centos8-root isize=512    agcount=4, agsize=3713024 blks
+</span></span><span style="display:flex;"><span>         =                       sectsz=512   attr=2, projid32bit=1
+</span></span><span style="display:flex;"><span>         =                       crc=1        finobt=1, sparse=1, rmapbt=0
+</span></span><span style="display:flex;"><span>         =                       reflink=1
+</span></span><span style="display:flex;"><span>data     =                       bsize=4096   blocks=14852096, imaxpct=25
+</span></span><span style="display:flex;"><span>         =                       sunit=0      swidth=0 blks
+</span></span><span style="display:flex;"><span>naming   =version 2              bsize=4096   ascii-ci=0, ftype=1
+</span></span><span style="display:flex;"><span>log      =internal log           bsize=4096   blocks=7252, version=2
+</span></span><span style="display:flex;"><span>         =                       sectsz=512   sunit=0 blks, lazy-count=1
+</span></span><span style="display:flex;"><span>realtime =none                   extsz=4096   blocks=0, rtextents=0
+</span></span><span style="display:flex;"><span>data blocks changed from 14852096 to 17473536
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>$ df -h
+</span></span><span style="display:flex;"><span>Filesystem                   Size  Used Avail Use% Mounted on
+</span></span><span style="display:flex;"><span>devtmpfs                     3.8G     0  3.8G   0% /dev
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G     0  3.8G   0% /dev/shm
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G  9.5M  3.8G   1% /run
+</span></span><span style="display:flex;"><span>tmpfs                        3.8G     0  3.8G   0% /sys/fs/cgroup
+</span></span><span style="display:flex;"><span>/dev/mapper/cl_centos8-root   67G   43G   25G  64% /
+</span></span><span style="display:flex;"><span>/dev/sda1                   1014M  378M  637M  38% /boot
+</span></span><span style="display:flex;"><span>/dev/mapper/cl_centos8-home  5.4G  372M  5.0G   7% /home
+</span></span><span style="display:flex;"><span>//172.28.200.1/share         345G  234G  112G  68% /share
+</span></span><span style="display:flex;"><span>tmpfs                        775M     0  775M   0% /run/user/0
+</span></span><span style="display:flex;"><span>$ 
+</span></span><span style="display:flex;"><span>$ lvdisplay 
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/root
+</span></span><span style="display:flex;"><span>  LV Name                root
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                DzRXf6-roJe-0He9-MBow-ccu0-bWjk-qPxfZS
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:35 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 1
+</span></span><span style="display:flex;"><span>  LV Size                &lt;66.66 GiB
+</span></span><span style="display:flex;"><span>  Current LE             17064
+</span></span><span style="display:flex;"><span>  Segments               2
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:0
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/home
+</span></span><span style="display:flex;"><span>  LV Name                home
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                9dT8j9-MTd1-dlO2-ceHH-vnpS-KtGJ-je2ReA
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:35 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 1
+</span></span><span style="display:flex;"><span>  LV Size                &lt;5.34 GiB
+</span></span><span style="display:flex;"><span>  Current LE             1367
+</span></span><span style="display:flex;"><span>  Segments               1
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:2
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>  --- Logical volume ---
+</span></span><span style="display:flex;"><span>  LV Path                /dev/cl_centos8/swap
+</span></span><span style="display:flex;"><span>  LV Name                swap
+</span></span><span style="display:flex;"><span>  VG Name                cl_centos8
+</span></span><span style="display:flex;"><span>  LV UUID                VSq1ve-Dn73-RLjq-q2GP-wa0r-De07-CO7edF
+</span></span><span style="display:flex;"><span>  LV Write Access        read/write
+</span></span><span style="display:flex;"><span>  LV Creation host, time centos8, 2021-11-28 12:38:36 +0900
+</span></span><span style="display:flex;"><span>  LV Status              available
+</span></span><span style="display:flex;"><span>  # open                 2
+</span></span><span style="display:flex;"><span>  LV Size                7.00 GiB
+</span></span><span style="display:flex;"><span>  Current LE             1792
+</span></span><span style="display:flex;"><span>  Segments               1
+</span></span><span style="display:flex;"><span>  Allocation             inherit
+</span></span><span style="display:flex;"><span>  Read ahead sectors     auto
+</span></span><span style="display:flex;"><span>  - currently set to     8192
+</span></span><span style="display:flex;"><span>  Block device           253:1
+</span></span><span style="display:flex;"><span>   
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h4 id="jenkins-ansicolor-플러그인">(jenkins) AnsiColor 플러그인</h4>
+<p>플러그인 설치 후 개별 job 의 <code>구성</code>에서 <code>빌드 환경</code>에 <code>Color ANSI Console Output</code> 을 선택하면 됩니다.</p>
+<p>플러그인 설명은 <code>Adds ANSI coloring to the Console Output</code> 입니다.</p>
+<h4 id="nexus-cleanup--compact-blob">(nexus) cleanup / compact blob</h4>
+<p>nexus 저장소에 오래된 snapshot 이 많아져서 공간이 부족해지면 아래 2가지 작업을 등록합니다.</p>
+<p>cleanup policy 및 cleanup task 만 등록할 경우 실제 blob 파일은 삭제되지 않기에 <code>compact blob task</code> 까지 등록해야 합니다.</p>
+<p>task 등록이 된 다음에는 해당 task 에서 <code>Run</code> 버튼을 클릭하여 실행하고 du 명령어로 공간이 확보된 것을 확인할 수 있을 것입니다.</p>
+<ul>
+<li>
+<p><code>Repository</code> &gt; <code>Cleanup Policies</code> 메뉴에서 정책 등록</p>
+</li>
+<li>
+<p><code>System</code> &gt; <code>Task</code> 메뉴에서 작업 등록</p>
+</li>
+</ul>
+<h4 id="cockpit">(cockpit)</h4>
+<p>cockpit 은 centos 의 web console 을 제공하는 패키지 입니다.</p>
+<p>설치</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ dnf install cockpit
+</span></span><span style="display:flex;"><span>$ systemctl enable --now cockpit.socket
+</span></span><span style="display:flex;"><span>$ netstat -ntplu | grep 9090
+</span></span></code></pre></div><p>cockpit 에 ssl 인증서 교체하기</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># create-cert.sh 로 인증서를 생성합니다.
+</span></span><span style="display:flex;"><span># 인자는 web console 에 접근할 도메인으로 생성하면 됩니다.
+</span></span><span style="display:flex;"><span># 예시는 centos8 이라는 도메인으로 생성합니다.
+</span></span><span style="display:flex;"><span>$ ./create-cert.sh centos8
+</span></span><span style="display:flex;"><span>$ ls -al 
+</span></span><span style="display:flex;"><span>-rw-r--r--  1 root root 1310  1월  2 14:58 centos8.crt
+</span></span><span style="display:flex;"><span>-rw-------  1 root root 1708  1월  2 14:58 centos8.key
+</span></span><span style="display:flex;"><span>$ cd /etc/cockpit/ws-certs.d
+</span></span><span style="display:flex;"><span>$ ls -al
+</span></span><span style="display:flex;"><span>-rw-r--r--  1 root root       2094  1월  2 00:46 0-self-signed-ca.pem
+</span></span><span style="display:flex;"><span>-rw-r--r--  1 root root       1684  1월  2 00:46 0-self-signed.cert
+</span></span><span style="display:flex;"><span>-rw-r-----  1 root cockpit-ws 1704  1월  2 00:46 0-self-signed.key
+</span></span><span style="display:flex;"><span>$ cp centos8.crt centos8.key /etc/cockpit/ws-certs.d
+</span></span><span style="display:flex;"><span>$ chmod 640 centos8.key
+</span></span><span style="display:flex;"><span>$ chown root:cockpit-ws centos8.key
+</span></span><span style="display:flex;"><span>$ chmod 644 centos8.crt
+</span></span><span style="display:flex;"><span>$ remotectl certificate centos8.crt centos8.key
+</span></span><span style="display:flex;"><span>generated combined certificate file: /etc/cockpit/ws-certs.d/centos8.cert
+</span></span><span style="display:flex;"><span>$ remotectl certificate
+</span></span><span style="display:flex;"><span>certificate: /etc/cockpit/ws-certs.d/centos8.crt
+</span></span><span style="display:flex;"><span>$ systemctl restart cockpit
+</span></span></code></pre></div><p>centos8 인증서 등록하기</p>
+<p><code>https://centos8:9090/</code> 링크로 이동하면 신뢰할 수 없는 사이트라고 표시됩니다.</p>
+<p>인증서를 내보내기 한 다음 아래 절차대로 인증서를 등록합니다.</p>
+<ul>
+<li>chrome 에서 <code>chrome://settings/security?q=enhanced</code> 링크로 이동합니다.</li>
+<li><code>인증서 관리</code> 메뉴를 클릭하면 팝업이 열립니다.</li>
+<li><code>신뢰할 수 있는 루트 인증 기관</code> 탭에서 가져오기를 클릭 합니다.</li>
+<li>내보내기 한 인증서를 선택하고 가져오기를 합니다.</li>
+<li>chrome 에서 <code>chrome://net-internals/#hsts</code> 링크로 이동합니다.</li>
+<li><code>Delete domain security policies</code> 에서 <code>centos8</code> 을 입력하고 <code>Delete</code> 버튼을 클릭합니다.</li>
+<li>chrome 에서 <code>chrome://restart</code> 링크 이동으로 chrome 을 재시작합니다.</li>
+<li>chrome 에서 <code>https://centos8:9090/</code> 링크로 이동하여 정상 작동하는지를 확인합니다.</li>
+</ul>
+<p>listen-port 변경하기</p>
+<p><code>/etc/systemd/system/sockets.target.wants/cockpit.socket</code> 파일을 아래와 같이 편집합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[Unit]
+</span></span><span style="display:flex;"><span>Description=Cockpit Web Service Socket
+</span></span><span style="display:flex;"><span>Documentation=man:cockpit-ws(8)
+</span></span><span style="display:flex;"><span>Wants=cockpit-motd.service
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Socket]
+</span></span><span style="display:flex;"><span>#ListenStream=9090 # 기본값
+</span></span><span style="display:flex;"><span>ListenStream=127.0.0.1:8000  # 변경값 (httpd 에서 proxy 로 접근)
+</span></span><span style="display:flex;"><span>ExecStartPost=-/usr/share/cockpit/motd/update-motd &#39;&#39; localhost
+</span></span><span style="display:flex;"><span>ExecStartPost=-/bin/ln -snf active.motd /run/cockpit/motd
+</span></span><span style="display:flex;"><span>ExecStopPost=-/bin/ln -snf inactive.motd /run/cockpit/motd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[Install]
+</span></span><span style="display:flex;"><span>WantedBy=sockets.target
+</span></span></code></pre></div><p>redhat 공식문서에서는 <code>/etc/systemd/system/cockpit.socket.d/listen.conf</code> 파일을 <code>생성</code>하고 daemon-reload 를 하라고 되어있습니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>[Socket]
+</span></span><span style="display:flex;"><span>ListenStream=
+</span></span><span style="display:flex;"><span>ListenStream=127.0.0.1:8000
+</span></span><span style="display:flex;"><span>FreeBind=yes
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>If an IP address is used here, it is often desirable to listen on it before the interface it is configured on is up and running, and even regardless of whether it will be up and running at any point. To deal with this, it is recommended to set the FreeBind= option described below.
+</span></span></code></pre></div><p>편집 후 아래 명령어를 실행합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl daemon<span style="color:#f92672">-</span>reload cockpit<span style="color:#f92672">.</span>socket
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> systemctl restart cockpit<span style="color:#f92672">.</span>socket
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 변경 상태를 확인합니다.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> netstat <span style="color:#f92672">-</span>ntplu <span style="color:#f92672">|</span> grep <span style="color:#ae81ff">8000</span>
+</span></span></code></pre></div><h4 id="mosh">(mosh)</h4>
+<p>설치</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ yum install mosh
+</span></span></code></pre></div><p>상태</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># 접속 후 netstat 상태 보기
+</span></span><span style="display:flex;"><span>$ mosh root@172.28.200.30
+</span></span><span style="display:flex;"><span>$ netstat -ntplu | grep 3253
+</span></span><span style="display:flex;"><span>udp        0      0 172.28.200.30:60001     0.0.0.0:*                           3253/mosh-server    
+</span></span><span style="display:flex;"><span>$ netstat -ntplu | grep 3217
+</span></span><span style="display:flex;"><span>udp        0      0 0.0.0.0:19001           0.0.0.0:*                           3217/mosh-client    
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 접속 옵션
+</span></span><span style="display:flex;"><span>$ mosh -ssh=&#39;ssh -vvv&#39; root@172.28.200.30
+</span></span></code></pre></div><p>chrome 확장 프로그램 <code>Secure Shell</code></p>
+<p><a href="https://chrome.google.com/webstore/detail/secure-shell/iodihamcpbpeioajjeobimgagajmlibd/related?hl=ko" target="_blank">링크</a></p>
+<h4 id="jasypt-encrypt">(jasypt) encrypt</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>    PooledPBEStringEncryptor encryptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PooledPBEStringEncryptor();
+</span></span><span style="display:flex;"><span>    SimpleStringPBEConfig config <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleStringPBEConfig();
+</span></span><span style="display:flex;"><span>    String secretkey <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+</span></span><span style="display:flex;"><span>    config.<span style="color:#a6e22e">setPassword</span>(secretkey);
+</span></span><span style="display:flex;"><span>    config.<span style="color:#a6e22e">setAlgorithm</span>(<span style="color:#e6db74">&#34;PBEWithHMACSHA512AndAES_256&#34;</span>);
+</span></span><span style="display:flex;"><span>    config.<span style="color:#a6e22e">setPoolSize</span>(<span style="color:#e6db74">&#34;2&#34;</span>);
+</span></span><span style="display:flex;"><span>    config.<span style="color:#a6e22e">setStringOutputType</span>(<span style="color:#e6db74">&#34;base64&#34;</span>);
+</span></span><span style="display:flex;"><span>    config.<span style="color:#a6e22e">setIvGenerator</span>(<span style="color:#66d9ef">new</span> RandomIvGenerator());
+</span></span><span style="display:flex;"><span>    encryptor.<span style="color:#a6e22e">setConfig</span>(config);
+</span></span><span style="display:flex;"><span>    String 암호문 <span style="color:#f92672">=</span> encryptor.<span style="color:#a6e22e">encrypt</span>(<span style="color:#e6db74">&#34;asdf&#34;</span>);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(암호문);
+</span></span><span style="display:flex;"><span>    String 평문 <span style="color:#f92672">=</span> encryptor.<span style="color:#a6e22e">decrypt</span>(암호문);
+</span></span><span style="display:flex;"><span>    System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(평문);
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><h4 id="java-keytool-인증서-생성">(java) keytool 인증서 생성</h4>
+<p>java 에 포함되어 있는 <code>keytool</code> 명령으로 아래 절차로 인증서를 생성합니다.</p>
+<p>생성된 인증서는 spring-boot 어플리케이션 설정파일인 <code>application.yaml</code> 주요 설정값을 암복호화를 할 때 사용하려 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#75715e"># keytool 경로 확인</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> which keytool
+</span></span><span style="display:flex;"><span><span style="color:#f92672">/</span>z<span style="color:#f92672">/</span>develop<span style="color:#f92672">/</span>java<span style="color:#f92672">/</span>openjdk<span style="color:#f92672">-</span><span style="color:#ae81ff">11.0</span><span style="color:#f92672">.</span><span style="color:#ae81ff">13.8</span><span style="color:#f92672">-</span>temurin<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>keytool
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># private-key 파일 생성 (mgkim-pc.jks)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> keytool <span style="color:#f92672">-</span>genkeypair <span style="color:#f92672">-</span>alias mgkim<span style="color:#f92672">-</span>pc <span style="color:#f92672">-</span>keyalg RSA <span style="color:#f92672">-</span>dname <span style="color:#e6db74">&#34;CN=mgkim, OU=API Development, O=mgkim.net, L=Seoul, C=KR&#34;</span> <span style="color:#f92672">-</span>keypass <span style="color:#e6db74">&#34;votmdnjem&#34;</span> <span style="color:#f92672">-</span>keystore mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks <span style="color:#f92672">-</span>storepass <span style="color:#e6db74">&#34;votmdnjem&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> ls <span style="color:#f92672">-</span>al mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">2733</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 인증서 파일 생성 (mgkim-pc.cer)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> keytool <span style="color:#f92672">-</span><span style="color:#66d9ef">export</span> <span style="color:#f92672">-</span>alias mgkim<span style="color:#f92672">-</span>pc <span style="color:#f92672">-</span>keystore mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks <span style="color:#f92672">-</span>rfc <span style="color:#f92672">-</span>file mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>cer
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">키</span> <span style="color:#960050;background-color:#1e0010">저장소</span> <span style="color:#960050;background-color:#1e0010">비밀번호</span> <span style="color:#960050;background-color:#1e0010">입력</span>:  votmdnjem
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">인증서가</span> <span style="color:#f92672">&lt;</span>mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>cer<span style="color:#f92672">&gt;</span> <span style="color:#960050;background-color:#1e0010">파일에</span> <span style="color:#960050;background-color:#1e0010">저장되었습니다</span><span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> ls <span style="color:#f92672">-</span>al mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">1236</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">58</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>cer
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">2733</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># public-key 파일 생성 (mgkim-pc.jks.pub)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> keytool <span style="color:#f92672">-</span>import <span style="color:#f92672">-</span>alias mgkim<span style="color:#f92672">-</span>pc <span style="color:#f92672">-</span>file mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>cer <span style="color:#f92672">-</span>keystore mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks<span style="color:#f92672">.</span>pub
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">키</span> <span style="color:#960050;background-color:#1e0010">저장소</span> <span style="color:#960050;background-color:#1e0010">비밀번호</span> <span style="color:#960050;background-color:#1e0010">입력</span>:  votmdnjem
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">새</span> <span style="color:#960050;background-color:#1e0010">비밀번호</span> <span style="color:#960050;background-color:#1e0010">다시</span> <span style="color:#960050;background-color:#1e0010">입력</span>: votmdnjem
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">소유자</span>: CN<span style="color:#f92672">=</span>mgkim, OU<span style="color:#f92672">=</span>API Development, O<span style="color:#f92672">=</span>mgkim<span style="color:#f92672">.</span>net, L<span style="color:#f92672">=</span>Seoul, C<span style="color:#f92672">=</span>KR
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">발행자</span>: CN<span style="color:#f92672">=</span>mgkim, OU<span style="color:#f92672">=</span>API Development, O<span style="color:#f92672">=</span>mgkim<span style="color:#f92672">.</span>net, L<span style="color:#f92672">=</span>Seoul, C<span style="color:#f92672">=</span>KR
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">일련</span> <span style="color:#960050;background-color:#1e0010">번호</span>: <span style="color:#ae81ff">59e8</span>ce89
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">적합한</span> <span style="color:#960050;background-color:#1e0010">시작</span> <span style="color:#960050;background-color:#1e0010">날짜</span>: Thu Jan <span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span>:<span style="color:#ae81ff">38</span> KST <span style="color:#ae81ff">2022</span> <span style="color:#960050;background-color:#1e0010">종료</span> <span style="color:#960050;background-color:#1e0010">날짜</span>: Wed Apr <span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span>:<span style="color:#ae81ff">38</span> KST <span style="color:#ae81ff">2022</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">인증서</span> <span style="color:#960050;background-color:#1e0010">지문</span>:
+</span></span><span style="display:flex;"><span>         SHA1: <span style="color:#ae81ff">1</span>D:<span style="color:#ae81ff">5</span>F:AF:<span style="color:#ae81ff">4</span>A:BE:<span style="color:#ae81ff">13</span>:E8:<span style="color:#ae81ff">2</span>C:<span style="color:#ae81ff">3</span>A:<span style="color:#ae81ff">17</span>:<span style="color:#ae81ff">3</span>D:DF:D4:<span style="color:#ae81ff">0</span>B:<span style="color:#ae81ff">32</span>:<span style="color:#ae81ff">31</span>:<span style="color:#ae81ff">8</span>C:FA:F2:<span style="color:#ae81ff">88</span>
+</span></span><span style="display:flex;"><span>         SHA256: CC:<span style="color:#ae81ff">89</span>:<span style="color:#ae81ff">1</span>A:<span style="color:#ae81ff">2</span>A:E0:<span style="color:#ae81ff">2</span>E:<span style="color:#ae81ff">6</span>D:E5:<span style="color:#ae81ff">82</span>:<span style="color:#ae81ff">12</span>:<span style="color:#ae81ff">57</span>:B7:<span style="color:#ae81ff">95</span>:<span style="color:#ae81ff">30</span>:C8:<span style="color:#ae81ff">09</span>:F5:<span style="color:#ae81ff">4</span>D:<span style="color:#ae81ff">46</span>:<span style="color:#ae81ff">13</span>:C1:<span style="color:#ae81ff">06</span>:D1:<span style="color:#ae81ff">3</span>B:FB:A1:<span style="color:#ae81ff">68</span>:<span style="color:#ae81ff">72</span>:<span style="color:#ae81ff">24</span>:<span style="color:#ae81ff">5</span>E:<span style="color:#ae81ff">18</span>:A3
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">서명</span> <span style="color:#960050;background-color:#1e0010">알고리즘</span> <span style="color:#960050;background-color:#1e0010">이름</span>: SHA256withRSA
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">주체</span> <span style="color:#960050;background-color:#1e0010">공용</span> <span style="color:#960050;background-color:#1e0010">키</span> <span style="color:#960050;background-color:#1e0010">알고리즘</span>: <span style="color:#ae81ff">2048</span><span style="color:#960050;background-color:#1e0010">비트</span> RSA <span style="color:#960050;background-color:#1e0010">키</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">버전</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">확장</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#1: ObjectId: 2.5.29.14 Criticality=false</span>
+</span></span><span style="display:flex;"><span>SubjectKeyIdentifier [
+</span></span><span style="display:flex;"><span>KeyIdentifier [
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0000</span>: <span style="color:#ae81ff">89</span> <span style="color:#ae81ff">34</span> C5 D9 <span style="color:#ae81ff">38</span> <span style="color:#ae81ff">29</span> <span style="color:#ae81ff">88</span> <span style="color:#ae81ff">26</span>   <span style="color:#ae81ff">43</span> <span style="color:#ae81ff">6</span>B DF B8 <span style="color:#ae81ff">34</span> E7 AE <span style="color:#ae81ff">74</span>  <span style="color:#f92672">.</span><span style="color:#ae81ff">4.</span><span style="color:#f92672">.</span><span style="color:#ae81ff">8</span>)<span style="color:#f92672">.&amp;</span>Ck<span style="color:#f92672">..</span><span style="color:#ae81ff">4.</span><span style="color:#f92672">.</span>t
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0010</span>: FD <span style="color:#ae81ff">35</span> <span style="color:#ae81ff">0</span>B <span style="color:#ae81ff">8</span>F                                        <span style="color:#f92672">.</span><span style="color:#ae81ff">5.</span><span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">이</span> <span style="color:#960050;background-color:#1e0010">인증서를</span> <span style="color:#960050;background-color:#1e0010">신뢰합니까?</span> [<span style="color:#960050;background-color:#1e0010">아니오</span>]:  y
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">인증서가</span> <span style="color:#960050;background-color:#1e0010">키</span> <span style="color:#960050;background-color:#1e0010">저장소에</span> <span style="color:#960050;background-color:#1e0010">추가되었습니다</span><span style="color:#f92672">.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> ls <span style="color:#f92672">-</span>al mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">1236</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">58</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>cer
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">2733</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">21</span>:<span style="color:#ae81ff">56</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>rw<span style="color:#f92672">-</span>r<span style="color:#f92672">--</span>r<span style="color:#f92672">--</span> <span style="color:#ae81ff">1</span> Administrator <span style="color:#ae81ff">197121</span> <span style="color:#ae81ff">1239</span> <span style="color:#ae81ff">2022</span><span style="color:#f92672">-</span><span style="color:#ae81ff">01</span><span style="color:#f92672">-</span><span style="color:#ae81ff">27</span> <span style="color:#ae81ff">22</span>:<span style="color:#ae81ff">00</span> mgkim<span style="color:#f92672">-</span>pc<span style="color:#f92672">.</span>jks<span style="color:#f92672">.</span>pub
+</span></span><span style="display:flex;"><span><span style="color:#f92672">$</span> 
+</span></span></code></pre></div><ul>
+<li>mgkim-pc.jks: private-key 파일</li>
+<li>mgkim-pc.cer: 인증서 파일</li>
+<li>mgkim-pc.jks.pub: public-key 파일</li>
+</ul>
+<h4 id="windows-vbs-msgbox-사용하기">(windows) vbs MsgBox 사용하기</h4>
+<p>vbs 내용을 별도 파일<code>MessageBox.vbs</code>로 저장하고, cmd 창에서 <code>cscript Z:/develop/script/MessageBox.vbs &quot;팝업 메시지&quot;</code> 형태로 사용할 수 있습니다.</p>
+<p>(윈도우즈에서 백업 스크립트가 처리 완료되었음을 알릴 때 활용할 수 있습니다.)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Set objArgs = WScript.Arguments
+</span></span><span style="display:flex;"><span>messageText = objArgs(0)
+</span></span><span style="display:flex;"><span>MsgBox messageText
+</span></span></code></pre></div><h4 id="win-절전-cmd">(win) 절전 cmd</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>%windir%\System32\rundll32.exe powrprof.dll SetSuspendState
+</span></span></code></pre></div><h4 id="vmware-실행-cmd">(vmware) 실행 cmd</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>set &#34;VMWARE_HOME=C:\Program Files (x86)\VMware\VMware Workstation&#34;
+</span></span><span style="display:flex;"><span>set &#34;PATH=%PATH%;%VMWARE_HOME%&#34;
+</span></span><span style="display:flex;"><span>vmrun -T ws start &#34;Z:\centos7-develop\centos7-develop.vmx&#34; nogui
+</span></span></code></pre></div><h4 id="jmeter-jmeter-실행-cmd">(jmeter) jmeter 실행 cmd</h4>
+<p>jmeter 실행 결과 디렉토리에 timestamp 변수 사용하기</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&gt; set ts=%DATE:~0,4%%DATE:~5,2%%DATE:~8,2%_%TIME:~0,2%%TIME:~3,2%%TIME:~6,2%
+</span></span><span style="display:flex;"><span>&gt; apache-jmeter-5.4.1\bin\jmeter.bat -n -t jmeter-mgkim-core.jmx -l data\%ts%.csv -e -o data\%ts%
+</span></span></code></pre></div><h4 id="oracle-client-무설치-설정">(oracle) client 무설치 설정</h4>
+<p><strong>시스템변수</strong></p>
+<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_client</code></p>
+<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\ORACLE\KEY_client</code></p>
+<p><strong>tnsnames.ora</strong></p>
+<h4 id="oracle-sqlplus">(oracle) sqlplus</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>C:\Users\Administrator&gt;sqlplus /nolog
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL*Plus: Release 12.1.0.2.0 Production on 목 9월 2 11:39:53 2021
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL&gt; conn SPADBA/password@develop:1521/SPADBP
+</span></span><span style="display:flex;"><span>연결되었습니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL&gt; show con_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CON_NAME
+</span></span><span style="display:flex;"><span>------------------------------
+</span></span><span style="display:flex;"><span>CDB$ROOT
+</span></span><span style="display:flex;"><span>SQL&gt; set line 150 pages 1000
+</span></span><span style="display:flex;"><span>SQL&gt; col name for a30
+</span></span><span style="display:flex;"><span>SQL&gt; select con_id, dbid, name, open_mode from v$containers order by 1;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    CON_ID   DBID NAME           OPEN_MODE
+</span></span><span style="display:flex;"><span>---------- ---------- ------------------------------ ----------
+</span></span><span style="display:flex;"><span>   1 1588065228 CDB$ROOT           READ WRITE
+</span></span><span style="display:flex;"><span>   2 2599163564 PDB$SEED           READ ONLY
+</span></span><span style="display:flex;"><span>   3  673775647 SPADBP           READ WRITE
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL&gt; alter session set container=SPADBP;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>세션이 변경되었습니다.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SQL&gt; show con_name
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>CON_NAME
+</span></span><span style="display:flex;"><span>------------------------------
+</span></span><span style="display:flex;"><span>SPADBP
+</span></span><span style="display:flex;"><span>SQL&gt;
+</span></span></code></pre></div><h4 id="oracle-object-조회-query">(oracle) object 조회 query</h4>
+<p>dictionary 뷰에서부터 object 정보를 확인하고 생성된 상태를 확인할 수 있습니다.</p>
+<p>sqlgate 에 단축키로 등록하고 사용하면 유용할 query 입니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span># 테이블 검색
+</span></span><span style="display:flex;"><span>SELECT /* (Alt+1) 테이블 검색  */ A.OWNER, A.COMMENTS AS T_COMMENT, A.TABLE_NAME AS T_NAME, B.COLUMN_NAME AS C_NAME, B.COMMENTS AS C_COMMENT, B1.COLUMN_ID
+</span></span><span style="display:flex;"><span>FROM  ALL_TAB_COMMENTS A, ALL_COL_COMMENTS B, ALL_TAB_COLS B1
+</span></span><span style="display:flex;"><span>WHERE 1=1
+</span></span><span style="display:flex;"><span>  AND A.TABLE_NAME LIKE &#39;%&amp;Var%&#39;
+</span></span><span style="display:flex;"><span>  AND A.TABLE_NAME = B.TABLE_NAME
+</span></span><span style="display:flex;"><span>  AND B.TABLE_NAME = B1.TABLE_NAME
+</span></span><span style="display:flex;"><span>  AND B.COLUMN_NAME = B1.COLUMN_NAME
+</span></span><span style="display:flex;"><span>  AND A.OWNER = B.OWNER
+</span></span><span style="display:flex;"><span>  AND B.OWNER = B1.OWNER(+)
+</span></span><span style="display:flex;"><span>  AND A.OWNER IN (&#39;SPADBA&#39;)
+</span></span><span style="display:flex;"><span>ORDER BY A.OWNER DESC, B1.COLUMN_ID, A.COMMENTS
+</span></span><span style="display:flex;"><span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 컬럼 검색
+</span></span><span style="display:flex;"><span>SELECT /* (Alt+2) 컬럼 검색  */ A.OWNER, A.COMMENTS AS T_COMMENT, A.TABLE_NAME AS T_NAME, B.COLUMN_NAME AS C_NAME, B.COMMENTS AS C_COMMENT, B1.COLUMN_ID
+</span></span><span style="display:flex;"><span>FROM  ALL_TAB_COMMENTS A, ALL_COL_COMMENTS B, ALL_TAB_COLS B1, ALL_CONS_COLUMNS C
+</span></span><span style="display:flex;"><span>WHERE 1=1
+</span></span><span style="display:flex;"><span>  AND (B.COLUMN_NAME LIKE &#39;%&amp;Var%&#39; OR B.COMMENTS LIKE &#39;%&amp;Var%&#39;)
+</span></span><span style="display:flex;"><span>  AND A.TABLE_NAME = B.TABLE_NAME
+</span></span><span style="display:flex;"><span>  AND B.TABLE_NAME = C.TABLE_NAME(+)
+</span></span><span style="display:flex;"><span>  AND B.TABLE_NAME = B1.TABLE_NAME
+</span></span><span style="display:flex;"><span>  AND B.COLUMN_NAME = B1.COLUMN_NAME
+</span></span><span style="display:flex;"><span>  AND A.OWNER = B.OWNER
+</span></span><span style="display:flex;"><span>  AND B.OWNER = B1.OWNER(+)
+</span></span><span style="display:flex;"><span>  AND B.OWNER = C.OWNER
+</span></span><span style="display:flex;"><span>  AND B.COLUMN_NAME = C.COLUMN_NAME(+)
+</span></span><span style="display:flex;"><span>  AND C.CONSTRAINT_NAME(+) LIKE &#39;%PK&#39;
+</span></span><span style="display:flex;"><span>  AND A.OWNER IN (&#39;SPADBA&#39;)
+</span></span><span style="display:flex;"><span>  AND (A.TABLE_NAME LIKE &#39;E%&#39; OR A.TABLE_NAME LIKE &#39;CB%&#39;)
+</span></span><span style="display:flex;"><span>ORDER BY A.OWNER DESC, A.COMMENTS, B1.COLUMN_ID, C.POSITION
+</span></span><span style="display:flex;"><span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># 테이블 조회
+</span></span><span style="display:flex;"><span>SELECT /* (Alt+3) 테이블 조회 */ * FROM &amp;Var WHERE ROWNUM &lt; 200
+</span></span><span style="display:flex;"><span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span># dict 검색
+</span></span><span style="display:flex;"><span>SELECT /* (Alt+4) DICT 검색 */ * FROM DICT WHERE TABLE_NAME LIKE &#39;%&#39;||&#39;&amp;Var&#39;||&#39;%&#39;
+</span></span><span style="display:flex;"><span>ORDER BY TABLE_NAME
+</span></span><span style="display:flex;"><span>;
+</span></span></code></pre></div><h4 id="oracle12-시스템-계정">(oracle12) 시스템 계정</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>groupadd oinstall
+</span></span><span style="display:flex;"><span>groupadd dba
+</span></span><span style="display:flex;"><span>useradd -g oinstall -G dba oracle
+</span></span></code></pre></div><h4 id="oracle12-설치-디렉토리">(oracle12) 설치 디렉토리</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir -p /prod/oracle12/app
+</span></span><span style="display:flex;"><span>mkdir -p /prod/oracle12/oraInventory
+</span></span><span style="display:flex;"><span>chown -R oracle:oinstall /prod/oracle12/app
+</span></span><span style="display:flex;"><span>chown -R oracle:oinstall /prod/oracle12/oraInventory
+</span></span><span style="display:flex;"><span>chmod -R 775 /prod/oracle12/app
+</span></span><span style="display:flex;"><span>chmod -R 775 /prod/oracle12/oraInventory
+</span></span><span style="display:flex;"><span>chmod g+s /prod/oracle12/app
+</span></span><span style="display:flex;"><span>chmod g+s /prod/oracle12/oraInventory
+</span></span></code></pre></div><h4 id="oracle12-시스템-변수">(oracle12) 시스템 변수</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> TMPDIR<span style="color:#f92672">=$</span>TMP
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> ORACLE_BASE<span style="color:#f92672">=/</span>prod<span style="color:#f92672">/</span>oracle12<span style="color:#f92672">/</span>app<span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> ORACLE_HOME<span style="color:#f92672">=$</span>ORACLE_BASE<span style="color:#f92672">/</span>product<span style="color:#f92672">/</span><span style="color:#ae81ff">12.2</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">/</span>dbhome_1
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> ORACLE_HOME_LISTNER<span style="color:#f92672">=$</span>ORACLE_HOME<span style="color:#f92672">/</span>bin<span style="color:#f92672">/</span>lsnrctl
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> ORACLE_SID<span style="color:#f92672">=</span>orcl
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> LD_LIBRARY_PATH<span style="color:#f92672">=/</span>lib:<span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>lib:<span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>lib64:<span style="color:#f92672">$</span>ORACLE_HOME<span style="color:#f92672">/</span>lib
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> CLASSPATH<span style="color:#f92672">=$</span>ORACLE_HOME<span style="color:#f92672">/</span>jlib:<span style="color:#f92672">$</span>ORACLE_HOME<span style="color:#f92672">/</span>rdbms<span style="color:#f92672">/</span>jlib
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> PATH<span style="color:#f92672">=$</span>ORACLE_HOME<span style="color:#f92672">/</span>bin:<span style="color:#f92672">$</span>PATH:<span style="color:#f92672">$</span>HOME<span style="color:#f92672">/.</span>local<span style="color:#f92672">/</span>bin:<span style="color:#f92672">$</span>HOME<span style="color:#f92672">/</span>bin
+</span></span></code></pre></div><h4 id="oracle12-gui-패키지-설치">(oracle12) gui 패키지 설치</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ yum grouplist
+</span></span><span style="display:flex;"><span>사용 가능한 환경 그룹 :
+</span></span><span style="display:flex;"><span>   서버 - GUI 사용
+</span></span><span style="display:flex;"><span>   최소 설치
+</span></span><span style="display:flex;"><span>   워크스테이션
+</span></span><span style="display:flex;"><span>   가상화 호스트
+</span></span><span style="display:flex;"><span>   사용자 정의 운영 체제
+</span></span><span style="display:flex;"><span>$ yum groupinstall &#34;서버 - GUI 사용&#34;
+</span></span></code></pre></div><p>설치 후 runlevel 변경: <code>$ systemctl set-default graphical.target</code></p>
+<h4 id="oracle12-oracle12c-ee-설치">(oracle12) oracle12c-ee 설치</h4>
+<p>gui 환경으로 booting 후 oracle 계정으로 로그인하고 <code>runInstaller</code> 실행</p>
+<p>설치 파일: <code>oracle-ee_12102_linux_x64_1of2.zip</code>, <code>oracle-ee_12102_linux_x64_2of2.zip</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>install
+</span></span><span style="display:flex;"><span>response
+</span></span><span style="display:flex;"><span>rpm
+</span></span><span style="display:flex;"><span>runInstaller
+</span></span><span style="display:flex;"><span>sshsetup
+</span></span><span style="display:flex;"><span>stage
+</span></span><span style="display:flex;"><span>welcome.html
+</span></span></code></pre></div><h4 id="oracle12-systemctl-등록">(oracle12) systemctl 등록</h4>
+<p>systemctl 환경변수 파일: /etc/sysconfig/ora12c.env</p>
+<p>소유자(oracle) 설정: <code>chown oracle:db /etc/sysconfig/ora12c.env</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ORACLE_BASE=/prod/oracle12/app
+</span></span><span style="display:flex;"><span>ORACLE_HOME=$ORACLE_BASE/product/12.2.0/dbhome_1
+</span></span><span style="display:flex;"><span>ORACLE_SID=ora12c
+</span></span></code></pre></div><h4 id="oracle12-각종-오류">(oracle12) 각종 오류</h4>
+<ul>
+<li>
+<p>ORA-01102: cannot mount database in EXCLUSIVE mode</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>cat $ORACLE_BASE/admin/ora12c/pfile/init.ora.1028202115570
+</span></span><span style="display:flex;"><span>cp $ORACLE_BASE/admin/ora12c/pfile/init.ora.1028202115570 $ORACLE_HOME/dbs/initora12c.ora
+</span></span></code></pre></div></li>
+<li>
+<p>ORA-01033: ORACLE initialization or shutdown in progress</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>alter pluggable database pdborcl open read write;
+</span></span></code></pre></div></li>
+</ul>
+<p>systemctl service 파일 생성</p>
+<p>service 파일에는 환경변수 파일을 적용할 것</p>
+<p><code>ora12c@lsnrctl.service</code>, <code>ora12c@dbms.service</code></p>
+<h4 id="oracle12-oratab-파일">(oracle12) oratab 파일</h4>
+<p>파일: /etc/oratab</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>ora12c:/prod/oracle12/app/product/12.2.0/dbhome_1:Y
+</span></span></code></pre></div><p>소유자(oracle) 설정: <code>chown oracle:db /etc/oratab</code></p>
+<h4 id="apache-httpdconf">(apache) httpd.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>ServerRoot <span style="color:#e6db74">&#34;/etc/httpd&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Listen <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Include conf<span style="color:#f92672">.</span>modules<span style="color:#f92672">.</span>d<span style="color:#f92672">/*.</span>conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>User apache
+</span></span><span style="display:flex;"><span>Group web
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ServerAdmin hi<span style="color:#960050;background-color:#1e0010">@</span>mgkim<span style="color:#f92672">.</span>net
+</span></span><span style="display:flex;"><span>ServerName develop:<span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Directory</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  AllowOverride none
+</span></span><span style="display:flex;"><span>  Require all denied
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">Directory</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DocumentRoot <span style="color:#e6db74">&#34;/var/www/html&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>Files <span style="color:#e6db74">&#34;.ht*&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  Require all denied
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>Files<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ErrorLog <span style="color:#e6db74">&#34;/outlog/WEB/httpd/error.log&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>LogLevel warn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>IfModule log_config_module<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  LogFormat <span style="color:#e6db74">&#34;%h %l </span><span style="color:#e6db74">%u</span><span style="color:#e6db74"> %t </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%r</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> %&gt;s %b </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%{Referer}i</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%{User-Agent}i</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">&#34;</span> combined
+</span></span><span style="display:flex;"><span>  LogFormat <span style="color:#e6db74">&#34;%h %l </span><span style="color:#e6db74">%u</span><span style="color:#e6db74"> %t </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%r</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> %&gt;s %b&#34;</span> common
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>IfModule logio_module<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    LogFormat <span style="color:#e6db74">&#34;%h %l </span><span style="color:#e6db74">%u</span><span style="color:#e6db74"> %t </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%r</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> %&gt;s %b </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%{Referer}i</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%{User-Agent}i</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> %I %O&#34;</span> combinedio
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>IfModule<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  CustomLog <span style="color:#e6db74">&#34;/outlog/WEB/httpd/access.log&#34;</span> combined
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>IfModule<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>IfModule alias_module<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ScriptAlias <span style="color:#f92672">/</span>cgi<span style="color:#f92672">-</span>bin<span style="color:#f92672">/</span> <span style="color:#e6db74">&#34;/var/www/cgi-bin/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>IfModule<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Directory</span> <span style="color:#e6db74">&#34;/var/www/cgi-bin&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  AllowOverride None
+</span></span><span style="display:flex;"><span>  Options None
+</span></span><span style="display:flex;"><span>  Require all granted
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">Directory</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>IfModule mime_module<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  TypesConfig <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>mime<span style="color:#f92672">.</span>types
+</span></span><span style="display:flex;"><span>  AddType application<span style="color:#f92672">/</span>x<span style="color:#f92672">-</span>compress <span style="color:#f92672">.</span>Z
+</span></span><span style="display:flex;"><span>  AddType application<span style="color:#f92672">/</span>x<span style="color:#f92672">-</span>gzip <span style="color:#f92672">.</span>gz <span style="color:#f92672">.</span>tgz
+</span></span><span style="display:flex;"><span>  AddType text<span style="color:#f92672">/</span>html <span style="color:#f92672">.</span>shtml
+</span></span><span style="display:flex;"><span>  AddOutputFilter INCLUDES <span style="color:#f92672">.</span>shtml
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>IfModule<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>AddDefaultCharset UTF<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>IfModule mime_magic_module<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  MIMEMagicFile conf<span style="color:#f92672">/</span>magic
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>IfModule<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>EnableSendfile on
+</span></span><span style="display:flex;"><span>IncludeOptional conf<span style="color:#f92672">.</span>d<span style="color:#f92672">/*.</span>conf
+</span></span></code></pre></div><h4 id="apache-sslconf">(apache) ssl.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span>Listen <span style="color:#ae81ff">443</span> https
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLPassPhraseDialog exec:<span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>libexec<span style="color:#f92672">/</span>httpd<span style="color:#f92672">-</span>ssl<span style="color:#f92672">-</span><span style="color:#66d9ef">pass</span><span style="color:#f92672">-</span>dialog
+</span></span><span style="display:flex;"><span>SSLSessionCache         shmcb:<span style="color:#f92672">/</span>run<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>sslcache(<span style="color:#ae81ff">512000</span>)
+</span></span><span style="display:flex;"><span>SSLSessionCacheTimeout  <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>SSLRandomSeed startup file:<span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>urandom  <span style="color:#ae81ff">256</span>
+</span></span><span style="display:flex;"><span>SSLRandomSeed connect builtin
+</span></span><span style="display:flex;"><span>SSLCryptoDevice builtin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>VirtualHost _default_:<span style="color:#ae81ff">443</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName develop
+</span></span><span style="display:flex;"><span>  ErrorLog <span style="color:#f92672">/</span>outlog<span style="color:#f92672">/</span>WEB<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>develop<span style="color:#f92672">-</span>error_ssl<span style="color:#f92672">.</span>log
+</span></span><span style="display:flex;"><span>  TransferLog <span style="color:#f92672">/</span>outlog<span style="color:#f92672">/</span>WEB<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>develop<span style="color:#f92672">-</span>access_ssl<span style="color:#f92672">.</span>log
+</span></span><span style="display:flex;"><span>  LogLevel warn
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine on
+</span></span><span style="display:flex;"><span>  SSLProtocol all <span style="color:#f92672">-</span>SSLv2 <span style="color:#f92672">-</span>SSLv3
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:<span style="color:#ae81ff">3</span>DES:<span style="color:#f92672">!</span>aNULL:<span style="color:#f92672">!</span>MD5:<span style="color:#f92672">!</span>SEED:<span style="color:#f92672">!</span>IDEA
+</span></span><span style="display:flex;"><span>  SSLCertificateFile <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>conf<span style="color:#f92672">.</span>d<span style="color:#f92672">/</span>certs<span style="color:#f92672">/</span>develop<span style="color:#f92672">.</span>crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile <span style="color:#f92672">/</span>etc<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>conf<span style="color:#f92672">.</span>d<span style="color:#f92672">/</span>certs<span style="color:#f92672">/</span>develop<span style="color:#f92672">.</span>key
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span>Files <span style="color:#f92672">~</span> <span style="color:#e6db74">&#34;\.(cgi|shtml|phtml|php3?)$&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SSLOptions <span style="color:#f92672">+</span>StdEnvVars
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span>Files<span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">Directory</span> <span style="color:#e6db74">&#34;/var/www/cgi-bin&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SSLOptions <span style="color:#f92672">+</span>StdEnvVars
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">Directory</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  BrowserMatch <span style="color:#e6db74">&#34;MSIE [2-5]&#34;</span> nokeepalive ssl<span style="color:#f92672">-</span>unclean<span style="color:#f92672">-</span>shutdown downgrade<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span> force<span style="color:#f92672">-</span>response<span style="color:#f92672">-</span><span style="color:#ae81ff">1.0</span>
+</span></span><span style="display:flex;"><span>  CustomLog <span style="color:#f92672">/</span>outlog<span style="color:#f92672">/</span>WEB<span style="color:#f92672">/</span>httpd<span style="color:#f92672">/</span>default<span style="color:#f92672">-</span>request_ssl<span style="color:#f92672">.</span>log <span style="color:#e6db74">&#34;%t %h %{SSL_PROTOCOL}x %{SSL_CIPHER}x </span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74">%r</span><span style="color:#ae81ff">\&#34;</span><span style="color:#e6db74"> %b&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/</span>VirtualHost<span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h4 id="apache-vhost-centos8conf">(apache) vhost-centos8.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName centos8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On [NC]
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://centos8/$1 [P,L]
+</span></span><span style="display:flex;"><span>  #RewriteCond %{HTTP:Upgrade} =websocket [NC]
+</span></span><span style="display:flex;"><span>  #RewriteRule /(.*) wss://centos8/$1 [P,L]
+</span></span><span style="display:flex;"><span>  #RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+</span></span><span style="display:flex;"><span>  #RewriteRule /(.*) https://centos8/$1 [P,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName centos8
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/cockpit/ws-certs.d/centos8.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/cockpit/ws-certs.d/centos8.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ErrorLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/centos8-error.log.%Y-%m-%d 86400 +540&#34;
+</span></span><span style="display:flex;"><span>  CustomLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/centos8-access.log.%Y-%m-%d 86400 +540&#34; combined
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ProxyRequests Off
+</span></span><span style="display:flex;"><span>  ProxyPreserveHost On
+</span></span><span style="display:flex;"><span>  # AH01961: SSL Proxy requested for centos8:443 but not enabled [Hint: SSLProxyEngine]
+</span></span><span style="display:flex;"><span>  SSLProxyEngine On
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  AllowEncodedSlashes On
+</span></span><span style="display:flex;"><span>  Header set Access-Control-Allow-Origin &#34;*&#34;
+</span></span><span style="display:flex;"><span>  RequestHeader set X-Forwarded-Proto https
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;Proxy balancer://cluster1&gt;
+</span></span><span style="display:flex;"><span>    BalancerMember https://127.0.0.1:8000
+</span></span><span style="display:flex;"><span>  &lt;/Proxy&gt;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ProxyPass / balancer://cluster1/ stickysession=JSESSIONID|jsessionid
+</span></span><span style="display:flex;"><span>  ProxyPassReverse / balancer://cluster1/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTP:Upgrade} =websocket [NC]
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*)           wss://127.0.0.1:8000/$1 [P,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span></code></pre></div><h4 id="apache-vhost-nexusconf">(apache) vhost-nexus.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName nexus
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://nexus.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName nexus
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/nexus.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/nexus.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://nexus.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName nexus.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName nexus.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ErrorLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/nexus.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540%&#34;
+</span></span><span style="display:flex;"><span>  CustomLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/nexus.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540%&#34; combined
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  AllowEncodedSlashes On
+</span></span><span style="display:flex;"><span>  Header set Access-Control-Allow-Origin &#34;*&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ProxyRequests Off
+</span></span><span style="display:flex;"><span>  ProxyPreserveHost On
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;Proxy *&gt;
+</span></span><span style="display:flex;"><span>    Require all granted
+</span></span><span style="display:flex;"><span>  &lt;/Proxy&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ProxyPass / http://127.0.0.1:8100/
+</span></span><span style="display:flex;"><span>  ProxyPassReverse / http://127.0.0.1:8100/
+</span></span><span style="display:flex;"><span>  RequestHeader set X-Forwarded-Proto &#34;https&#34;
+</span></span><span style="display:flex;"><span>  #ProxyPassMatch ^/(.*)$ http://127.0.0.1:8100/$1
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span></code></pre></div><h4 id="apache-vhost-gitlabconf">(apache) vhost-gitlab.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName gitlab
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://gitlab.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName gitlab
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/gitlab.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/gitlab.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://gitlab.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName gitlab.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName gitlab.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  DocumentRoot &#34;/opt/gitlab/embedded/service/gitlab-rails/public&#34;
+</span></span><span style="display:flex;"><span>  ErrorLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/gitlab.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540&#34;
+</span></span><span style="display:flex;"><span>  CustomLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/gitlab.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540&#34; combined
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ProxyRequests Off
+</span></span><span style="display:flex;"><span>  ProxyPreserveHost On
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  &lt;Proxy gitlab&gt;
+</span></span><span style="display:flex;"><span>    Require all granted
+</span></span><span style="display:flex;"><span>  &lt;/Proxy&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  AllowEncodedSlashes On
+</span></span><span style="display:flex;"><span>  Header set Access-Control-Allow-Origin &#34;*&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ProxyPass / http://127.0.0.1:8200/
+</span></span><span style="display:flex;"><span>  ProxyPassReverse / http://127.0.0.1:8200/
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span></code></pre></div><h4 id="apache-vhost-jenkinsconf">(apache) vhost-jenkins.conf</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName jenkins
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteCond %{REQUEST_URI} ^/(computer)/.*$
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) http://localhost:8400/$1 [QSA,P,L]
+</span></span><span style="display:flex;"><span>  RewriteCond %{REQUEST_URI} ^/(wsagents)/.*$
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) ws://localhost:8400/$1 [QSA,P,L]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName jenkins
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/jenkins.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/jenkins.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:80&gt;
+</span></span><span style="display:flex;"><span>  ServerName jenkins.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteCond %{REQUEST_URI} ^/(computer)/.*$
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) http://localhost:8400/$1 [QSA,P,L]
+</span></span><span style="display:flex;"><span>  RewriteCond %{REQUEST_URI} ^/(wsagents)/.*$
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) ws://localhost:8400/$1 [QSA,P,L]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://jenkins.mgkim.net/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;VirtualHost *:443&gt;
+</span></span><span style="display:flex;"><span>  ServerName jenkins.mgkim.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ErrorLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/jenkins.mgkim.net_ssl-error.log.%Y-%m-%d 86400 +540&#34;
+</span></span><span style="display:flex;"><span>  CustomLog &#34;|/usr/sbin/rotatelogs /outlog/WEB/httpd/jenkins.mgkim.net_ssl-access.log.%Y-%m-%d 86400 +540&#34; combined
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine On
+</span></span><span style="display:flex;"><span>  SSLProtocol all -SSLv2
+</span></span><span style="display:flex;"><span>  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+</span></span><span style="display:flex;"><span>  SSLCertificateFile /etc/httpd/conf.d/certs/STAR.mgkim.net.crt
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile /etc/httpd/conf.d/certs/STAR.mgkim.net.key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  AllowEncodedSlashes On
+</span></span><span style="display:flex;"><span>  Header set Access-Control-Allow-Origin &#34;*&#34;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine On
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTP:Upgrade} =websocket [NC]
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) ws://localhost:8400/$1 [P,L]
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTP:Upgrade} !=websocket [NC]
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) http://localhost:8400/$1 [P,L]
+</span></span><span style="display:flex;"><span>&lt;/VirtualHost&gt;
+</span></span></code></pre></div><h4 id="apache-weblogic-connector">(apache) weblogic-connector</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>LoadModule weblogic_module modules/mod_wl_24.so
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;IfModule mod_weblogic.c&gt;
+</span></span><span style="display:flex;"><span>  WebLogicCluster IP:PORT,IP:PORT,IP:PORT
+</span></span><span style="display:flex;"><span>  ConnectTimeoutSecs 8
+</span></span><span style="display:flex;"><span>  ConnectRetrySecs 2
+</span></span><span style="display:flex;"><span>  Idempotent OFF
+</span></span><span style="display:flex;"><span>  DynamicServerList OFF
+</span></span><span style="display:flex;"><span>  MatchExpression *
+</span></span><span style="display:flex;"><span>  KeepAliveEnabled OFF
+</span></span><span style="display:flex;"><span>&lt;/IfModule&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;Location /api &gt;
+</span></span><span style="display:flex;"><span>  WLSRequest On
+</span></span><span style="display:flex;"><span>  #SetHandler weblogic-handler
+</span></span><span style="display:flex;"><span>  WebLogicCluster IP:PORT,IP:PORT,IP:PORT
+</span></span><span style="display:flex;"><span>  #Idempotent OFF
+</span></span><span style="display:flex;"><span>&lt;/Location&gt;
+</span></span></code></pre></div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <aside class="aside">
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#centos-zsh">(centos) zsh</a></li>
+                <li><a href="#git-bash-zsh">(git-bash) zsh</a></li>
+                <li><a href="#cockpit-grafana-grafana-pcp">(cockpit) grafana, grafana-pcp</a></li>
+                <li><a href="#cockpit-cockpit-pcp-설치">(cockpit) cockpit-pcp 설치</a></li>
+                <li><a href="#elk-elasticsearch-패스워드-설정">(ELK) elasticsearch 패스워드 설정</a></li>
+                <li><a href="#centos-디스크-size-확장">(centos) 디스크 size 확장</a></li>
+                <li><a href="#jenkins-ansicolor-플러그인">(jenkins) AnsiColor 플러그인</a></li>
+                <li><a href="#nexus-cleanup--compact-blob">(nexus) cleanup / compact blob</a></li>
+                <li><a href="#cockpit">(cockpit)</a></li>
+                <li><a href="#mosh">(mosh)</a></li>
+                <li><a href="#jasypt-encrypt">(jasypt) encrypt</a></li>
+                <li><a href="#java-keytool-인증서-생성">(java) keytool 인증서 생성</a></li>
+                <li><a href="#windows-vbs-msgbox-사용하기">(windows) vbs MsgBox 사용하기</a></li>
+                <li><a href="#win-절전-cmd">(win) 절전 cmd</a></li>
+                <li><a href="#vmware-실행-cmd">(vmware) 실행 cmd</a></li>
+                <li><a href="#jmeter-jmeter-실행-cmd">(jmeter) jmeter 실행 cmd</a></li>
+                <li><a href="#oracle-client-무설치-설정">(oracle) client 무설치 설정</a></li>
+                <li><a href="#oracle-sqlplus">(oracle) sqlplus</a></li>
+                <li><a href="#oracle-object-조회-query">(oracle) object 조회 query</a></li>
+                <li><a href="#oracle12-시스템-계정">(oracle12) 시스템 계정</a></li>
+                <li><a href="#oracle12-설치-디렉토리">(oracle12) 설치 디렉토리</a></li>
+                <li><a href="#oracle12-시스템-변수">(oracle12) 시스템 변수</a></li>
+                <li><a href="#oracle12-gui-패키지-설치">(oracle12) gui 패키지 설치</a></li>
+                <li><a href="#oracle12-oracle12c-ee-설치">(oracle12) oracle12c-ee 설치</a></li>
+                <li><a href="#oracle12-systemctl-등록">(oracle12) systemctl 등록</a></li>
+                <li><a href="#oracle12-각종-오류">(oracle12) 각종 오류</a></li>
+                <li><a href="#oracle12-oratab-파일">(oracle12) oratab 파일</a></li>
+                <li><a href="#apache-httpdconf">(apache) httpd.conf</a></li>
+                <li><a href="#apache-sslconf">(apache) ssl.conf</a></li>
+                <li><a href="#apache-vhost-centos8conf">(apache) vhost-centos8.conf</a></li>
+                <li><a href="#apache-vhost-nexusconf">(apache) vhost-nexus.conf</a></li>
+                <li><a href="#apache-vhost-gitlabconf">(apache) vhost-gitlab.conf</a></li>
+                <li><a href="#apache-vhost-jenkinsconf">(apache) vhost-jenkins.conf</a></li>
+                <li><a href="#apache-weblogic-connector">(apache) weblogic-connector</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+</aside>
+
+</main>
+
+  <footer class="footer">
+Designed by MK
+</footer>
+</body>
+</html>

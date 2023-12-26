@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MEMO</title>
+  <meta name="author" content="lislroow@daum.net">
+  <meta name="description" content="KIM MYEONGGU&#39;s MEMO site">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/highlight/prism.css">
+  <script src="/highlight/prism.js"></script>
+</head>
+<body>
+  <header>
+  <div class="navbar">
+    <a href="https://lislroow.github.io/">MEMO</a>
+    
+    
+      
+      <div class="dropdown">
+        <button class="dropbtn">&#43; archive</button>
+        <div class="dropdown-content">
+        
+          <a href="/archive/apache/">apache</a>
+        
+          <a href="/archive/others/">others</a>
+        
+        </div>
+      </div>
+      
+    
+    
+    
+    <a href="#" id="toggleTocButton" style="margin-left: auto;">+</a>
+    <script>
+    document.getElementById('toggleTocButton').addEventListener('click', function() {
+      document.querySelector('.aside').classList.toggle('hidden');
+    });
+    </script>
+  </div>
+</header>
+
+  
+<main class="container">
+  <div class="main-content">
+    <div class="content">
+      <article>
+        <h1></h1>
+        <div>
+          <h2 id="1-설치">1. 설치</h2>
+<ul>
+<li>버전: apache 2.4.x</li>
+</ul>
+<h3 id="1-다운로드">1) 다운로드</h3>
+<p>다운로드 후 tar zxvf *.tar.gz 로 압축 해제 합니다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ wget https://dlcdn.apache.org/httpd/httpd-2.4.58.tar.gz
+</span></span><span style="display:flex;"><span>$ wget https://dlcdn.apache.org/apr/apr-1.7.4.tar.gz
+</span></span><span style="display:flex;"><span>$ wget https://dlcdn.apache.org/apr/apr-util-1.6.3.tar.gz
+</span></span><span style="display:flex;"><span>$ wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2-10.42.tar.gz
+</span></span></code></pre></div><h3 id="2-사전-점검">2) 사전 점검</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ yum list expat-devel
+</span></span></code></pre></div><h3 id="3-compile-설치">3) compile 설치</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>$ cd /opt/apache/apr-1.7.4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  ./configure <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/usr/local/src/apr-1.7.4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make install
+</span></span><span style="display:flex;"><span>$ cd /opt/apache/apr-util-1.6.3 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  ./configure <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/usr/local/src/apr-util-1.6.3 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr<span style="color:#f92672">=</span>/usr/local/src/apr-1.7.4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make install
+</span></span><span style="display:flex;"><span>$ cd /opt/apache/pcre2-10.42 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  ./configure <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/usr/local/src/pcre2-10.42 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr<span style="color:#f92672">=</span>/usr/local/src/apr-1.7.4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make install
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># non-ssl compile</span>
+</span></span><span style="display:flex;"><span>$ cd /opt/apache/httpd-2.4.58 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  ./configure <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/engn/apache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-modules<span style="color:#f92672">=</span>most <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-mods-shared<span style="color:#f92672">=</span>all <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-so <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-mpm<span style="color:#f92672">=</span>prefork <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr<span style="color:#f92672">=</span>/usr/local/src/apr-1.7.4 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr-util<span style="color:#f92672">=</span>/usr/local/src/apr-util-1.6.3 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-pcre<span style="color:#f92672">=</span>/usr/local/src/pcre2-10.42 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make install
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># with-ssl compile</span>
+</span></span><span style="display:flex;"><span>$ cd /opt/apache/httpd-2.4.58 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  ./configure <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --prefix<span style="color:#f92672">=</span>/engn/apache <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-modules<span style="color:#f92672">=</span>most <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-mods-shared<span style="color:#f92672">=</span>all <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-ssl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-ssl<span style="color:#f92672">=</span>/usr/bin/openssl <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --enable-so <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-mpm<span style="color:#f92672">=</span>prefork <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr<span style="color:#f92672">=</span>/usr/local/src/apr-1.7.4 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-apr-util<span style="color:#f92672">=</span>/usr/local/src/apr-util-1.6.3 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --with-pcre<span style="color:#f92672">=</span>/usr/local/src/pcre2-10.42
+</span></span><span style="display:flex;"><span>  make <span style="color:#f92672">&amp;&amp;</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  make install
+</span></span></code></pre></div><h2 id="2-설정">2. 설정</h2>
+<h3 id="1-기본-항목">1) 기본 항목</h3>
+<ul>
+<li>
+<p>User, Group 설정: <code>User apache</code>, <code>Group apache</code></p>
+</li>
+<li>
+<p>디렉토리 설정: <code>DocumentRoot</code>, <code>&lt;Directory&gt;</code>, <code>&lt;Location&gt;</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>DocumentRoot <span style="color:#e6db74">&#34;/sorc/apache&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;Directory</span> <span style="color:#e6db74">/</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  AllowOverride AuthConfig
+</span></span><span style="display:flex;"><span>  Require <span style="color:#66d9ef">all</span> denied
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;LimitExcept</span> <span style="color:#e6db74">GET POST OPTIONS</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    Order allow,deny
+</span></span><span style="display:flex;"><span>    Allow from <span style="color:#66d9ef">all</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/LimitExcept&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Directory&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;Location</span> <span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  Require <span style="color:#66d9ef">all</span> granted
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Location&gt;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>로그 설정: <code>LogFormat</code> 에 %{X-Forward-For}i  %I %O 추가</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span><span style="color:#f92672">&lt;IfModule</span> <span style="color:#e6db74">log_config_module</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  LogFormat <span style="color:#e6db74">&#34;%{X-Forward-For}i %h %l %u %t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34;&#34;</span> combined
+</span></span><span style="display:flex;"><span>  LogFormat <span style="color:#e6db74">&#34;%{X-Forward-For}i %h %l %u %t \&#34;%r\&#34; %&gt;s %b&#34;</span> common
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;IfModule</span> <span style="color:#e6db74">logio_module</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    LogFormat <span style="color:#e6db74">&#34;%{X-Forward-For}i %h %l %u %t \&#34;%r\&#34; %&gt;s %b \&#34;%{Referer}i\&#34; %I %O&#34;</span> combinedio
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/IfModule&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  CustomLog <span style="color:#e6db74">&#34;/logs/apache/access_log&#34;</span> combinedio
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div></li>
+<li>
+<p>서버 정보 노출: <code>ServerTokens Prod</code>, <code>ServerSignature Off</code></p>
+<p>(Prod: 웹서버의 이름만 표시, Full 은 전체 표시)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>ServerTokens Prod
+</span></span><span style="display:flex;"><span>ServerSignature <span style="color:#66d9ef">Off</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="2-성능-및-옵션">2) 성능 및 옵션</h3>
+<ul>
+<li>mpm 설정: <code>mpm_prefork_module</code>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span><span style="color:#f92672">&lt;IfModule</span> <span style="color:#e6db74">mpm_prefork_module</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerLimit           <span style="color:#ae81ff">1024</span>
+</span></span><span style="display:flex;"><span>  StartServers             <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>  MinSpareServers          <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>  MaxSpareServers         <span style="color:#ae81ff">10</span>
+</span></span><span style="display:flex;"><span>  MaxRequestWorkers     <span style="color:#ae81ff">1024</span>
+</span></span><span style="display:flex;"><span>  MaxConnectionsPerChild   <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/IfModule&gt;</span>
+</span></span></code></pre></div></li>
+<li>request body 크기 제한 설정
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span>LimitRequestBody <span style="color:#ae81ff">2147483647</span>
+</span></span></code></pre></div></li>
+<li>mod_status, mod_info 설정
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span><span style="color:#f92672">&lt;Location</span> <span style="color:#e6db74">/server-info</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  SetHandler server-info
+</span></span><span style="display:flex;"><span>  Require <span style="color:#66d9ef">all</span> denied
+</span></span><span style="display:flex;"><span>  Require ip <span style="color:#ae81ff">172.28.200.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Location&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;Location</span> <span style="color:#e6db74">/server-status</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  SetHandler server-status
+</span></span><span style="display:flex;"><span>  Require <span style="color:#66d9ef">all</span> denied
+</span></span><span style="display:flex;"><span>  Require ip <span style="color:#ae81ff">172.28.200.1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/Location&gt;</span>
+</span></span><span style="display:flex;"><span>ExtendedStatus <span style="color:#66d9ef">On</span>
+</span></span></code></pre></div></li>
+</ul>
+<h3 id="3-가상호스트-및-proxy-설정">3) 가상호스트 및 proxy 설정</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:80</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName smpl.develop.net
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ErrorLog <span style="color:#e6db74">&#34;/logs/smpl/smpl-apache_error.log&#34;</span>
+</span></span><span style="display:flex;"><span>  CustomLog <span style="color:#e6db74">&#34;/logs/smpl/smpl-apache_access.log&#34;</span> combinedio
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  DocumentRoot <span style="color:#e6db74">&#34;/sorc/smpl/web&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  Header always edit Set-Cookie (.*) <span style="color:#e6db74">&#34;$1; Secure; SameSite=None;&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ProxyRequests <span style="color:#66d9ef">Off</span>
+</span></span><span style="display:flex;"><span>  ProxyPreserveHost <span style="color:#66d9ef">On</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  Header add Set-Cookie <span style="color:#e6db74">&#34;ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/&#34;</span> env=BALANCER_ROUTE_CHANGED
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;Proxy</span> <span style="color:#e6db74">balancer://cluster</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    BalancerMember http://172.28.200.101:8010 route=cluster1 retry=1 acquire=3000 timeout=10000 Keepalive=On
+</span></span><span style="display:flex;"><span>    BalancerMember http://172.28.200.101:8011 route=cluster2 retry=1 acquire=3000 timeout=10000 Keepalive=On
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ProxySet stickysession=ROUTEID
+</span></span><span style="display:flex;"><span>    ProxySet lbmethod=byrequests
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/Proxy&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ProxyPassMatch ^/$          balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch <span style="color:#e6db74">/health</span>      balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch <span style="color:#e6db74">/api/</span>(.*)    balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch /(.*\.jsp.*) balancer://cluster
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</span></span></code></pre></div><h2 id="3-ssl">3. SSL</h2>
+<h3 id="1-openssl-인증서-생성">1) openssl 인증서 생성</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  
+</span></span><span style="display:flex;"><span>DOMAIN<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span>FILENM<span style="color:#f92672">=</span>star.<span style="color:#e6db74">${</span>DOMAIN<span style="color:#e6db74">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cat <span style="color:#e6db74">&lt;&lt;- EOF &gt; ${FILENM}.cnf
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[req]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">distinguished_name = req_distinguished_name
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">x509_extensions = v3_req
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">prompt = no
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[req_distinguished_name]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">countryName             = KR
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">stateOrProvinceName     = Seoul
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">localityName            = Seonyudo
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">organizationName        = MK
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">organizationalUnitName  = Dev.Team
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">CN                      = ${DOMAIN}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[v3_req]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">keyUsage = critical, digitalSignature, keyAgreement
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">extendedKeyUsage = serverAuth
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">subjectAltName = @alt_names
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[alt_names]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">DNS.1 = *.${DOMAIN}
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">EOF</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># crt 생성</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># openssl req -x509 -nodes -days 730 -newkey rsa:2048 -keyout ${FILENM}.key -out ${FILENM}.crt -sha256 -config ${FILENM}.cnf</span>
+</span></span><span style="display:flex;"><span>openssl req -x509 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -nodes <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -days <span style="color:#ae81ff">730</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -newkey rsa:2048 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -keyout <span style="color:#e6db74">${</span>FILENM<span style="color:#e6db74">}</span>.key <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -out <span style="color:#e6db74">${</span>FILENM<span style="color:#e6db74">}</span>.crt <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -sha256 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  -config <span style="color:#e6db74">${</span>FILENM<span style="color:#e6db74">}</span>.cnf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># ---</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 참고1) 실행 및 확인</span>
+</span></span><span style="display:flex;"><span>$ ./create-crt.sh develop.net
+</span></span><span style="display:flex;"><span>$ ls -al *develop.net*
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 참고2) crt to pfx 변환</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># DOMAIN=develop.net</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># FILENM=star.${DOMAIN}</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># openssl pkcs12 -export -in ${FILENM}.crt -inkey ${FILENM}.key -out ${FILENM}.pfx</span>
+</span></span><span style="display:flex;"><span>$ openssl pkcs12 -export <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -in star.develop.net.crt <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -inkey star.develop.net.key <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -out star.develop.net.pfx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 참고3) pfx to jks 변환</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># keytool -importkeystore -srckeystore ${FILENM}.pfx -srcstoretype pkcs12 -destkeystore ${FILENM}.jks -deststoretype jks</span>
+</span></span><span style="display:flex;"><span>$ keytool -importkeystore <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -srckeystore star.develop.net.pfx <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -srcstoretype pkcs12 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -destkeystore star.develop.net.jks <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -deststoretype jks
+</span></span></code></pre></div><h3 id="2-ssl-인증서-적용">2) SSL 인증서 적용</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apacheconf" data-lang="apacheconf"><span style="display:flex;"><span><span style="color:#75715e"># conf/httpd.conf</span>
+</span></span><span style="display:flex;"><span>LoadModule socache_shmcb_module modules/mod_socache_shmcb.so
+</span></span><span style="display:flex;"><span>LoadModule ssl_module modules/mod_ssl.so
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Include conf/ssl.conf
+</span></span><span style="display:flex;"><span>Include conf/vhost-memo.conf
+</span></span><span style="display:flex;"><span>Include conf/vhost-smpl.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># conf/ssl.conf</span>
+</span></span><span style="display:flex;"><span>Listen <span style="color:#ae81ff">443</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+</span></span><span style="display:flex;"><span>SSLProxyCipherSuite HIGH:MEDIUM:!MD5:!RC4:!3DES
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLHonorCipherOrder <span style="color:#66d9ef">on</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLProtocol <span style="color:#66d9ef">all</span> -SSLv3
+</span></span><span style="display:flex;"><span>SSLProxyProtocol <span style="color:#66d9ef">all</span> -SSLv3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLPassPhraseDialog  builtin
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SSLSessionCache        <span style="color:#e6db74">&#34;shmcb:/engn/apache/logs/ssl_scache(512000)&#34;</span>
+</span></span><span style="display:flex;"><span>SSLSessionCacheTimeout  <span style="color:#ae81ff">300</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># conf/vhost-memo.conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># memo.develop.net</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:80</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName memo.develop.net
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  DocumentRoot <span style="color:#e6db74">&#34;/sorc/memo&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  RewriteEngine <span style="color:#66d9ef">On</span>
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:443</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName memo.develop.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  DocumentRoot <span style="color:#e6db74">&#34;/sorc/memo&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  ErrorLog <span style="color:#e6db74">&#34;/logs/memo/error_log&#34;</span>
+</span></span><span style="display:flex;"><span>  TransferLog <span style="color:#e6db74">&#34;/logs/memo/access_log&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLEngine <span style="color:#66d9ef">on</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  SSLCertificateFile <span style="color:#e6db74">&#34;/engn/apache/conf/star.develop.net.crt&#34;</span>
+</span></span><span style="display:flex;"><span>  SSLCertificateKeyFile <span style="color:#e6db74">&#34;/engn/apache/conf/star.develop.net.key&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># conf/vhost-smpl.conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># smpl.develop.net</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:80</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName smpl.develop.net
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  RewriteEngine <span style="color:#66d9ef">On</span>
+</span></span><span style="display:flex;"><span>  RewriteCond %{HTTPS} !=On
+</span></span><span style="display:flex;"><span>  RewriteRule /(.*) https://%{HTTP_HOST}/$1 [QSA,R,L]
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">*:443</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  ServerName smpl.develop.net
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ErrorLog <span style="color:#e6db74">&#34;/logs/smpl/smpl-apache_error.log&#34;</span>
+</span></span><span style="display:flex;"><span>  CustomLog <span style="color:#e6db74">&#34;/logs/smpl/smpl-apache_access.log&#34;</span> combinedio
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  DocumentRoot <span style="color:#e6db74">&#34;/sorc/smpl/web&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  Header always edit Set-Cookie (.*) <span style="color:#e6db74">&#34;$1; Secure; SameSite=None;&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ProxyRequests <span style="color:#66d9ef">Off</span>
+</span></span><span style="display:flex;"><span>  ProxyPreserveHost <span style="color:#66d9ef">On</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  Header add Set-Cookie <span style="color:#e6db74">&#34;ROUTEID=.%{BALANCER_WORKER_ROUTE}e; path=/&#34;</span> env=BALANCER_ROUTE_CHANGED
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;Proxy</span> <span style="color:#e6db74">balancer://cluster</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    BalancerMember http://172.28.200.101:8010 route=cluster1 retry=1 acquire=3000 timeout=10000 Keepalive=On
+</span></span><span style="display:flex;"><span>    BalancerMember http://172.28.200.101:8011 route=cluster2 retry=1 acquire=3000 timeout=10000 Keepalive=On
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    ProxySet stickysession=ROUTEID
+</span></span><span style="display:flex;"><span>    ProxySet lbmethod=byrequests
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/Proxy&gt;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  ProxyPassMatch ^/$          balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch <span style="color:#e6db74">/health</span>      balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch <span style="color:#e6db74">/api/</span>(.*)    balancer://cluster
+</span></span><span style="display:flex;"><span>  ProxyPassMatch /(.*\.jsp.*) balancer://cluster
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/VirtualHost&gt;</span>
+</span></span></code></pre></div>
+        </div>
+      </article>
+    </div>
+  </div>
+  <aside class="aside">
+
+
+
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-설치">1. 설치</a>
+          <ul>
+            <li><a href="#1-다운로드">1) 다운로드</a></li>
+            <li><a href="#2-사전-점검">2) 사전 점검</a></li>
+            <li><a href="#3-compile-설치">3) compile 설치</a></li>
+          </ul>
+        </li>
+        <li><a href="#2-설정">2. 설정</a>
+          <ul>
+            <li><a href="#1-기본-항목">1) 기본 항목</a></li>
+            <li><a href="#2-성능-및-옵션">2) 성능 및 옵션</a></li>
+            <li><a href="#3-가상호스트-및-proxy-설정">3) 가상호스트 및 proxy 설정</a></li>
+          </ul>
+        </li>
+        <li><a href="#3-ssl">3. SSL</a>
+          <ul>
+            <li><a href="#1-openssl-인증서-생성">1) openssl 인증서 생성</a></li>
+            <li><a href="#2-ssl-인증서-적용">2) SSL 인증서 적용</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+</aside>
+
+</main>
+
+  <footer class="footer">
+Designed by MK
+</footer>
+</body>
+</html>

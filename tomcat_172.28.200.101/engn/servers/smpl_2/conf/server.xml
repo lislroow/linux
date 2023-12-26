@@ -61,7 +61,7 @@
         -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" 
                rotatable="false" directory="${log.base}" prefix="${instance.id}-tomcat_access" suffix=".log"
-               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b %{User-Agent}i" />
+               pattern="%{X-Forwarded-For}i %h %l %u %t &quot;%r&quot; %s %b" />
         <Valve className="org.apache.catalina.valves.HealthCheckValve" path="/health" checkContainersAvailable="true" />
       </Host>
     </Engine>
