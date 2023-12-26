@@ -1,4 +1,97 @@
 
+
+### * `systemctl`
+
+#### 1) [Unit]
+- `Before=`, `After=` unit 시작의 전후 관계에 대한 옵션이며, Requires= 옵션과는 독립적입니다. Before= 에 나열된 unit 이 시작되기 전에 해당 unit 이 실행됩니다.
+- `Requires=` 상위 unit(의존성)을 설정합니다.
+- `RequiresOverridable=` Requires= 옵션과 유사하며, 사용자에 의해서 실행할 경우 상위 unit 이 실패 하더라도 무시하고 시작합니다.
+- `Requisite=` RequiresOverridable= 옵션과 유사하며, 상위 unit 시작되지 않은 경우 즉시 실패를 반환합니다.
+- `Wants=` Requires= 옵션에 비해 완화된 옵션입니다. 상위 unit 이 시작되지 않더라도 실행에 영향을 끼치지 않습니다.
+- `BindsTo` Requires= 옵션과 유사하며, systemd 개입없이 갑자기 서비스가 사라진 경우 해당 unit 도 같이 중지하도록 설정합니다.
+- `PartOf=` Requires= 옵션과 유사하며, 상위 unit 을 stop/start 할 경우 해당 unit 을 stop/start 를 수행합니다.
+- `Conflicts=` 역의 관계를 구성합니다. e.g) unit1, unit2 가 있고 unit1 에 Conflicts=unit2 설정이 있을 경우, unit1 이 start 되면 unit-2 는 stop 이 됩니다.
+- `OnFailure=` 해당 unit 이 failure 가 되면 수행할 unit 목록을 설정합니다.
+
+
+#### 2) [Service]
+- Type=[`simple`|`forking`|oneshot|notify|dbus]
+  - `simple`: Type 의 기본값이며, unit 이 start 되면 systemd 는 완료되었다고 판단합니다. 다른 unit 과 통신을 하는 경우에는 적합하지 않습니다.
+  - `forking`: 해당 unit 이 자식 프로세스 생성을 완료하는 단계에 systemd 가 완료되었다고 판단합니다. parent 프로세스를 추적할 수 있도록 PIDFile= 필드에 pid 파일 경로를 선언해야 합니다.
+  - oneshot: simple 과 유사하며, RemainAfterExit=yes 옵션을 통해 unit 이 활성화 상태로 설정할 수 있습니다.
+  - notify: simple 과 유사하며, unit 이 start 완료가되면 systemd 에 signal 을 보내고 완료를 판단합니다.
+  - dbus: DBUS 에 지정된 BusName 이 준비될 때까지 대기합니다. DBUS 준비가 완료된 이후 unit 이 start 되었다고 간주합니다.
+- `RemainAfterExit=[yes|no]`: yes 일 경우, start 된 unit 이 종료된 이후에도 활성화 상태를 판단합니다.
+- `PIDFile=`: PID 파일을 지정합니다. Type=forking 일 경우 pid 파일의 절대 경로를 추가해야 합니다.
+- `Environment=`: 해당 unit 에서 사용할 환경변수를 선언합니다. `반드시 Exec*=` 옵션보다 위에 선언해야 합니다.
+- `EnvironmentFile=`: 환경변수가 정의된 파일경로를 선언합니다. 환경변수 파일의 주석은 `#`, `;` 입니다. Environment= 보다 우선순위가 낮습니다.
+- `ExecStart=`: start 명령어를 선언합니다. 여러 명령어를 `;`으로 등록할 수 있습니다. `ExecStart="cmd 1; cmd 2"`   
+- `ExecStop=`: stop 명령어를 선언합니다.
+- `WatchdogSec=`: unit 이 start 된 이후 상태를 체크를 할 때 반환하는 시간을 설정합니다. Restart= 옵션과 관련이 있으며 Restart=[on-failure|always] 설정으로 unit 을 자동으로 restart 할 때 WatchdogSec= 옵션이 필요합니다. 기본값은 0으로 unit 상태를 체크하지 않습니다.
+- Restart=[no|on-success|on-failure|on-watchdog|on-abort|always]: unit 이 dead 상태이거나 WatchdogSec= 시간동안 응답이 없는 경우 restart 를 합니다. 기본값은 no 이며, unit 를 restart 하지 않습니다.  
+- `User=`, `Group=`: unit 실행에 사용할 user, group 을 설정합니다.
+- `RootDirectoryStartOnly=[yes|no]`: 프로세스 실행 시 "/" 디렉토리를 설정합니다. `chroot` 함수를 사용하며 start 합니다.
+- `RootDirectory=`: chroot 함수로 변경할 "/" 디렉토리를 설정합니다.
+- `WorkingDirectory=`: 특정 디렉토리에서 start 해야 하는 unit 에서 사용할 수 있습니다.
+- `StartLimitInterval=`, `StartLimitBurst=`: 해당 unit 에 과도한 restart 가 발생하지 않도록 합니다. 기본값은 10초 간격으로 5번까지 start 를 하도록 허용합니다.
+- `UMask=`: umask 값을 선언합니다. 기본값은 0022 입니다.
+
+#### 3) [Install]
+- `WantedBy=`, `RequiredBy=`: systemctl enable 명령으로 unit 을 등록할 때 필요한 unit 을 설정합니다.
+
+#### 4) service unit 등록
+- `/etc/systemd/system/` 디렉토리에 service 파일 추가
+
+```shell
+#!/bin/bash
+
+USER_LIST=($(cat <<- EOF
+
+smpl
+hello
+
+EOF
+))
+
+read -r userList <<< ${USER_LIST[*]}
+idx=1
+for item in ${userList[*]}; do
+  if [ ! -e "/home/${item}" ]; then
+    continue
+  fi
+  
+  cat <<- EOF > /etc/systemd/system/${item}.service
+[Unit]
+Description=${item} service
+After=network.target syslog.target
+
+[Service]
+Type=forking
+User=${item}
+Group=wasadm
+ExecStart=/engn/servers/${item}/start-${item}.sh
+ExecStop=/engn/servers/${item}/stop-${item}.sh
+Restart=no
+
+[Install]
+WantedBy=multi-user.target
+EOF
+  systemctl enable ${item}.service
+done
+```
+
+#### 5) service unit enabled/disabled 확인
+- `systemctl -t service list-units`
+- `systemctl -t service list-unit-files`
+```shell
+$ systemctl enable smpl.service
+$ systemctl -t service list-unit-files | grep smpl
+smpl.service                               enabled 
+$ systemctl disable smpl.service
+$ systemctl -t service list-unit-files | grep smpl
+smpl.service                               disabled
+```
+
 ### * `xmllint`
 ```xml
 # https://repo1.maven.org/maven2/javax/servlet/servlet-api/maven-metadata.xml
@@ -176,22 +269,6 @@ $ find . -type f -name '*.jsp' | xargs -I{} ls -al {}
 ### * `hostname`
 ```shell
 $ hostnamectl set-hostname develop
-```
-
-### * `systemctl`
-
-#### - 종속성 확인
-
-```shell
-# 종속성 확인
-$ systemctl list-dependencies logstash.service 
-logstash.service
-● ├─-.mount
-● ├─elasticsearch.service
-● ├─system.slice
-● └─sysinit.target
-●   ├─dev-hugepages.mount
-●   ├─dev-mqueue.mount
 ```
 
 ### * `bash`
