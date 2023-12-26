@@ -45,38 +45,38 @@
 ```shell
 #!/bin/bash
 
-USER_LIST=($(cat <<- EOF
+LIST=($(cat <<- EOF
 
-smpl
-hello
+smpl2:smpl_2
 
 EOF
 ))
 
-read -r userList <<< ${USER_LIST[*]}
+read -r list <<< ${LIST[*]}
 idx=1
-for item in ${userList[*]}; do
-  if [ ! -e "/home/${item}" ]; then
+for item in ${list[*]}; do
+  userid=${item%:*}
+  instance=${item##*:}
+  if [ ! -e "/home/${userid}" ]; then
     continue
   fi
-  
-  cat <<- EOF > /etc/systemd/system/${item}.service
+  cat <<- EOF > /etc/systemd/system/${instance}.service
 [Unit]
-Description=${item} service
+Description=${instance} service
 After=network.target syslog.target
 
 [Service]
 Type=forking
-User=${item}
+User=${userid}
 Group=wasadm
-ExecStart=/engn/servers/${item}/start-${item}.sh
-ExecStop=/engn/servers/${item}/stop-${item}.sh
+ExecStart=/engn/servers/${instance}/start-${instance}.sh
+ExecStop=/engn/servers/${instance}/stop-${instance}.sh
 Restart=no
 
 [Install]
 WantedBy=multi-user.target
 EOF
-  systemctl enable ${item}.service
+  systemctl enable ${instance}.service
 done
 ```
 
