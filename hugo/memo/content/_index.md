@@ -47,7 +47,7 @@
 
 LIST=($(cat <<- EOF
 
-smpl2:smpl_2
+smpl
 
 EOF
 ))
@@ -55,8 +55,10 @@ EOF
 read -r list <<< ${LIST[*]}
 idx=1
 for item in ${list[*]}; do
-  userid=${item%:*}
-  instance=${item##*:}
+  #userid=${item%:*}
+  #instance=${item##*:}
+  userid=${item}
+  instance=${item}
   if [ ! -e "/home/${userid}" ]; then
     continue
   fi
