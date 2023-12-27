@@ -44,3 +44,13 @@ theme = 'simple'
     name = 'others'
     url = '/archive/others/'
     weight = 99
+  [[menu.main]]
+    identifier = 'spring'
+    name = '+ spring'
+    weight = 2
+  [[menu.main]]
+    parent = 'spring'
+    identifier = 'mybatis'
+    name = 'mybatis'
+    url = '/spring/mybatis/'
+    weight = 1
