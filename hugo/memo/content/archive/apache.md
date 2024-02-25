@@ -18,7 +18,7 @@ $ wget https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.42/pcre2
 #### 1) 의존성 설치
 
 ```shell
-$ yum install expat-devel
+$ yum install gcc gcc-c++ expat expat-devel expat-static
 $ cd /opt/apache/apr-1.7.4 && \
   ./configure \
     --prefix=/usr/local/src/apr-1.7.4 && \

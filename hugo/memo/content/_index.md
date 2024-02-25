@@ -1,3 +1,11 @@
+### * `curl`
+```shell
+$ curl -X 'POST' \
+  http://localhost:8080/v2/file/upload \
+  -H 'Content-Type: multipart-form-data' \
+  -F 'file1=@photo.jpg' \
+  -F 'name1=홍길동'
+```
 
 
 ### * `systemctl`
