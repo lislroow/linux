@@ -1,0 +1,12 @@
+kafka:
+  clusters:
+    - name: standalone
+      bootstrapServers: 127.0.0.1:9092
+spring:
+  jmx:
+    enabled: true
+  auth:
+    type: DISABLED
+server:
+  port: 8080
+
